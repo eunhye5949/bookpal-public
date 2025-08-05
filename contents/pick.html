@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 모바일헤더 일때 M_Header 추가 -->
+  <!-- 디바이스줄여도 계속 footer보이면 Main 클래스 추가 -->
+  <!-- fixed_button 하단 고정일때 class="fixed" 추가-->
+  <body class="LightMode color-bg-02 Main fixed M_Header">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="clearfix wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">선택구매</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <section
+        class="section detail_box wrapper clearfix template temp_list template_column select_list book_list"
+        id="EpisodeList"
+      >
+        <div class="radius-xxl color-bg-01 area_box">
+          <div id="top_header" class="color-bg-01">
+            <button
+              type="button"
+              class="prev_btn"
+              onclick="history.back()"
+            ></button>
+            <span class="title-02-b color-txt-normal text_overflow"
+              >선택구매</span
+            >
+          </div>
+          <div class="content_body">
+            <div class="tit_con clearfix">
+              <div class="left">
+                <label
+                  for="a1"
+                  class="checkbox_round check-type-01 small label_on"
+                >
+                  <input type="checkbox" id="a1" />
+                  <span class="box"></span>
+                  <span class="txt color-txt-04">빠른선택</span>
+                </label>
+                <button
+                  type="button"
+                  onclick="Modal2()"
+                  class="button select_modal_btn"
+                >
+                  <span class="color-btn-03-txt btn-03">선택구매</span>
+                </button>
+              </div>
+              <div class="right button_dot">
+                <!-- 클릭시 click 추가-->
+                <button type="button" class="button btn-03">
+                  <span class="color-btn-03-txt">처음부터</span>
+                </button>
+                <button type="button" class="button btn-03 click">
+                  <span class="color-btn-03-txt">최신순</span>
+                </button>
+              </div>
+            </div>
+            <!-- 웹소설 선택구매-->
+            <ul class="list novel_list">
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list1"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list1" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <p class="color-txt-05 title-tiny-02">외전</p>
+                    <p class="color-txt-normal btn-04-active">N화</p>
+                    <p class="badges">
+                      <span class="ic_up sm radius-xs icon_badge"
+                        ><img src="/images/up_badge.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span class="ic_adult sm icon_badge"
+                        ><img src="/images/ic_adult.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                    <p class="other_info">
+                      <span class="color-txt-05 body-02"
+                        >선물이용권 이용 제한</span
+                      >
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list2"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list2" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <p class="color-txt-normal btn-04-active">N화</p>
+                    <p class="badges">
+                      <span class="ic_up sm radius-xs icon_badge"
+                        ><img src="/images/up_badge.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span class="ic_adult sm icon_badge"
+                        ><img src="/images/ic_adult.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                    <p class="other_info">
+                      <span class="color-txt-05 body-02"
+                        >선물이용권 이용 제한</span
+                      >
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list3"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list3" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <p class="color-txt-05 title-tiny-02">외전</p>
+                    <p class="color-txt-normal btn-04-active">N화</p>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- 단행본 선택구매-->
+            <ul class="list novel_list">
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list4"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list4" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <p class="color-txt-05 title-tiny-02">외전</p>
+                    <p class="color-txt-normal btn-04-active">N권</p>
+                    <p class="badges">
+                      <span class="ic_up sm radius-xs icon_badge"
+                        ><img src="/images/up_badge.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span class="ic_adult sm icon_badge"
+                        ><img src="/images/ic_adult.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                    <p class="other_info">
+                      <span class="color-txt-05 body-02"
+                        >선물이용권 이용 제한</span
+                      >
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list5"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list5" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <p class="color-txt-normal btn-04-active">N권</p>
+                    <p class="badges">
+                      <span class="ic_up sm radius-xs icon_badge"
+                        ><img src="/images/up_badge.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span class="ic_adult sm icon_badge"
+                        ><img src="/images/ic_adult.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                    <p class="other_info">
+                      <span class="color-txt-05 body-02"
+                        >선물이용권 이용 제한</span
+                      >
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list6"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list6" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <p class="color-txt-05 title-tiny-02">외전</p>
+                    <p class="color-txt-normal btn-04-active">N권</p>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- 웹툰/만화 선택구매-->
+            <ul class="list toon_list">
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list7"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list7" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <div class="cover_img radius-xs">
+                      <img src="/contents/images/toon_thumbnail.png" />
+                      <p class="ic_bottom badges_box badges">
+                        <span class="ic_up sm radius-xs icon_badge"
+                          ><img src="/images/up_badge.svg"
+                        /></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span class="ic_adult sm icon_badge"
+                        ><img src="/images/ic_adult.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                    <p class="other_info">
+                      <span class="color-txt-05 body-02"
+                        >선물이용권 이용 제한</span
+                      >
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list8"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list8" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <div class="cover_img radius-xs">
+                      <img src="/contents/images/toon_thumbnail.png" />
+                      <p class="ic_bottom badges_box badges">
+                        <span class="ic_up sm radius-xs icon_badge"
+                          ><img src="/images/up_badge.svg"
+                        /></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                    <p class="other_info">
+                      <span class="color-txt-05 body-02"
+                        >선물이용권 이용 제한</span
+                      >
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a>
+                  <button type="button" class="edit_select">
+                    <label
+                      for="list9"
+                      class="checkbox_round check-type-01 medium label_on"
+                    >
+                      <input type="checkbox" id="list9" />
+                      <span class="box"></span>
+                    </label>
+                  </button>
+                  <div class="left">
+                    <div class="cover_img radius-xs">
+                      <img src="/contents/images/toon_thumbnail.png" />
+                      <p class="ic_bottom badges_box badges">
+                        <span class="ic_up sm radius-xs icon_badge"
+                          ><img src="/images/up_badge.svg"
+                        /></span>
+                      </p>
+                    </div>
+                  </div>
+                  <div class="right info_txt">
+                    <div class="list_tit_con">
+                      <span
+                        class="title color-txt-01 title-book-03-m text_overflow"
+                        >책제목입니다.</span
+                      >
+                    </div>
+                    <p class="info_vertical info">
+                      <span class="color-txt-04 body-02">23.09.10</span>
+                      <span class="color-txt-04 body-02">11.3MB</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="fixed_button">
+            <button
+              type="button"
+              class="button btn_01 filled btn-05 white-always txt"
+              disabled=""
+            >
+              <span>0</span>개 회차 소장하기
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- //container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box clearfix">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 텍스트 토스트 -->
+    <div
+      class="toast message_toast black_opacity-80 bg radius-xs"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-body">
+        <div class="area">
+          <p class="text color-btn-02-txt body-02-long">Toast Message Text</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">
+              타이틀 제목들어가는자리
+            </div>
+            <div class="desc color-txt-02">
+              <p class="title-book-03-m">
+                <span class="text_overflow"
+                  >책제목영역입니다. 책제목영역입니다. 책제목영역입니다.</span
+                >
+              </p>
+              <p class="body-03-long">
+                내용들어가는자리<br />내용들어가는자리입니다.
+              </p>
+            </div>
+            <div class="txt_box title-01-m radius-sm color-bg-select-01">
+              <p class="color-txt-01">
+                <span class="color-txt-04">잔여쿠폰</span> 1개 ·
+                <span class="color-txt-04">사용쿠폰</span> 4개
+              </p>
+              <p class="color-btn-01 txt">쿠폰이 부족합니다.</p>
+            </div>
+            <div>
+              <label
+                for="agree"
+                class="checkbox_round check-type-01 small label_on"
+              >
+                <input type="checkbox" id="agree" />
+                <span class="box"></span>
+                <span class="txt color-txt-04">선물소장권 사용</span>
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on filled button"
+            >
+              빨간배경 버튼
+            </button>
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on outlined button"
+            >
+              빨간줄 버튼
+            </button>
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              다음에 할게요.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 선택구매 info 모달 -->
+    <div id="Modal2" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">
+              선택구매 유의사항
+            </div>
+            <div class="desc color-txt-02 body-03-long">
+              <p>
+                - 구매 회차가 많을 경우, 구매 후 대기시간이 발생할 수 있습니다.
+              </p>
+              <p>
+                - 구매 시에는 선택한 회차 중 앞 회차부터 소장권, 쿠폰 순으로
+                매칭되어 사용됩니다.
+              </p>
+              <p>
+                - 소장권 사용을 선택하실 경우 잔여 소장권이 모두 선택되어 구매에
+                사용됩니다.
+              </p>
+              <p>
+                - 구매해야 하는 회차의 쿠폰수가 부족할 경우엔 쿠폰 충전 안내가
+                진행됩니다.
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              닫기
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("Modal"));
+      function Modal() {
+        modal.show();
+      }
+
+      let modal2 = new bootstrap.Modal(document.getElementById("Modal2"));
+      function Modal2() {
+        modal2.show();
+      }
+    </script>
+  </body>
+</html>

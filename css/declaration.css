@@ -1,0 +1,61 @@
+.area_box ul>li{
+    margin-bottom: 24px
+}
+.check_event{
+    margin-top: 40px;
+    text-align: center
+}
+.button_box button{
+    width: 100%
+}
+.info_txt .text{
+    word-break: keep-all;
+    position: relative;
+    padding-left: 10px
+}
+.info_txt .text b{
+    font-weight: bold;
+}
+.info_txt>li .title{
+    margin-bottom: 12px
+}
+.info_txt>li .text:not(:first-of-type){
+    margin-top: 8px
+}
+.info_txt .text::before{
+    display: block;
+    content: '-';
+    position: absolute;
+    left: 0;
+    top: 0
+}
+.table_box{
+    margin-top: 12px
+}
+.table_box>p{
+    padding: 12px 8px;
+    display: flex;
+}
+.table_box>p span:first-child{
+    flex: 1;
+    width: 100%
+}
+.table_box>p span{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 8px;
+    box-sizing: border-box;
+    width: 22%
+}
+
+@media (max-width: 999px) {
+
+}
+@media (max-width: 540px) {
+    .area_box ul>li{
+        margin-bottom: 20px;
+    }
+    .check_event{
+        margin-top: 36px
+    }
+}

@@ -1,0 +1,40 @@
+@media (max-width: 999px) {
+  #header {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #header .app_banner {
+    display: flex;
+    width: 100%;
+  }
+  #visual {
+    padding-top: 48px;
+  }
+  #visual .banner {
+    max-width: 808px;
+    width: 100%;
+    min-height: 390px;
+  }
+  .Main #footer {
+    margin: 0;
+    padding-bottom: 0;
+  }
+  #top_btn {
+    position: static;
+    margin: 0;
+    text-align: center;
+    padding: 16px 0 86px;
+  }
+  #top_btn button {
+    box-shadow: none;
+  }
+  .app_banner {
+    display: flex;
+  }
+}
+@media (max-width: 540px) {
+  #visual .banner .swiper-slide {
+    width: 300px;
+  }
+}

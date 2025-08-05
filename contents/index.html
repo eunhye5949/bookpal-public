@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/re.bootstrap.css" rel="stylesheet">
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <link href="/css/guid.css" rel="stylesheet">
+    <link href="/css/content.css" rel="stylesheet">
+    <link href="/css/mediaquery.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>history.scrollRestoration = "manual"</script>
+
+</head>
+
+<!-- 모바일헤더 일때 M_Header 추가 -->
+<!-- 디바이스줄여도 계속 footer보이면 Main 클래스 추가 -->
+<!-- top_btn 가려질때 class="TopDepth2" 추가 -->
+<body class="LightMode color-bg-02 home Main TopDepth2 M_Header">
+
+    <!-- header --> 
+    <header id="header">
+        <div class="header_inner color-border-01">
+            <div class="clearfix wrapper">
+                <div class="left">
+                    <div class="logo text_overflow">
+                        <a href="/index.html"></a>
+                        <span class="color-txt-normal title-02-b title">페이지제목</span>
+                    </div>
+                    <ul class="gnb">
+                        <li class="home">
+                            <a href="/index.html">
+                                <p class="gnb_list white-always btn-04 txt">추천</p>
+                            </a>
+                        </li>
+                        <li class="novel">
+                            <a href="/novel">
+                                <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                            </a>
+                        </li>
+                        <li class="toon">
+                            <a href="/toon">
+                                <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                            </a>
+                        </li>
+                        <li class="gift">
+                            <a href="/gift">
+                                <p class="gnb_list white-always btn-04 txt">선물함</p>
+                            </a>
+                        </li>
+                        <li class="storage">
+                            <a href="/storage">
+                                <p class="gnb_list white-always btn-04 txt">보관함</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns right">
+                    <a href="" target="_blank">
+                        <p class="factory">작가홈</p>
+                    </a>
+                    <a href="/order" id="orderLink" >
+                        <p class="charge">충전</p>
+                    </a>
+                    <a href="/search">
+                        <p class="search">검색</p>
+                    </a>
+                    <a href="/mypage">
+                        <p class="mypage">
+                            <span class="dot color-btn-01 bg radius-full"></span>
+                            마이페이지
+                        </p>
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!--  모바일헤더 -->
+    <div id="navMenu" class="title_header contents_header">
+        <div class="title_menu wrapper">
+            <div class="btns left_btns">
+                <button type="button" class="prev_btn" onClick="history.back()"></button>
+                <button type="button" class="home_btn"></button>
+            </div>
+            <div class="title-04 color-txt-normal text_overflow"></div>
+            <div class="btns right_btns">
+                <!-- 클릭시 click 추가 -->
+                <button type="button" class="favorite_btn"></button>
+                <!-- 클릭시 click 추가 -->
+                <button type="button" class="alarm_btn"></button>
+                <button type="button" class="detail_btn"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- container -->
+    <div id="container">
+        <section class="section detail_box wrapper clearfix template">
+            <div class="info_box radius-xxl left color-bg-01">
+                <div class="view_top" style="background-image: url(/images/thumbnail.jpg);">
+                    <div class="view_con">
+                        <a href="#none" onclick="coverModal()" return false;>
+                            <div class="cover_img radius-xs">
+                                <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                <img src="/images/thumbnail.jpg" class="radius-xs">
+                            </div>
+                        </a>
+                        <ul class="info_box radius-xs black_opacity-30 white-always txt">
+                            <li>
+                                <p class="icon_label icon_txt radius-full white_opacity-10 title-sub-01">웹소설</p>
+                                <p class="info_txt title-01-b-long">819화</p>
+                                <p class="info_stxt title-sub-02-m txt_white_opacity-60">3화 무료</p>
+                            </li>
+                            <li>
+                                <p class="icon_label"><img src="/contents/images/icon_heart.svg"></p>
+                                <p class="info_txt title-01-b-long">2,463</p>
+                            </li>
+                            <li>
+                                <p class="icon_label"><img src="/contents/images/icon_person.svg "></p>
+                                <p class="info_txt title-01-b-long">80.8만</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="view_btns">
+                        <!-- 관심작품, 알림 클릭시 click 추가 -->
+                        <button type="button" class="button body-01" id="favoriteBtn"><span class="txt_white_opacity-60">관심작품</span></button>
+                        <button type="button" class="button body-01" id="alarmBtn"><span class="txt_white_opacity-60">알림</span></button>
+                        <button type="button" class="button body-01" id="detailBtn" onclick="location.href='/contents/details.html'"><span class="txt_white_opacity-60">작품 이용내역</span></button>
+                    </div>
+                </div>
+                <div class="view_bottom radius-xxl color-bg-01">
+                    <div class="info_wrap">
+                        <div class="info_txt">
+                            <p class="color-txt-normal title-book-05-b text_overflow2 title">작품명 들어가는 자리 최대 2줄 까지 나오고 단어로 줄바꿈되는 작품명 자리입니다.</p>
+                            <p class="writer color-txt-03 body-02 text_overflow">여기는 작가명 들어가는 자리이고 한줄에서 말줄임표로 표현되는 자리</p>
+                        </div>
+                        <p class="category_list">   
+                            <!-- 로맨스, 로판, BL, 판타지 (장르구분) -->
+                            <span class="btn-01 color-txt-02 radius-full color-bg-point-gold-01">로맨스</span>
+                            <!-- 완결, 연재, 휴재 (연재상태구분) -->
+                            <span class="btn-01 color-txt-02 radius-full color-bg-point-gray-01">완결</span>
+                            <!-- 19, 29 (성인작 수위 구분) -->
+                            <span class="btn-01 color-txt-02 radius-full color-bg-point-red-01">19</span>
+                            <!-- 월, 화, 수, 목, 금, 토, 일, 비정기, 만화 (연재웹툰 요일 구분) -->
+                            <span class="btn-01 color-txt-02 radius-full color-bg-point-purple-01">월</span>
+                            <!-- 벌써열두시?!, 정주행의맛, 이벤트, 자유연재 (프로모션 구분 1) -->
+                            <span class="btn-01 color-txt-02 radius-full color-bg-point-green-01">벌써열두시?!</span>
+                            <!-- 선물함, 리뷰무료, 핫딜, 단행본 할인, 플러스무료 (프로모션 구분 2) -->
+                            <span class="btn-01 color-txt-02 radius-full color-bg-point-yellow-01">선물함</span>
+                        </p>
+                        <!-- 뷰어로 첫화보기 버튼 -->
+                        <div class="view_button color-btn-01 bg radius-sm">
+                            <button type="button" class="button">
+                                <p class="white-always txt btn-05 title">뷰어로 첫 화 보기</p>
+                            </button>
+                        </div> 
+                        <!-- 이어보기 버튼 -->
+                        <div class="view_button color-btn-01 bg radius-sm" style="display: none;">
+                            <button type="button" class="button">
+                                <p class="white-always txt btn-05 title">이어보기</p>
+                                <p class="caption-02 txt_white_opacity-80 s_title text_overflow">회차제목영역입니다.</p>
+                            </button>
+                            <!-- 태블릿부터 나오는 버튼 -->
+                            <!-- <button type="button" class="button" id="positionBtn">
+                                <p class="title"><img src="/contents/images/icon_position_btn.svg"></p>
+                                <p class="caption-02 txt_white_opacity-80 s_title">보던 위치로</p>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="list_wrap border-top-line border-soild border color-border-01">
+                        <ul class="benefits_box info_txt">
+                            <!-- 벌써 열두시?! -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_midnight"></p>
+                                    <p class="title info plus_info">
+                                        <!-- 첫만남이용권 있을때 최초만 / 첫만남 이용권 없을때 이용권 텍스트 빼기 -->
+                                        <span class="color-txt-01 body-02">벌써열두시?! 이용권</span> 
+                                        <!-- <span class="color-btn-01 txt body-02">첫만남이용권 5장</span> -->
+                                    </p>
+                                </div>
+                                <p class="right">
+                                    <button type="button" class="button btn_03 round radius-full small label_on outlined link_btn"><span class="btn-02 color-txt-04">선물받기</span></button>
+                                    <!-- 선물받기 후 -->
+                                    <!-- <p class="title-sub-02-m color-btn-01 txt">12시간뒤 충전</p> -->
+                                </p>
+                            </li>
+                            <!-- 정주행의맛 -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_flag"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">정주행의맛 이벤트 작품</span> 
+                                        <span class="title-sub-02-b color-txt-02">0/7</span>
+                                    </p>
+                                </div>
+                                <p class="right">
+                                    <!-- 클릭시 토스트메세지 노출 -->
+                                    <button type="button" class="button" id="info"></button>
+                                </p>
+                            </li>
+                            <!-- 묶음이벤트 -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_event"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">발렌타인데이 이벤트</span> 
+                                    </p>
+                                </div>
+                                <p class="right">
+                                    <button type="button" class="button btn_03 round radius-full small label_on outlined link_btn"><span class="btn-02 color-txt-04">진행중</span></button>
+                                </p>
+                            </li>
+                            <!-- 선물함 -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_gift"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">깜짝 선물이 도착했습니다.</span> 
+                                    </p>
+                                </div>
+                                <p class="right">
+                                    <button type="button" class="button btn_03 round radius-full small label_on outlined link_btn"><span class="btn-02 color-txt-04">선물받기</span></button>
+                                </p>
+                            </li>
+                            <!-- 핫딜 -->
+                            <!-- 단행본에서는 핫딜명칭 빠짐 10% 할인 -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_deal"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">핫딜 10% 할인</span> 
+                                        <span class="color-txt-05 txt body-02">3일 남음</span>
+                                    </p>
+                                </div>
+                                <p class="right">
+                                    <button type="button" class="button btn_03 round radius-full small label_on outlined link_btn" onclick="DealModal()" return false;><span class="btn-02 color-txt-04">할인받기</span></button>
+                                </p>
+                            </li>    
+                            <!-- 플러스무료 -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_plus"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">3화 플러스무료</span> 
+                                        <span class="color-txt-05 txt body-02">23시간 남음</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <!-- 자유연재 -->
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_megaphone"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">댓글 입력시 선물소장권 추첨!</span> 
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="left">
+                                    <p class="icon" id="icon_coupon"></p>
+                                    <p class="title info">
+                                        <span class="color-txt-01 body-02">보유중인 쿠폰</span> 
+                                        <span class="color-txt-normal title-sub-02-b">112개</span>
+                                    </p>
+                                </div>
+                                <p class="right"><button type="button" class="button btn_03 round radius-full small label_on outlined link_btn"><span class="btn-02 color-txt-04">충전하기</span></button></p>
+                            </li>
+                        </ul>
+                        <ul class="available_box radius-xs color-bg-02">
+                            <li>
+                                <span class="left title color-txt-04 body-02">사용 가능 선물이용권</span>
+                                <span class="right num body-02 color-txt-02">0</span>
+                            </li>
+                            <li>
+                                <span class="left title color-txt-04 body-02">사용 가능 선물소장권</span>
+                                <span class="right num body-02 color-txt-02">0</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="content color-bg-01 radius-xxl color-bg-01 right temp_list temp_list_type">
+                <!-- 중단예정 작품일때 -->
+                <div id="StopEpisode" class="notice_sec">
+                    <p class="area color-bg-select-01 radius-sm">
+                        <span class="title title-sub-02-m color-btn-01-hover txt">다운로드 또는 소장을 해주세요! (24.05.13 중단 예정)</span>
+                        <button type="button" id="infoBtn" class="icon button"></button>
+                    </p>
+                    <div id="toolTip" class="toolTip right" style="display: block;">
+                        <button type="button" class="radius-xs color-btn-02 bg top_left">
+                            <span class="color-btn-02-txt caption-02-long txt">
+                                소장된 회차는 상시 다운로드 가능<br>
+                                상시 무료회차는 소장이 불가능<br>
+                                (단, 중단 전 다운로드 가능)
+                            </span>
+                            <p class="clear_btn"></p>
+                        </button>
+                    </div>
+                </div>
+                <!-- 중단된 작품일때-->
+                <!-- <div id="BlindEpisode" class="notice_sec">
+                    <div class="area color-bg-select-01 radius-sm">
+                        <p class="title title-01-m-long color-btn-01-hover txt">
+                            요청에 의해 중단된 작품으로<br>
+                            소장된 회차만 보실 수 있습니다. 
+                        </p>
+                    </div>
+                </div> -->
+                <!-- 블라인드 작품일때-->
+                <!-- <div id="BlindEpisode" class="notice_sec">
+                    <div class="area color-bg-select-01 radius-sm">
+                        <p class="title title-01-m-long color-btn-01-hover txt">
+                            블라인드된 작품입니다. 
+                        </p>
+                    </div>
+                </div> -->
+
+                <ul class="tab_list menu_tab large color-bg-01">
+                    <!-- 탭 이동시 최상단위로 올라가기 -->
+                    <li class="color-txt-muted btn-04"><a href="#" class="border border-soild border-bottom-line active" >첫 화 보기</a></li>
+                    <li class="color-txt-muted btn-04"><a href="#" class="border border-soild border-bottom-line" >회차</a></li>
+                    <li class="color-txt-muted btn-04"><a href="#" class="border border-soild border-bottom-line">소개</a></li>
+                    <li class="color-txt-muted btn-04"><a href="#" class="border border-soild border-bottom-line"><span class="dot color-btn-01 bg radius-full"></span>소식</a></li>
+                    <li class="color-txt-muted btn-04"><a href="#" class="border border-soild border-bottom-line" ><span class="dot color-btn-01 bg radius-full"></span>댓글</a></li>
+                </ul>
+                <div class="list">
+                    <!-- 첫화보기 -->
+                    <div class="list_1" id="FirstEpisode">
+                        <div class="view_body">
+                            <div class="area_box">
+                                <div class="contents_box wrap">
+                                    <div class="area bg viewer-white NanumBarunGothic" style="padding-left: 7%; padding-right: 7%;">
+                                        <div>
+                                            <div class="images"><img src="https://image.bookpal.co.kr/img_view_big?m=0&cd=8UfLQP%2FdDPWoRvUPegueQA%3D%3D"></div>
+                                            <div class="contents viewer-black-01 txt" style="font-size: 18px; line-height: 180%;">
+                                                "내가?"
+                                                "응."
+            
+                                                레비가 억울하다는 듯 나를 향해 눈을 크게 떴다.
+            
+                                                "나쁜 짓? 너무하네 진짜. 나 완전 착하거든??"
+                                                "근데 막 근육이랑 문신 있으니까, 꼭... 조폭 같잖아." 
+            
+                                                레비의 눈은 아까보다 더 크게 떠졌다. 정말 억울하다는 표정이었다. 그 모습이 너무 귀여워서 나도 모르게 먹던 고기를 뿜을 뻔했다.
+            
+                                                "조폭!!!!? 진짜 너무하다. 너."
+                                                "조폭이란 말도 아네?"
+                                                "나 한국 영화 많이 봤어. 한국 SLANG 많이 알아!"
+                                                "크크킄, 암튼 그래서 넌 착했다 이거지?"
+                                                "당연하지!!"
+                                                "근데 왜 그렇게 근육이랑 문신 있어? 한국에서는 그거 둘 다 있으면 조폭인데."
+            
+                                                레비는 이제 양손까지 으쓱 들어 보였다. 
+            
+                                                "미국 고등학교에서는 운동 안하고 근육 없으면 좀 LOSER 느낌 있어. 괴롭히는 애들도 있고. 그래서 운동해서 만든 거야."
+                                                "옷 그래... 그럼 타투는 왜?"
+                                                "타투는 미국에서는 음..."
+            
+                                                이건 할 말이 없는 걸까? 녀석은 다시 약간 안절부절 못하는 표정이 되었다. 와 이런 거 구경하는 거 꿀잼이구나. 나는 원래 누굴 놀리는 걸 좋아하는 편은 아니었지만, 이 녀석 놀리는 건 정말로 재미있었다.
+            
+                                                "아, 아무튼 한국보다는 이상한 거 아니야!"
+                                                "그래 알았어. 너 완전 착한걸로."
+            
+                                                레비와 나는 킥킥 웃으며 마지막으로 샤브샤브 국물을 속까지 휘저어 고기들을 건져냈다. 나는 마지막 남은 고기들 중 절반을 레비에게 건네주고 나머지는 내가 먹었다. 가만히 그것을 보고있던 레비가 웃는다.
+            
+                                                "고마워. 체리는 참 친절해."
+                                                "이 정도가?"
+                                                "응. 체리 착하고 친절해."
+            
+                                                이 정도로 점수를 받다니. 고기도 심지어 내 거가 약간 더 컸는데. 정말 이 녀석은 이 외모에 이 피지컬에 성격은 왜이리 순수한 거냐. 아니면 순수한 척인가? 내가 고단수 바람둥이에게 속고있는 건가? 알 수 없었다.
+                                                젓가락을 내려놓자마자 레비는 기지개를 켜더니 기분좋게 말했다. 
+            
+                                                "그럼 갈까? 나 오늘은 오토바이 타고 왔어!"
+                                                "엉? 오토바이?! 차는 어따두고?"
+                                                "차는 오늘 친구가 갖고갔어. 오토바이랑 차 둘다 친구랑 같이 써. 가자!"
+            
+                                                ***
+            
+                                                막상 오토바이를 앞에서 보니 약간 떨려왔다. 오토바이를 탄 적은 한 번도 없었다. 그것도 누군가의 뒤에서. 이게 과연 괜찮을까? 내가 멍하니 오토바이를 바라보기만 하고 선뜻 움직이지 않자, 레비가 갸웃거렸다.
+            
+                                                "왜?"
+                                                "아니 좀 떨려서... 무서울 거 같아."
+                                                "으응? 아냐 나 운전 잘 해. 사고난 적 한 번도 없어!"
+                                                "1년밖에 안 됐으니까 없는 거 아냐?"
+                                                "아닌데! 나 미국에서도 자동차도 오토바이도 한 번도 사고 안 났어!"
+            
+                                                끙... 뭐 꼭 사고가 문제는 아니고... 그냥 난 이런 게 무섭다 이건데. 그래도 안탈수는 없겠지?
+                                                레비가 희희낙낙 내게 헬멧을 내밀었다.
+            
+                                                "이거 나도 써야 돼?"
+                                                "응! 써야 돼. 안 쓰면 경찰 아저씨한테 혼나."
+                                                "너만 쓰는 거 아니고 나까지?"
+            
+                                                나는 영 내키지 않아 헬멧을 들고 요리조리 살펴보았다. 앞머리 망가지는 건 질색이었다.
+            
+                                                "응. 뒤에 타도 써야 돼. 자 이렇게..."
+            
+                                                나는 할 수 없이 헬멧을 썼다. 레비는 내가 헬멧 쓴 걸 보자마자 손뼉을 치며 웃었다.
+            
+                                                "와! 헬멧 써도 엄청 귀여워!"
+            
+                                                나는 헬멧 속에서 중얼거렸다.
+            
+                                                "끙... 빨리 타자 일단."
+            
+                                                ***
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 회차 -->
+                    <div class="list_2" id="EpisodeList">
+                        <div class="tit_con clearfix">
+                            <div class="left">
+                                <label class="medium toggle_btn">
+                                    <input role="switch" type="checkbox">
+                                    <span class="color-txt-05 btn-03">열람회차</span>
+                                </label>
+                                <button type="button" class="button" id="selectChoose" onclick="location.href='/contents/pick.html'"><span class="btn-03 color-btn-03-txt">선택구매</span></button>
+                            </div>
+                            <div class="right button_dot">
+                                <!-- 클릭시 click 추가-->
+                                <button type="button" class="button btn-03"><span class="color-btn-03-txt">처음부터</span></button>
+                                <button type="button" class="button btn-03 click"><span class="color-btn-03-txt">최신순</span></button>
+                            </div>
+                        </div>
+                        <div class="temp_list template_column book_list">
+                            <!-- 웹소설 회차-->
+                            <ul class="list novel_list">
+                                <li class="read bookmark">
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-05 title-tiny-02">외전</p>
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                            <p class="badges">
+                                                <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                            </p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="ic_adult sm icon_badge"><img src="/images/ic_adult.svg"></span>
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-txt-05 body-02">선물이용권 이용 제한</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="read">
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge free icon_badge sm">
+                                                    <!-- 라이트모드 -->
+                                                    <img src="/contents/images/badge_free-LightMode.svg">
+                                                    <!-- 다크모드 -->
+                                                    <!-- <img src="/contents/images/badge_free-DarkMode.svg"> -->
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                            <p class="badges">
+                                                <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                            </p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge plus_free icon_badge sm"><img src="/contents/images/badge_plusfree.svg"></span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-05 title-tiny-02">외전</p>
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge plus_free icon_badge sm"><img src="/contents/images/badge_plusfree.svg"></span>
+                                                <span class="color-txt-05 body-02">선물이용권 이용 제한</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-state-danger txt body-02">대여 - 15시간 남음</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-txt-muted txt body-02">대여기간만료</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-state-success txt body-02">소장</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N화</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- 단행본 회차-->
+                            <ul class="list novel_list">
+                                <li class="read bookmark">
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-05 title-tiny-02">외전</p>
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                            <p class="badges">
+                                                <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                            </p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="ic_adult sm icon_badge"><img src="/images/ic_adult.svg"></span>
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-txt-05 body-02">선물이용권 이용 제한</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="read">
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge free icon_badge sm">
+                                                    <!-- 라이트모드 -->
+                                                    <img src="/contents/images/badge_free-LightMode.svg">
+                                                    <!-- 다크모드 -->
+                                                    <!-- <img src="/contents/images/badge_free-DarkMode.svg"> -->
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                            <p class="badges">
+                                                <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                            </p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge plus_free icon_badge sm"><img src="/contents/images/badge_plusfree.svg"></span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-05 title-tiny-02">외전</p>
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge plus_free icon_badge sm"><img src="/contents/images/badge_plusfree.svg"></span>
+                                                <span class="color-txt-05 body-02">선물이용권 이용 제한</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-state-danger txt body-02">대여 - 15시간 남음</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-txt-muted txt body-02">대여기간만료</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-state-success txt body-02">소장</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <p class="color-txt-normal btn-04-active">N권</p>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- 웹툰/만화 회차-->
+                            <ul class="list toon_list">
+                                <li class="read bookmark">
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="ic_adult sm icon_badge"><img src="/images/ic_adult.svg"></span>
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-txt-05 body-02">선물이용권 이용 제한</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="read">
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge free icon_badge sm">
+                                                    <!-- 라이트모드 -->
+                                                    <img src="/contents/images/badge_free-LightMode.svg">
+                                                    <!-- 다크모드 -->
+                                                    <!-- <img src="/contents/images/badge_free-DarkMode.svg"> -->
+                                                </span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge plus_free icon_badge sm"><img src="/contents/images/badge_plusfree.svg"></span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="free_badge plus_free icon_badge sm"><img src="/contents/images/badge_plusfree.svg"></span>
+                                                <span class="color-txt-05 body-02">선물이용권 이용 제한</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-state-danger txt body-02">대여 - 15시간 남음</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-txt-muted txt body-02">대여기간만료</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                            <p class="other_info">
+                                                <span class="color-state-success txt body-02">소장</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="left">
+                                            <div class="cover_img radius-xs color-border-thumbnail border-line border-soild">
+                                                <img src="/contents/images/toon_thumbnail.png">
+                                                <p class="ic_bottom badges_box badges">
+                                                    <span class="ic_up sm radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="right info_txt">
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-01 title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <p class="info_vertical info">
+                                                <span class="color-txt-04 body-02">23.09.10</span>
+                                                <span class="color-txt-04 body-02">11.3MB</span>
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 소개 -->
+                    <div class="list_3" id="Introduction">
+                        <!-- 연관작품 보러가기 -->
+                        <article class="template_column temp_list related_box">
+                            <div class="tit_con">
+                                <div class="left text_overflow">
+                                    <span class="color-txt-normal title-01-b">연관작품 보러가기</span>
+                                </div>
+                            </div>
+                            <ul class="list">
+                                <li>
+                                    <a href="#">
+                                        <div class="cover_img border-soild border-right-line color-border-01 radius-xs">
+                                            <p class="ic_adult badge_adult_middle"><img src="../images/ic_adult.svg"></p>
+                                            <img src="../images/thumbnail.jpg">
+                                        </div>
+                                        <div class="info_txt spacing_08">
+                                            <div class="info">
+                                                <span class="body-01 color-txt-05">웹툰</span>
+                                                <span class="body-01 color-txt-05">로맨스</span>
+                                            </div>
+                                            <div class="list_tit_con">
+                                                <span class="title color-txt-normal title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <div class="writer body-02 color-txt-03 text_overflow">작가명</div>
+                                            <div class="info">
+                                                <span class="body-01 color-txt-05">3화무료</span>
+                                                <span class="body-01 color-txt-05">61.4만</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="cover_img border-soild border-right-line color-border-01 radius-xs">
+                                            <p class="ic_adult badge_adult_middle"><img src="../images/ic_adult.svg"></p>
+                                            <img src="../images/thumbnail.jpg">
+                                            <p class="ic_bottom badges_box">
+                                                <span class="ic_discount radius-xs discount_10 icon_badge"><img src="../images/discount_10.svg"></span>
+                                            </p>
+                                        </div>
+                                        <div class="info_txt spacing_08">
+                                            <div class="info">
+                                                <span class="body-01 color-txt-05">단행본</span>
+                                                <span class="body-01 color-txt-05">로맨스</span>
+                                            </div>
+                                            <div class="list_tit_con">
+                                                <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                <span class="title color-txt-normal title-book-03-m text_overflow">책제목입니다.</span>
+                                            </div>
+                                            <div class="writer body-02 color-txt-03 text_overflow">작가명</div>
+                                            <div class="info">
+                                                <span class="body-01 color-txt-05">3화무료</span>
+                                                <span class="body-01 color-txt-05">61.4만</span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </article>
+                        <!-- 랭킹 바로가기 // 랭킹 100위안에 드는 작품일 때만 보이게 -->
+                        <article class="ranking_box">
+                            <button type="button" class="button radius-sm color-border-01">
+                                <img src="/contents/images/medal_color.png">
+                                <span class="color-txt-02 title-01-m-long">웹소설 랭킹 100위</span>
+                            </button>
+                        </article>
+                        <!-- 키워드 -->
+                        <article class="keyword_box">
+                            <div class="tit_con">
+                                <div class="left text_overflow">
+                                    <span class="color-txt-normal title-01-b">키워드</span>
+                                </div>
+                            </div>
+                            <div class="keyword">
+                                <button type="button" onClick="location.href='keyword.html'" class="button medium radius-full border-line border-soild color-border-01 color-bg-01 label_on"><span class="color-txt-02 btn-03">#키워드</span></button>
+                                <button type="button" onClick="location.href='keyword.html'" class="button medium radius-full border-line border-soild color-border-01 color-bg-01 label_on"><span class="color-txt-02 btn-03">#키워드</span></button>
+                                <button type="button" onClick="location.href='keyword.html'" class="button medium radius-full border-line border-soild color-border-01 color-bg-01 label_on"><span class="color-txt-02 btn-03">#키워드</span></button>
+                                <button type="button" onClick="location.href='keyword.html'" class="button medium radius-full border-line border-soild color-border-01 color-bg-01 label_on"><span class="color-txt-02 btn-03">#키워드</span></button>
+                            </div>
+                        </article>
+                        <!-- 작품 소개 및 줄거리 -->
+                        <article class="introduction_box">
+                            <div class="tit_con">
+                                <div class="left text_overflow">
+                                    <span class="color-txt-normal title-01-b">작품 소개 및 줄거리</span>
+                                </div>
+                            </div>
+                            <div class="text_box gold_opacity-10 radius-lg color-border-01 border-line border-soild">
+                                <div id="inputbox">
+                                    <span class="text body-01-long color-txt-03">두둥! 어느 날 소설 속 희대의 악녀 루첼라이의 딸이 되었다. 그것도 황후를 살해하려다 실패하여 끔찍한 죽음으로 결말을 맞이하는 미래를 가진 채로! 다른 건 몰라도 죽음만큼은 막아야 한다</span>
+                                </div>
+                                <button type="button" id="moreBtn"></button>
+                            </div>      
+
+                            <script>
+                                function updateButtonVisibility() {
+                                    var textSpan = document.querySelector('#inputbox span');
+                                    var textHeight = textSpan.offsetHeight;
+                                    if (textHeight >= 19) {
+                                        $('#moreBtn').show();
+                                    } else {
+                                        $('#moreBtn').hide();
+                                    }
+                                }
+                                updateButtonVisibility();
+                                var observer = new MutationObserver(function(mutations) {
+                                    mutations.forEach(function(mutation) {
+                                        if (mutation.type === 'childList' || mutation.type === 'characterData') {
+                                            updateButtonVisibility();
+                                        }
+                                    });
+                                });
+                                var targetNode = document.getElementById('inputbox');
+                                var config = { childList: true, subtree: true, characterData: true };
+                                observer.observe(targetNode, config);
+                            </script>
+
+                        </article>
+                        <!-- 작가의 다른 작품-->
+                        <article class="other_box vertical_list template_row">
+                            <div class="tit_con">
+                                <div class="left text_overflow">
+                                    <span class="color-txt-normal title-01-b">작가의 다른 작품</span>
+                                </div>
+                                <div class="right">
+                                    <a href="author.html" class="more_btn">
+                                        <span class="color-btn-03-txt btn-03">작가소개</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- 리스트-->
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="info">
+                                                        <span class="color-txt-05 caption-02">장르</span>
+                                                        <span class="color-txt-05 caption-02">완결여부</span>
+                                                    </div>
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="info">
+                                                        <span class="color-txt-05 caption-02">장르</span>
+                                                        <span class="color-txt-05 caption-02">완결여부</span>
+                                                    </div>
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="info">
+                                                        <span class="color-txt-05 caption-02">장르</span>
+                                                        <span class="color-txt-05 caption-02">완결여부</span>
+                                                    </div>
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="info">
+                                                        <span class="color-txt-05 caption-02">장르</span>
+                                                        <span class="color-txt-05 caption-02">완결여부</span>
+                                                    </div>
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 독자들이 선택한 다음 작품 -->
+                        <article class="reader_box template_row vertical_list">
+                            <div class="tit_con">
+                                <div class="left text_overflow">
+                                    <span class="color-txt-normal title-01-b">독자들이 선택한 다음 작품!</span>
+                                </div>
+                            </div>
+                            <div class="list">
+                                <div class="swiper mySwiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- 리스트-->
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                    <div class="writer color-txt-03 body-01 text_overflow">작가명</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                    <div class="writer color-txt-03 body-01 text_overflow">작가명</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                    <div class="writer color-txt-03 body-01 text_overflow">작가명</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#">
+                                                <div class="cover_img radius-xs">
+                                                    <p class="ic_adult badge_adult_normal"><img src="/images/ic_adult.svg"></p>
+                                                    <img src="/images/thumbnail.jpg">
+                                                    <p class="ic_bottom badges_box">
+                                                        <span class="ic_midnight radius-xs icon_badge"><img src="/images/midnight_badge.svg"></span>
+                                                        <span class="ic_up radius-xs icon_badge"><img src="/images/up_badge.svg"></span>
+                                                        <span class="ic_discount radius-xs discount_10 icon_badge"><img src="/images/discount_10.svg"></span>
+                                                    </p>
+                                                </div>
+                                                <div class="info_txt spacing_04">
+                                                    <div class="title color-txt-normal title-book-02-m text_overflow2">책제목입니다.</div>
+                                                    <div class="writer color-txt-03 body-01 text_overflow">작가명</div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                        </article>
+                    </div>
+                    <!-- 소식 -->
+                    <div class="list_4 template_row" id="News">
+                        <ul class="toggle_list">
+                            <li class="color-bg-01 border-line border-soild radius-sm color-border-01">
+                                <button type="button" class="button large color-bg-01 label_on">
+                                    <p class="badge radius-full color-state-point-02 bg"><span class="white-always txt">소식</span></p>
+                                    <div class="text">
+                                        <p class="color-txt-02 title-01-m-long">‘악녀의 딸은 집착을 받고 있습니다’ 작품의 웹툰화가 결정되었습니다!</p>
+                                        <p class="date body-01 color-txt-05">24.05.13</p>
+                                    </div>
+                                 </button>
+                                <div class="txt_box color-txt-03 body-02-long border-soild border-top-line color-bg-02 color-border-01">
+                                    본인 인증이 가능한 생년월일이 포함된 신분증을 북팔 아이디와 함께 메일(bookpal@bookpal.co.kr)로 
+                                    보내주시면 인증 및 보상 지급 처리해드리도록 하겠습니다.<br><br>※인증 완료 후 해당 정보는 즉시 파기됩니다.
+                                </div>
+                            </li>
+                            <li class="color-bg-01 border-line border-soild radius-sm color-border-01">
+                                <button type="button" class="button large color-bg-01 label_on">
+                                    <p class="badge radius-full color-btn-01 bg"><span class="white-always txt">공지</span></p>
+                                    <div class="text">
+                                        <p class="color-txt-02 title-01-m-long">해외 거주자 본인 인증 방법</p>
+                                        <p class="date body-01 color-txt-05">24.05.13</p>
+                                    </div>
+                                 </button>
+                                <div class="txt_box color-txt-03 body-02-long border-soild border-top-line color-bg-02 color-border-01">
+                                    본인 인증이 가능한 생년월일이 포함된 신분증을 북팔 아이디와 함께 메일(bookpal@bookpal.co.kr)로 
+                                    보내주시면 인증 및 보상 지급 처리해드리도록 하겠습니다.<br><br>※인증 완료 후 해당 정보는 즉시 파기됩니다.
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- 리스트가 없을때 -->
+                        <!-- <p class="no_data small color-txt-04 body-02-long">아직 소식이 등록되지 않았어요.</p> -->
+                    </div>
+                    <!-- 댓글 -->
+                    <div class="list_5" id="Comment">
+                        <div class="tit_con clearfix">
+                            <div class="left">
+                                <span class="btn-03 color-btn-03-txt">전체 1,325</span>
+                            </div>
+                            <div class="right button_dot">
+                                <!-- 클릭시 button class에 click 추가-->
+                                <button type="button" class="button btn-03 click"><span class="color-btn-03-txt">좋아요순</span></button>
+                                <button type="button" class="button btn-03"><span class="color-btn-03-txt">최신순</span></button>
+                            </div>
+                        </div>
+                        <div class="temp_list">
+                            <ul class="list comment_list">
+                                <!-- 댓글 좋아요 5개 이상달렸을때 베스트뱃지  -->
+                                <li>
+                                    <div class="comment_top">
+                                        <div class="profile_box left">
+                                            <span class="profile radius-full">
+                                                <img src="/images/thumbnail.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="right comment_box">
+                                            <div class="top_con">
+                                                <div class="badge_list">
+                                                    <p class="badge best_badge color-btn-01 bg border border-soild border-line radius-full">
+                                                        <span class="white-always txt">Best</span>
+                                                    </p>
+                                                </div>
+                                                <div class="name text_overflow title-01-b-long color-txt-normal">눈송이송송송송송송송송송송</div>
+                                                <div class="date title-sub-02-m color-txt-muted">24.03.25</div>
+                                            </div>
+                                            <div class="desc color-txt-02 body-03-long">
+                                                베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨.
+                                                댓글 내용 글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                                            </div>
+                                            <div class="info">
+                                                <span class="title body-01-long color-txt-05 text_overflow">작품제목</span>
+                                                <span class="body-01-long color-txt-05">- N화</span>
+                                            </div>
+                                            <div class="btns bottom_con">
+                                                <div class="left">
+                                                    <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full" id="likeBtn">
+                                                        <span class="btn-03 color-txt-04 text">0</span>
+                                                    </button>
+                                                    <!-- 답글 버튼 -->
+                                                    <button type="button" onclick="location.href='/contents/reply.html'" class="button btn_03 medium outlined label_on round radius-full before" id="replyBtn">
+                                                        <span class="btn-03 color-txt-04 text">112</span>
+                                                    </button>
+                                                </div>
+                                                <div class="right">
+                                                    <!-- 신고/차단버튼 -->
+                                                    <button type="button" id="reportBtn" onclick="Modal()" return false;></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 작가가 선정한 댓글 뱃지 -->
+                                <li>
+                                    <div class="comment_top">
+                                        <div class="profile_box left">
+                                            <span class="profile radius-full">
+                                                <img src="/images/thumbnail.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="right comment_box">
+                                            <div class="top_con">
+                                                <div class="badge_list">
+                                                    <p class="badge love_badge color-state-point-01 bg border border-soild border-line radius-full">
+                                                        <span class="white-always txt">작가감동♥︎</span>
+                                                    </p>
+                                                </div>
+                                                <div class="name text_overflow title-01-b-long color-txt-normal">눈송이송송송송송송송송송송</div>
+                                                <div class="date title-sub-02-m color-txt-muted">24.03.25</div>
+                                            </div>
+                                            <div class="desc color-txt-02 body-03-long">
+                                                베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨.
+                                                댓글 내용 글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                                            </div>
+                                            <div class="info">
+                                                <span class="title body-01-long color-txt-05 text_overflow">작품제목</span>
+                                                <span class="body-01-long color-txt-05">- N화</span>
+                                            </div>
+                                            <div class="btns bottom_con">
+                                                <div class="left">
+                                                    <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full" id="likeBtn">
+                                                        <span class="btn-03 color-txt-04 text">0</span>
+                                                    </button>
+                                                    <!-- 답글 버튼 -->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full before" id="replyBtn">
+                                                        <span class="btn-03 color-txt-04 text">14</span>
+                                                    </button>
+                                                </div>
+                                                <div class="right">
+                                                    <!-- 신고/차단버튼 -->
+                                                    <button type="button" id="reportBtn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 내가 쓴 답글 있을때 -->
+                                <li>
+                                    <div class="comment_top">
+                                        <div class="profile_box left">
+                                            <span class="profile radius-full">
+                                                <img src="/images/thumbnail.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="right comment_box">
+                                            <div class="top_con">
+                                                <div class="badge_list">
+                                                    
+                                                </div>
+                                                <div class="name text_overflow title-01-b-long color-txt-normal">눈송이송송송송송송송송송송</div>
+                                                <div class="date title-sub-02-m color-txt-muted">24.03.25</div>
+                                            </div>
+                                            <div class="desc color-txt-02 body-03-long">
+                                                베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨.
+                                                댓글 내용 글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                                            </div>
+                                            <div class="info">
+                                                <span class="title body-01-long color-txt-05 text_overflow">작품제목</span>
+                                                <span class="body-01-long color-txt-05">- N화</span>
+                                            </div>
+                                            <div class="btns bottom_con">
+                                                <div class="left">
+                                                    <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full" id="likeBtn">
+                                                        <span class="btn-03 color-txt-04 text">0</span>
+                                                    </button>
+                                                    <!-- 내가 쓴 댓글일때 버튼 -->
+                                                    <button type="button" class="button btn_01 medium outlined label_on round radius-full after" id="replyBtn">
+                                                        <span class="btn-03 color-btn-01 text">1</span>
+                                                    </button>
+                                                </div>
+                                                <div class="right">
+                                                    <!-- 신고/차단버튼 -->
+                                                    <button type="button" id="reportBtn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 내가 좋아요 눌렀을때 -->
+                                <li>
+                                    <div class="comment_top">
+                                        <div class="profile_box left">
+                                            <span class="profile radius-full">
+                                                <img src="/images/thumbnail.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="right comment_box">
+                                            <div class="top_con">
+                                                <div class="badge_list">
+                                                </div>
+                                                <div class="name text_overflow title-01-b-long color-txt-normal">눈송이송송송송송송송송송송</div>
+                                                <div class="date title-sub-02-m color-txt-muted">24.03.25</div>
+                                            </div>
+                                            <div class="desc color-txt-02 body-03-long">
+                                                베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨.
+                                                댓글 내용 글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                                            </div>
+                                            <div class="info">
+                                                <span class="title body-01-long color-txt-05 text_overflow">작품제목</span>
+                                                <span class="body-01-long color-txt-05">- N화</span>
+                                            </div>
+                                            <div class="btns bottom_con">
+                                                <div class="left">
+                                                    <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full click" id="likeBtn">
+                                                        <span class="btn-03 color-txt-04 text">0</span>
+                                                    </button>
+                                                    <!-- 답글 버튼 -->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full before" id="replyBtn">
+                                                        <span class="btn-03 color-txt-04 text">12</span>
+                                                    </button>
+                                                </div>
+                                                <div class="right">
+                                                    <!-- 신고/차단버튼 -->
+                                                    <button type="button" id="reportBtn"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 내가 쓴 댓글일때 MY뱃지 -->
+                                <li>
+                                    <div class="comment_top">
+                                        <div class="profile_box left">
+                                            <span class="profile radius-full">
+                                                <img src="/images/thumbnail.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="right comment_box">
+                                            <div class="top_con">
+                                                <div class="badge_list">
+                                                    <p class="badge my_badge border-line border-soild border color-btn-01 radius-full">
+                                                        <span class="color-btn-01 txt">MY</span>
+                                                    </p>
+                                                </div>
+                                                <div class="name text_overflow title-01-b-long color-txt-normal">눈송이송송송송송송송송송송</div>
+                                                <div class="date title-sub-02-m color-txt-muted">24.03.25</div>
+                                            </div>
+                                            <div class="desc color-txt-02 body-03-long">
+                                                베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨.
+                                                댓글 내용 글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                                            </div>
+                                            <div class="info">
+                                                <span class="title body-01-long color-txt-05 text_overflow">작품제목</span>
+                                                <span class="body-01-long color-txt-05">- N화</span>
+                                            </div>
+                                            <div class="btns bottom_con">
+                                                <div class="left">
+                                                    <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full" id="likeBtn">
+                                                        <span class="btn-03 color-txt-04 text">0</span>
+                                                    </button>
+                                                    <!-- 답글 버튼 -->
+                                                    <button type="button" class="button btn_03 medium outlined label_on round radius-full before" id="replyBtn">
+                                                        <span class="btn-03 color-txt-04 text">답글달기</span>
+                                                    </button>
+                                                </div>
+                                                <div class="right">
+                                                    <!-- 내가 쓴 댓글일때 삭제버튼 -->
+                                                    <button type="button" id="deleteBtn">
+                                                        <span class="body-01-long color-txt-05">삭제</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 내가 차단한 이용자 글일때 -->
+                                <li>
+                                    <div class="comment_top">
+                                        <div class="profile_box left">
+                                            <span class="profile radius-full">
+                                                <img src="/images/thumbnail.jpg">
+                                            </span>
+                                        </div>
+                                        <div class="right comment_box">
+                                            <div class="top_con">
+                                                <div class="name text_overflow title-01-b-long color-txt-normal">눈송이송송송송송송송송송송</div>
+                                            </div>
+                                            <div class="desc body-03-long color-txt-muted">
+                                                내가 차단한 이용자의 글입니다. 
+                                            </div>
+                                            <div class="btns bottom_con">
+                                                <div class="left">
+
+                                                </div>
+                                                <div class="right">
+                                                    <!-- 신고/차단버튼 -->
+                                                    <button type="button" id="reportBtn">
+                                                        <span></span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- 삭제한 댓글이 있을때 -->
+                                <li>
+                                    <div class="comment_top delete_list">
+                                        <p class="color-txt-muted body-03-long">작성자가 글을 삭제하였습니다. </p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <!-- 댓글이 없을때 -->
+                            <!-- <p class="no_data small color-txt-04 body-02-long">아직 등록된 댓글이 없습니다.<br>작품 감상 후 첫 댓글을 작성해 보세요.</p> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- container -->
+
+   <!-- footer -->
+    <footer id="footer" class="wrapper">
+        <div class="area_box clearfix">
+            <div class="left">
+                <div class="info">
+                    <button type="button" class="color-txt-03 btn-03">(주) 북팔 사업자정보</button>
+                    <div class="txt_box color-txt-04 body-01-long">
+                        서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br>
+                        대표이사 : 김석환  |  사업자등록번호 : 214-88-74813  |  통신판매업신고 :
+                        <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813" target="_blank">제2022-서울영등포-1421호</a><br>
+                        개인정보관리책임자 : 최성민 <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+                    </div>
+                </div>
+                <p class="copyright btn-01 color-txt-muted">Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.</p>
+                <ul class="menu_links">
+                    <li class="color-txt-muted btn-02">
+                        <a href="/help/index.html">고객센터</a>
+                      </li>
+                      <li class="color-txt-muted btn-02">
+                        <a href="/help/terms.html">이용약관</a>
+                      </li>
+                      <li class="color-txt-muted btn-02-active">
+                        <a href="/help/terms.html">개인정보처리방침</a>
+                      </li>
+                      <li class="color-txt-muted btn-02">
+                        <a href="/help/terms.html">청소년 보호정책</a>
+                      </li>
+                </ul>
+            </div>
+            <div class="right">
+                <ul class="sns_link">
+                    <li class="color-bg-02 radius-full blog">
+                        <a href="https://blog.naver.com/bookpalbooks" target="_blank" class="button btn_03 large label_off round on radius-full"><span>블로그</span></a>
+                    </li>
+                    <li class="color-bg-02 radius-full twitter">
+                        <a href="https://twitter.com/bookpalkorea" target="_blank"  class="button btn_03 large label_off round on radius-full"><span>트위터</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+        <button type="button" class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild" >
+            <span>Top</span>
+        </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 토스트 메세지 -->
+
+    <!-- 프로모션 토스트 -->
+    <div class="toast benefit_toast black_opacity-80 bg radius-xs" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            <div class="area">
+                <p class="text color-btn-02-txt btn-03-active">프로모션명</p>
+                <p class="text color-btn-02-txt body-02-long">
+                    <span class="text_overflow">책제목입니다.</span>
+                    <span>선물소장권 999장을 받았습니다.</span>
+                </p>
+                <p class="text color-state-point-01 txt caption-02-long">유효기간 :  2024. 01. 03 23:59:59</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 텍스트 토스트 -->
+    <div class="toast message_toast black_opacity-80 bg radius-xs" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-body">
+            <div class="area">
+                <p class="text color-btn-02-txt body-02-long">Toast Message Text</p>  
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content radius-xxl color-bg-modal"> 
+                <div class="modal-body"> 
+                    <div class="title title-02-b color-txt-normal">타이틀 제목들어가는자리</div>
+                    <div class="desc color-txt-02">
+                        <p class="body-03-long">
+                            <span class="text_overflow title-book-03-m">닉네임들어가는자리입니다.</span> 님
+                        </p>
+                        <p class="body-03-long">내용들어가는자리<br>내용들어가는자리입니다.</p>
+                    </div>
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="radius-sm btn-04 txt btn_01 large label_on filled button">빨간배경 버튼</button> 
+                    <button type="button" class="radius-sm btn-04 txt btn_01 large label_on outlined button">빨간줄 버튼</button> 
+                    <button type="button" class="radius-xs btn-03 txt btn_03 medium label_on filled button" data-bs-dismiss="modal">취소</button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+    <!-- 핫딜 모달 -->
+    <div id="DealModal" class="modal black_opacity-60" tabindex="-1"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content radius-xxl color-bg-modal"> 
+                <div class="modal-body"> 
+                    <div class="title title-02-b color-txt-normal">핫딜 구매 안내</div>
+                    <!-- ‘할인받기’ 터치시 안내 모달 -->
+                    <div class="txt_box title-01-m radius-sm color-bg-select-01">
+                        <p class="title-01-m">
+                          <span class="color-txt-04">구매회차</span>
+                          <span class="color-txt-01">76개</span>
+                        </p>
+                        <p class="title-01-m color-btn-01 txt">쿠폰 38개 (50%할인)</p>
+                    </div>
+                    <div class="desc color-txt-05 body-01-long">
+                        - 기존 구매 회차는 쿠폰이 소모되지 않습니다. <br>
+                        - 할인은 일괄 구매 시에만 적용되며 자동 소장됩니다.<br>
+                        - 쿠폰으로만 구매가 가능합니다. (선물권 사용 불가)<br>
+                        - 핫딜 구매 후에는 환불이 불가합니다.
+                    </div>
+                    <!-- ‘핫딜 구매’ 터치 후 쿠폰 부족할 경우 -->
+                    <!-- <div class="desc color-txt-02">
+                        <p class="title-book-03-m">
+                          <span class="text_overflow">책제목영역입니다. 책제목영역입니다. 책제목영역입니다.</span>
+                        </p>
+                        <p class="body-03-long">
+                            전체 회차를 소장하시겠습니까?
+                        </p>
+                    </div> 
+                    <div class="txt_box title-01-m radius-sm color-bg-select-01">
+                        <p class="color-txt-01">
+                          <span class="color-txt-04">잔여쿠폰</span> 21개 ·
+                          <span class="color-txt-04">사용쿠폰</span> 38개
+                        </p>
+                        <p class="color-btn-01 txt">쿠폰이 부족합니다.</p>
+                    </div> -->
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="radius-sm btn-04 txt btn_01 large label_on filled button">빨간색 배경 버튼</button> 
+                    <button type="button" class="radius-xs btn-03 txt btn_03 medium label_on filled button" data-bs-dismiss="modal">다음에 할게요</button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+
+    <!-- 표지확대 -->
+    <div id="coverModal" class="modal black_opacity-60" tabindex="-1"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content area_box">
+                <p class="closeBtn"><button type="button" class="button" data-bs-dismiss="modal"><img src="/contents/images/coverModal_closeBtn.svg"></button></p> 
+                <img src="/images/thumbnail.jpg">
+            </div> 
+        </div> 
+    </div> 
+    <script>
+
+        let modalCover =  new bootstrap.Modal(document.getElementById('coverModal')); 
+        function coverModal () { 
+            modalCover.show(); 
+        } 
+
+        let modal =  new bootstrap.Modal(document.getElementById('Modal')); 
+        function Modal () { 
+            modal.show(); 
+        } 
+
+        let modalDeal =  new bootstrap.Modal(document.getElementById('DealModal')); 
+        function DealModal () { 
+            modalDeal.show(); 
+        } 
+    </script>
+
+</body>
+</html> 
