@@ -1,0 +1,452 @@
+#container.s_wrap {
+  margin: 0 auto;
+}
+section {
+  padding: 40px 0;
+}
+#TopHeader {
+  top: 0;
+  position: sticky;
+  left: 0;
+  z-index: 9;
+}
+#TopHeader .title_menu {
+  max-width: 420px;
+  width: 100%;
+}
+#TopHeader.title_header .title_menu .btns {
+  display: flex;
+}
+#TopHeader.title_header .title_menu .title-04 {
+  text-align: center;
+}
+.notice_box_desc {
+  padding: 0;
+}
+.infoBox {
+  margin: 80px 0;
+  text-align: center;
+}
+.infoBox img {
+  width: 128px;
+}
+.infoBox .title {
+  margin-top: 24px;
+}
+.infoBox .desc {
+  margin-top: 16px;
+}
+.infoBox .button {
+  margin-top: 16px;
+  width: 100%;
+}
+#container.s_wrap .area_box {
+  margin-bottom: 24px;
+}
+
+/*** 충전 ***/
+.charge_box {
+  padding: 0;
+}
+.charge_box .list {
+  margin-top: 0;
+}
+.charge_box .list .article:not(:first-of-type) {
+  margin-top: 24px;
+}
+.charge_box .tit_con {
+  margin-bottom: 12px;
+}
+.charge_box .tit_con .right .info_btn {
+  border: 0 none;
+}
+.charge_box .tit_con .right .info_btn::before {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(/mypage/images/icon_info_circle.svg);
+  vertical-align: middle;
+}
+.charge_box .tit_con .right .info_btn span {
+  margin: 0 3px;
+}
+.charge_box .my_box > div {
+  padding: 18px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.charge_box .my_box > div:not(:first-of-type),
+.charge_box .my_box > div .right > p:not(:first-of-type) {
+  margin-top: 8px;
+}
+.charge_box .my_box > div .left {
+  flex: 1;
+  margin-right: 16px;
+}
+.charge_box .my_box > div .right {
+  text-align: right;
+}
+.charge_box .my_box .right .number span {
+  margin-right: 2px;
+}
+.charge_box .my_box .coupon_button .button {
+  display: flex;
+  align-items: center;
+}
+.charge_box .my_box .coupon_button .button span {
+  vertical-align: middle;
+}
+.charge_box .my_box .coupon_button .button span b {
+  font-weight: bold;
+}
+.charge_box .my_box .coupon_button .button::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(/mypage/images/icon_info_circle.svg);
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.charge_box .product_list > li .button {
+  padding: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  margin-top: 8px;
+}
+.charge_box .product_list > li .button.click {
+  border-color: #ec2a38;
+  background-color: rgba(236, 42, 56, 0.05);
+}
+.DarkMode .product_list .list_box > li .button.click {
+  border-color: #ff3746;
+  background-color: rgba(236, 42, 56, 0.07);
+}
+.charge_box .product_list > li .button .left {
+  flex: 1;
+}
+.charge_box .product_list > li .button .left .coupon_num {
+  display: flex;
+  align-items: center;
+}
+.charge_box .product_list > li .button .left .coupon_num .num {
+  margin-left: 4px;
+}
+.charge_box .product_list > li .button .left .coupon_num .num.line {
+  text-decoration: line-through;
+}
+.charge_box .product_list > li .button .left .coupon_num .red_num {
+  margin-left: 8px;
+}
+.charge_box .product_list > li .button .left .coupon_num .badge_list {
+  margin-left: 2px;
+}
+.charge_box .product_list > li .button .left .coupon_add {
+  margin-top: 10px;
+}
+.charge_box .product_list > li .button .right {
+  width: 96px;
+  text-align: right;
+}
+.charge_box .check_list > li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+}
+.charge_box .check_list > li > div {
+  margin-left: 4px;
+}
+.charge_box .check_list .logo_img {
+  height: 14px;
+}
+.charge_box .check_list .logo_img img {
+  height: 100%;
+  width: auto;
+  vertical-align: top;
+}
+.charge_box .check_list .info_btn {
+  margin-left: auto;
+}
+.charge_box .check_list .info_btn button {
+  display: flex;
+}
+.charge_box .check_list .info_btn button span {
+  margin: 0 2px;
+}
+.charge_box .check_list .info_btn button::after {
+  display: inline-block;
+  content: "";
+  width: 0.75rem;
+  height: 0.75rem;
+  background-position: center;
+  background-size: contain;
+  background-size: contain;
+  background-image: url(/order/images/icon_infoBtn_red-LightMode.svg);
+}
+.DarkMode .charge_box .check_list .info_btn button::after {
+  background-image: url(/order/images/icon_infoBtn_red-DarkMode.svg);
+}
+.charge_box .list_btn {
+  text-align: center;
+  padding: 16px 0;
+}
+.charge_box .list_btn button::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/order/images/icon_pay_moreBtn_LightMode.svg);
+  vertical-align: middle;
+  transform: rotate(180deg);
+}
+.DarkMode .charge_box .list_btn button::after {
+  background-image: url(/order/images/icon_pay_moreBtn_DarkMode.svg);
+}
+.charge_box .list_btn button span {
+  margin: 0 3px;
+  vertical-align: middle;
+}
+.charge_box .list_btn button.click::after {
+  transform: rotate(0);
+}
+.charge_box .pay_list > li:nth-child(n + 4).hidden {
+  display: none;
+}
+.charge_box .regular_box {
+  padding: 16px;
+  text-align: center;
+}
+.charge_box .regular_box .desc {
+  margin-top: 8px;
+}
+.charge_box .check_event {
+  text-align: center;
+  margin-top: 24px;
+}
+.charge_box .check_event .title {
+  margin-bottom: 12px;
+}
+.charge_box .my_coupon_box {
+  margin: 24px 0;
+}
+.charge_box .my_coupon_box > div > p:not(:first-of-type) {
+  margin-top: 8px;
+}
+.charge_box .my_coupon_box .button {
+  padding: 12px 16px;
+  margin-right: 8px;
+}
+.charge_box .my_coupon_box .button span {
+  width: 62px;
+  text-align: left;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+.charge_box .my_coupon_box .button::after {
+  display: inline-block;
+  content: "";
+  width: 1.125rem;
+  height: 1.125rem;
+  vertical-align: middle;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/order/images/icon_coupon_selectBtn_gray-LightMode.svg);
+}
+.DarkMode .charge_box .my_coupon_box .button::after {
+  background-image: url(/order/images/icon_coupon_selectBtn_gray-DarkMode.svg);
+}
+.list_2 .toolTip {
+  right: 72px;
+}
+.list_3 .toolTip {
+  right: 84px;
+}
+
+/*** 해외이용자 결제안내 ***/
+.overseas_box p {
+  word-break: keep-all;
+}
+.overseas_box > div {
+  padding: 16px;
+}
+.overseas_box .title_txt .s_title {
+  margin-top: 12px;
+}
+.overseas_box .procedure_list {
+  margin-top: 24px;
+}
+.overseas_box .procedure_list > li {
+  margin-top: 12px;
+}
+.overseas_box .procedure_list > li .title {
+  position: relative;
+  padding-left: 24px;
+}
+.overseas_box .procedure_list > li .title .num {
+  position: absolute;
+  left: 4px;
+  top: 0;
+  width: 16px;
+}
+.overseas_box .procedure_list .info_txt {
+  margin-top: 4px;
+  padding-left: 24px;
+  box-sizing: border-box;
+}
+.overseas_box .procedure_list .info_txt span {
+  display: block;
+}
+.overseas_box .desc {
+  margin-top: 24px;
+}
+
+/*** 북팔 계좌이체  ***/
+.account_box .title_box {
+  padding: 16px;
+}
+.account_box .title_box .s_title {
+  margin-top: 12px;
+}
+.account_box .deposit_num {
+  margin-top: 24px;
+  padding: 12px;
+  text-align: center;
+}
+.account_box .input_box > li {
+  margin-top: 24px;
+}
+/*** 결제내역 ***/
+section {
+  padding: 40px 0;
+}
+.payBox .list_box .refund_list {
+  padding: 16px;
+  margin-top: 20px;
+}
+.payBox .list_box li:not(:first-of-type) {
+  margin-top: 20px;
+}
+.payBox .list_box li .desc {
+  margin-top: 8px;
+}
+.payBox .button_box {
+  text-align: center;
+}
+.payBox .request_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.payBox .request_box .left {
+  flex: 1;
+}
+.payBox .request_box .right .button span {
+  margin: 0 3px;
+}
+
+/*** 결제완료 ***/
+.complete_box .title {
+  text-align: center;
+}
+.complete_box .desc_box > li {
+  margin-top: 24px;
+}
+.complete_box .desc_box > li .s_desc {
+  margin-top: 8px;
+}
+.complete_box .benefits_img {
+  text-align: center;
+}
+.complete_box .benefits_img img {
+  width: 268px;
+}
+.complete_box .button_box .button {
+  width: 100%;
+}
+.complete_box .desc_tit {
+  text-align: center;
+}
+
+/* 가상계좌 */
+.virtual_account .list {
+  margin-top: 40px;
+}
+.virtual_account .list .desc_box {
+  padding: 16px;
+  box-sizing: border-box;
+  margin-top: 24px;
+}
+.virtual_account .desc_box > li:first-child {
+  margin-top: 0;
+}
+.virtual_account .desc_box > li {
+  margin-top: 20px;
+}
+
+@media (max-width: 999px) {
+  .section .tit_con,
+  .section .list {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .payBox {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .payBox .button_box {
+    margin-top: 36px;
+  }
+  .toolTip.right {
+    right: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  section {
+    padding: 20px 0;
+  }
+  .payBox .button_box button {
+    width: 100%;
+    border-radius: 8px;
+  }
+  .charge_box .list .article:not(:first-of-type) {
+    margin-top: 20px;
+  }
+  .charge_box .product_list > li .button {
+    padding: 19px 17px;
+  }
+  .charge_box .product_list > li .button .left .coupon_add {
+    margin-top: 8px;
+  }
+  #container.s_wrap .area_box {
+    padding: 24px;
+  }
+  .infoBox {
+    margin: 64px 0;
+  }
+  .complete_box .button_box .button,
+  .complete_box .desc_tit {
+    margin-bottom: 36px;
+  }
+  .complete_box .desc_tit {
+    margin-top: 0;
+  }
+  .complete_box .title {
+    margin-top: 36px;
+  }
+}

@@ -1,0 +1,11 @@
+#header .gnb>li.novel a{
+    background-image: url(/images/ic_menu_novel_click.svg)
+}
+.LightMode #header .gnb>li.novel a,
+.LightMode #Mnavigation>li.novel .icon{
+    background-image: url(/images/ic_menu_novel_click.svg);
+}
+.DarkMode #header .gnb>li.novel a,
+.DarkMode #Mnavigation>li.novel .icon{
+    background-image: url(/images/ic_menu_novel_click-DarkMode.svg);
+}

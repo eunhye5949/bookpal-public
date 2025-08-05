@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 타이틀헤더 일때 Title_Header Sub_Header 추가 -->
+  <!-- 바닥에 여백 36px 추가하고싶으면 class="Depth" 추가 -->
+  <body class="LightMode Depth Title_Header Sub_Header">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="clearfix wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+          <button type="button" class="home_btn"></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">묶음이벤트</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <!-- 섹션 -->
+      <section class="section wrapper event_temp">
+        <div class="event_header">
+          <!-- 이벤트 배너-->
+          <p class="images"><img src="/promotions/images/event.png" /></p>
+          <p class="images"><img src="/promotions/images/event.png" /></p>
+
+          <!-- 묶음이벤트 버튼-->
+          <div class="btns" style="background-color: #fefbea">
+            <!-- 선물이용권 받기 버튼-->
+            <button
+              type="button"
+              style="background-color: #ff3371"
+              class="white-always txt radius-full button"
+            >
+              <p>선물이용권 <span>N</span>장 받기!</p>
+              <img src="/promotions/images/download.svg" />
+            </button>
+
+            <!-- 받기완료 버튼-->
+            <!-- <button type="button" class="white-always txt radius-full">
+                        <p>선물이용권 받기 완료</p>
+                    </button> -->
+
+            <!-- 선착순만료 버튼-->
+            <!-- <button type="button" class="white-always txt radius-full">
+                        <p>선물소장권 선착순 만료</p>
+                    </button> -->
+
+            <!-- 이벤트 종료 버튼-->
+            <!-- <button type="button" class="white-always txt radius-full">
+                        <p>이벤트 종료</p>
+                    </button> -->
+          </div>
+        </div>
+        <div class="typeList">
+          <!-- 타이틀 -->
+          <div class="tit_text">
+            <h2 class="title title-03 color-txt-normal text_overflow">
+              타이틀들어가는 자리입니다.
+            </h2>
+          </div>
+
+          <!-- 그리드 -->
+          <div class="template temp_list temp_list_type template_row">
+            <div class="list">
+              <ul>
+                <li>
+                  <a href="/contents/index.html">
+                    <div class="cover_img radius-xs">
+                      <p class="ic_adult badge_adult_normal">
+                        <img src="/images/ic_adult.svg" />
+                      </p>
+                      <img src="/images/thumbnail.jpg" />
+                    </div>
+                    <div class="info_txt spacing_04">
+                      <div class="info">
+                        <span class="color-txt-05 caption-02">장르</span>
+                      </div>
+                      <div
+                        class="title color-txt-normal title-book-02-m text_overflow2"
+                      >
+                        책제목입니다.
+                      </div>
+                      <div class="writer color-txt-03 body-01 text_overflow">
+                        작가명
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contents/index.html">
+                    <div class="cover_img radius-xs">
+                      <p class="ic_adult badge_adult_normal">
+                        <img src="/images/ic_adult.svg" />
+                      </p>
+                      <img src="/images/thumbnail.jpg" />
+                    </div>
+                    <div class="info_txt spacing_04">
+                      <div class="info">
+                        <span class="color-txt-05 caption-02">장르</span>
+                      </div>
+                      <div
+                        class="title color-txt-normal title-book-02-m text_overflow2"
+                      >
+                        책제목입니다.
+                      </div>
+                      <div class="writer color-txt-03 body-01 text_overflow">
+                        작가명
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contents/index.html">
+                    <div class="cover_img radius-xs">
+                      <p class="ic_adult badge_adult_normal">
+                        <img src="/images/ic_adult.svg" />
+                      </p>
+                      <img src="/images/thumbnail.jpg" />
+                    </div>
+                    <div class="info_txt spacing_04">
+                      <div class="info">
+                        <span class="color-txt-05 caption-02">장르</span>
+                      </div>
+                      <div
+                        class="title color-txt-normal title-book-02-m text_overflow2"
+                      >
+                        책제목입니다.
+                      </div>
+                      <div class="writer color-txt-03 body-01 text_overflow">
+                        작가명
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contents/index.html">
+                    <div class="cover_img radius-xs">
+                      <p class="ic_adult badge_adult_normal">
+                        <img src="/images/ic_adult.svg" />
+                      </p>
+                      <img src="/images/thumbnail.jpg" />
+                    </div>
+                    <div class="info_txt spacing_04">
+                      <div class="info">
+                        <span class="color-txt-05 caption-02">장르</span>
+                      </div>
+                      <div
+                        class="title color-txt-normal title-book-02-m text_overflow2"
+                      >
+                        책제목입니다.
+                      </div>
+                      <div class="writer color-txt-03 body-01 text_overflow">
+                        작가명
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contents/index.html">
+                    <div class="cover_img radius-xs">
+                      <p class="ic_adult badge_adult_normal">
+                        <img src="/images/ic_adult.svg" />
+                      </p>
+                      <img src="/images/thumbnail.jpg" />
+                    </div>
+                    <div class="info_txt spacing_04">
+                      <div class="info">
+                        <span class="color-txt-05 caption-02">장르</span>
+                      </div>
+                      <div
+                        class="title color-txt-normal title-book-02-m text_overflow2"
+                      >
+                        책제목입니다.
+                      </div>
+                      <div class="writer color-txt-03 body-01 text_overflow">
+                        작가명
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="/contents/index.html">
+                    <div class="cover_img radius-xs">
+                      <p class="ic_adult badge_adult_normal">
+                        <img src="/images/ic_adult.svg" />
+                      </p>
+                      <img src="/images/thumbnail.jpg" />
+                    </div>
+                    <div class="info_txt spacing_04">
+                      <div class="info">
+                        <span class="color-txt-05 caption-02">장르</span>
+                      </div>
+                      <div
+                        class="title color-txt-normal title-book-02-m text_overflow2"
+                      >
+                        책제목입니다.
+                      </div>
+                      <div class="writer color-txt-03 body-01 text_overflow">
+                        작가명
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 표지 우측 -->
+          <div
+            class="template temp_list temp_list_type template_column column_right"
+          >
+            <ul class="list">
+              <li class="clearfix">
+                <a
+                  href="#"
+                  class="radius-sm border-line border-soild color-border-01"
+                >
+                  <div class="info_txt spacing_08">
+                    <div
+                      class="title color-txt-normal text_overflow title-book-05-m"
+                    >
+                      책제목입니다.
+                    </div>
+                    <div class="writer color-txt-03 text_overflow">작가명</div>
+                    <div class="desc body-03-long color-txt-05 text_overflow">
+                      웹툰 원작 소설 정주행 기회!
+                    </div>
+                    <div class="keyword color-txt-03 btn-03 text_overflow">
+                      <!-- span 태그 무조건 한줄에서 쓰기 -->
+                      <span>#키워드</span><span>#키워드</span
+                      ><span>#키워드입니다~</span><span>#키워드</span
+                      ><span>#키워드 들어가는자리</span
+                      ><span>#키워드입니다~</span>
+                    </div>
+                  </div>
+                  <div
+                    class="cover_img border-soild border-left-line color-border-01"
+                  >
+                    <p class="ic_adult badge_adult_normal">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                  </div>
+                </a>
+              </li>
+              <li class="clearfix">
+                <a
+                  href="#"
+                  class="radius-sm border-line border-soild color-border-01"
+                >
+                  <div class="info_txt spacing_08">
+                    <div
+                      class="title color-txt-normal text_overflow title-book-05-m"
+                    >
+                      책제목입니다.
+                    </div>
+                    <div class="writer color-txt-03 text_overflow">작가명</div>
+                    <div class="desc body-03-long color-txt-05 text_overflow">
+                      웹툰 원작 소설 정주행 기회!
+                    </div>
+                    <div class="keyword color-txt-03 btn-03 text_overflow">
+                      <!-- span 태그 무조건 한줄에서 쓰기 -->
+                      <span>#키워드</span><span>#키워드</span
+                      ><span>#키워드입니다~</span><span>#키워드</span
+                      ><span>#키워드 들어가는자리</span
+                      ><span>#키워드입니다~</span>
+                    </div>
+                  </div>
+                  <div
+                    class="cover_img border-soild border-left-line color-border-01"
+                  >
+                    <p class="ic_adult badge_adult_normal">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 표지 좌측 -->
+          <div
+            class="template temp_list temp_list_type template_column column_left"
+          >
+            <ul class="list">
+              <li class="clearfix">
+                <a
+                  href="#"
+                  class="radius-sm border-line border-soild color-border-01"
+                >
+                  <div
+                    class="cover_img border-soild border-right-line color-border-01"
+                  >
+                    <p class="ic_adult badge_adult_normal">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                  </div>
+                  <div class="info_txt spacing_08">
+                    <div
+                      class="title color-txt-normal text_overflow title-book-05-m"
+                    >
+                      책제목입니다.
+                    </div>
+                    <div class="writer color-txt-03 text_overflow">작가명</div>
+                    <div class="desc body-03-long color-txt-05 text_overflow">
+                      웹툰 원작 소설 정주행 기회!
+                    </div>
+                    <div class="keyword color-txt-03 btn-03 text_overflow">
+                      <!-- span 태그 무조건 한줄에서 쓰기 -->
+                      <span>#키워드</span><span>#키워드</span
+                      ><span>#키워드입니다~</span><span>#키워드</span
+                      ><span>#키워드 들어가는자리</span
+                      ><span>#키워드입니다~</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="clearfix">
+                <a
+                  href="#"
+                  class="radius-sm border-line border-soild color-border-01"
+                >
+                  <div
+                    class="cover_img border-soild border-right-line color-border-01"
+                  >
+                    <p class="ic_adult badge_adult_normal">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                  </div>
+                  <div class="info_txt spacing_08">
+                    <div
+                      class="title color-txt-normal text_overflow title-book-05-m"
+                    >
+                      책제목입니다.
+                    </div>
+                    <div class="writer color-txt-03 text_overflow">작가명</div>
+                    <div class="desc body-03-long color-txt-05 text_overflow">
+                      웹툰 원작 소설 정주행 기회!
+                    </div>
+                    <div class="keyword color-txt-03 btn-03 text_overflow">
+                      <!-- span 태그 무조건 한줄에서 쓰기 -->
+                      <span>#키워드</span><span>#키워드</span
+                      ><span>#키워드입니다~</span><span>#키워드</span
+                      ><span>#키워드 들어가는자리</span
+                      ><span>#키워드입니다~</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 공지사항 -->
+          <div class="notice_box color-bg-02">
+            <h3 class="title color-txt-04 title-02-b-long">확인해주세요!</h3>
+            <ul class="desc">
+              <li class="color-txt-05 body-04-long">첫번째 규정입니다.</li>
+              <li class="color-txt-05 body-04-long">두번째 규정입니다.</li>
+              <li class="color-txt-05 body-04-long">세번째 규정입니다.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box clearfix">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!--  모달 -->
+    <div id="myModal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="desc color-txt-02 body-03-long">
+              작품 감상을 위해<br />성인 인증이 필요합니다.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="bg btn-04 radius-sm btn_01 large label_on filled button"
+            >
+              성인 인증
+            </button>
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              다음에 할게요.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("myModal"));
+      function showModal() {
+        modal.show();
+      }
+    </script>
+  </body>
+</html>

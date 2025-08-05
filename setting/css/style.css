@@ -1,0 +1,103 @@
+#container .section{
+    margin-top: 40px;
+}
+.button_box{
+    margin-top: 12px
+}
+.button_box .button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px 20px;
+}
+.button_box .button .left{
+    flex: 1;
+    text-align: left;
+}
+.button_box .button .right{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.button_box .button .right .icon{
+    width: 1.125rem;
+    height: 1.125rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url(/setting/images/icon_next_gray-LightMode.svg);
+    margin-left: 8px;
+
+}
+.DarkMode .button_box .button .right .icon{
+    background-image: url(/setting/images/icon_next_gray-DarkMode.svg);
+}
+.button_box .button .right .mode_txt{
+    margin-left: 4px
+}
+
+/*** 기기등록관리 ***/
+.device_box .top_con{
+    height: 30px
+}
+.device_box .add_btn{
+    margin-top: 16px;
+    text-align: center;
+}
+.device_box .my_device>li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px 24px;
+    margin-top: 8px
+}
+.device_box .my_device>li .left{
+    flex: 1
+}
+.device_box .my_device>li .left .date{
+    margin-top: 6px
+}
+.device_box .my_device>li .right span{
+    vertical-align: middle;
+}
+.device_box .add_btn button::before{
+    display: inline-block;
+    content: '';
+    width: 1.25rem;
+    height: 1.25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(/setting/images/icon_addBtn_gray-LightMode.svg);
+    vertical-align: middle;
+}
+.device_box .add_btn button span{
+    margin: 0 3px;
+    vertical-align: middle;
+}
+.DarkMode .device_box .add_btn button::before{
+    background-image: url(/setting/images/icon_addBtn_gray-DarkMode.svg);
+}
+
+@media (max-width: 999px) {
+
+    #container section{
+        margin-top: 20px;
+        padding-left: 12px;
+        padding-right: 12px
+    }
+    #container .section:first-child{
+        margin-top: 0
+    }
+    #container .section{
+        margin-top: 36px;
+    }
+    .section .tit_con,
+    .section .top_con, 
+    .section .list{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+}

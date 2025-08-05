@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title></title>
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/re.bootstrap.css" rel="stylesheet">
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <link href="/css/guid.css" rel="stylesheet">
+    <link href="/css/content.css" rel="stylesheet">
+
+    <link href="/css/mediaquery.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>history.scrollRestoration = "manual"</script>
+    
+</head>
+
+<!-- fixed_button 하단 고정일때 class="fixed" 추가-->
+<body class="LightMode fixed">
+
+    <!-- 충전 헤더 -->
+    <div id="TopHeader" class="color-bg-01 title_header">
+        <div class="title_menu wrapper">
+            <div class="btns left_btns"></div>
+            <div class="title-04 color-txt-normal text_overflow">북팔 계좌이체</div>
+            <div class="btns right_btns">
+                <button type="button" class="close_btn" onclick='window.close();'></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="container" class="s_wrap wrapper">
+        <section class="account_box area_box">
+            <div class="title_box radius-sm color-bg-02">
+                <div class="title_txt">
+                    <p class="title title-01-b-long color-txt-01">계좌이체는 자동으로 처리가 불가하여<br>쿠폰지급이 늦을 수 있습니다. </p>
+                    <p class="s_title body-03-long color-txt-01">빠른 처리를 원하시면<br>신용카드 등 <span class="color-btn-01 txt">다른 결제 방법</span>을 이용해주세요. </p>
+                </div>
+            </div>
+            <div class="section">
+                <div class="tit_con">
+                    <h2 class="title left text_overflow title-01-b color-txt-normal">계좌이체 정보 입력</h2>
+                </div>
+                <ul class="input_box">
+                    <li>
+                        <p class="input_txt body-01 color-txt-01">이름</p>
+                        <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                            <input type="text" placeholder="입금자명 입력" class="color-txt-normal body-03">
+                            <p class="right_btns">
+                                <span class="btnClear"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="input_txt body-01 color-txt-01">연락처</p>
+                        <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                            <input type="text" placeholder="-자리 제외 연락처 입력" class="color-txt-normal body-03">
+                            <p class="right_btns">
+                                <span class="btnClear"></span>
+                            </p>
+                        </div>
+                    </li>
+                    <li>
+                        <p class="input_txt body-01 color-txt-01">입금은행</p>
+                        <div class="select_box text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                            <button type="button" onclick="selectModal()" return false>
+                                <span class="body-03 color-txt-muted">입금은행 선택</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+                
+            </div>
+            <div class="section">
+                <div class="tit_con">
+                    <h2 class="title left text_overflow title-01-b color-txt-normal">북팔 입금 계좌</h2>
+                </div>
+                <!-- 클릭시 클립보드 복사 -->
+                <div class="deposit_num color-bg-select-01 radius-sm">
+                    <p class="color-txt-01 title-sub-02-b">국민은행 : 423701-01-132478 (주)북팔</p>
+                </div>
+            </div>
+            <div class="notice_box_desc section">
+                <p class="title title-02-b color-txt-04">안내</p>
+                <ul class="desc_list body-02-long color-txt-05">
+                    <li>입금 처리시간 : 10:00, 14:00, 17:00 (주말 및 공휴일 : 12:00 ~ 13:00)</li>
+                    <li>등록 후 3일 이내에 계좌이체를 하시지 않으시면 신청 목록에서 제외됩니다.</li>
+                    <li>입금자명과 신청자명이 같지 않을 경우, 본인확인 전까지 쿠폰이 지급되지 않습니다. 꼭 동일하게 작성해 주세요.</li>
+                </ul>
+            </div>
+            <div class="fixed_button">
+                <!-- 비활성화시 disabled 추가-->
+                <button type="button" class="button btn_01 filled btn-05 white-always txt" disabled>신청하기</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- select 모달 -->
+    <div id="selectModal" class="select_modal modal black_opacity-60" tabindex="-1"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content radius-xxl color-bg-modal"> 
+                <div class="modal-body"> 
+                    <div class="scroll_box select_box">
+                        <!-- 클릭시 click 추가-->
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">국민은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">카카오뱅크</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">토스뱅크</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">케이뱅크</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">기업은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">신한은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">우리은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">하나은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">농협은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">우체국</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">한국씨티</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">SC은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">새마을금고</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">산업은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">신협은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">전북은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">제주은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">경남은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">광주은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">대구은행</a></p>
+                        <p class="radius-sm color-bg-modal color-txt-normal body-02"><a href="#">부산은행</a></p>
+                    </div>
+                </div> 
+                <div class="modal-footer"> 
+                    <button type="button" class="radius-xs btn-03 txt btn_03 medium label_on filled button" data-bs-dismiss="modal">취소</button> 
+                </div> 
+            </div> 
+        </div> 
+    </div> 
+    <script> 
+        let modal =  new bootstrap.Modal(document.getElementById('selectModal')); 
+        function selectModal () { 
+            modal .show(); 
+        } 
+    </script> 
+
+
+</body>
+
+</html>

@@ -1,0 +1,11 @@
+#header .gnb>li.toon a{
+    background-image: url(/images/ic_menu_webtoon_click.svg)
+} 
+.LightMode #header .gnb>li.toon a,
+.LightMode #Mnavigation>li.toon .icon{
+    background-image: url(/images/ic_menu_webtoon_click.svg);
+}
+.DarkMode #header .gnb>li.toon a,
+.DarkMode #Mnavigation>li.toon .icon{
+    background-image: url(/images/ic_menu_webtoon_click-DarkMode.svg);
+}

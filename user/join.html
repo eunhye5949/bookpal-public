@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 모바일헤더 일때 M_Header 추가 -->
+  <body class="LightMode M_Header">
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">회원가입</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container" class="s_wrap wrapper">
+      <section class="join_box">
+        <p class="title color-txt-normal title-04">회원가입</p>
+        <div
+          class="area_box color-bg-01 radius-lg color-border-01 border-soild border-line"
+        >
+          <div class="logo_title">
+            <p class="logo"></p>
+            <p class="body-01 color-txt-muted label_txt">
+              당신의 상상이 이야기가 되는 곳
+            </p>
+          </div>
+          <ul class="input_box">
+            <!-- 잘못되었을때 error_text 추가 -->
+            <li class="error_text">
+              <p class="input_txt body-01 color-txt-01">아이디</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="text"
+                  placeholder="5글자 이상의 문자 및 숫자 "
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                  <span class="Error"></span>
+                </p>
+              </div>
+              <p class="bottom_txt caption-02 color-txt-05">
+                아이디를 입력해주세요.
+              </p>
+              <!-- <p class="bottom_txt caption-02 color-txt-05">5글자 이상, 30자리 미만의 영문/숫자로 입력해주세요.</p> -->
+              <!-- <p class="bottom_txt caption-02 color-txt-05">아이디가 중복되었어요.</p> -->
+            </li>
+            <li>
+              <p class="input_txt body-01 color-txt-01">닉네임</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="text"
+                  placeholder="2글자 이상"
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                  <span class="Error"></span>
+                </p>
+              </div>
+              <p class="bottom_txt caption-02 color-txt-05">
+                닉네임이 중복되었어요.
+              </p>
+            </li>
+            <li class="">
+              <p class="input_txt body-01 color-txt-01">비밀번호</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="password"
+                  placeholder="8~16자리 문자 및 숫자"
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                  <span class="Error"></span>
+                </p>
+              </div>
+              <p class="bottom_txt caption-02 color-txt-05">
+                비밀번호는 8~16자를 입력해주세요.
+              </p>
+            </li>
+            <li class="">
+              <p class="input_txt body-01 color-txt-01">비밀번호 확인</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="password"
+                  placeholder="재입력"
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                  <span class="Error"></span>
+                </p>
+              </div>
+              <p class="bottom_txt caption-02 color-txt-05">
+                비밀번호가 일치하지 않습니다.
+              </p>
+            </li>
+            <li class="">
+              <p class="input_txt body-01 color-txt-01">이메일</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="email"
+                  placeholder="사용중인 이메일 주소를 입력해주세요."
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                  <span class="Error"></span>
+                </p>
+              </div>
+              <p class="bottom_txt caption-02 color-txt-05">
+                이메일 형식이 잘못되었어요.
+              </p>
+            </li>
+          </ul>
+          <div class="check_event">
+            <label
+              for="agree"
+              class="checkbox_round check-type-01 medium label_on"
+            >
+              <input type="checkbox" id="agree" />
+              <span class="box"></span>
+              <span class="txt color-txt-04">모두 동의</span>
+            </label>
+            <ul class="check_list">
+              <li>
+                <label for="a1" class="check check-type-01 small label_on">
+                  <input type="checkbox" id="a1" />
+                  <span class="box"></span>
+                  <span class="txt color-txt-04">14세 이상입니다. (필수)</span>
+                </label>
+              </li>
+              <li>
+                <label for="a2" class="check check-type-01 small label_on">
+                  <input type="checkbox" id="a2" />
+                  <span class="box"></span>
+                  <span class="txt color-txt-04"
+                    >서비스 이용약관 동의 (필수)</span
+                  >
+                </label>
+                <button
+                  type="button"
+                  class="button btn-03 color-btn-03-txt"
+                  onclick="Modal()"
+                  return
+                  false;
+                >
+                  <span>보기</span>
+                </button>
+              </li>
+              <li>
+                <label for="a3" class="check check-type-01 small label_on">
+                  <input type="checkbox" id="a3" />
+                  <span class="box"></span>
+                  <span class="txt color-txt-04"
+                    >유료 이용약관 동의 (필수)</span
+                  >
+                </label>
+                <button
+                  type="button"
+                  class="button btn-03 color-btn-03-txt"
+                  onclick="Modal()"
+                  return
+                  false;
+                >
+                  <span>보기</span>
+                </button>
+              </li>
+              <li>
+                <label for="a4" class="check check-type-01 small label_on">
+                  <input type="checkbox" id="a4" />
+                  <span class="box"></span>
+                  <span class="txt color-txt-04"
+                    >개인정보 수집 및 이용 동의 (필수)</span
+                  >
+                </label>
+                <button
+                  type="button"
+                  class="button btn-03 color-btn-03-txt"
+                  onclick="Modal2()"
+                  return
+                  false;
+                >
+                  <span>보기</span>
+                </button>
+              </li>
+              <li>
+                <label for="a5" class="check check-type-01 small label_on">
+                  <input type="checkbox" id="a5" />
+                  <span class="box"></span>
+                  <span class="txt color-txt-04"
+                    >이벤트, 혜택 알림 수신 동의 (선택)</span
+                  >
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="fixed_button">
+            <!-- 정상적 입력값 모두 입력상태 disabled="disabled" 제거 -->
+            <button
+              type="button"
+              class="button btn_01 filled btn-05 white-always txt"
+              disabled="disabled"
+            >
+              회원가입하기
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- 이용약관 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered large">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-header">
+            <div class="title_menu">
+              <div class="title title-03 color-txt-normal text_overflow">
+                이용약관 동의
+              </div>
+              <button
+                type="button"
+                class="close_btn"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="scroll_box area_box">
+              관리자에서 들어오는 내용~~ 관리자에서 들어오는 내용~~ 관리자에서
+              들어오는 내용~~ 관리자에서 들어오는 내용~~
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 개인정보 수집 및 이용동의 모달 -->
+    <div id="Modal2" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered large">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-header">
+            <div class="title_menu">
+              <div class="title title-03 color-txt-normal text_overflow">
+                개인정보 수집 및 이용동의
+              </div>
+              <button
+                type="button"
+                class="close_btn"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="area_box scroll_box">
+              <table
+                class="table_box color-border-01 border-top-line border-soild"
+              >
+                <thead class="thead color-bg-02 color-txt-01 title-sub-02-b">
+                  <tr>
+                    <th>수집목적</th>
+                    <th>수집항목</th>
+                    <th>보유기간</th>
+                  </tr>
+                </thead>
+                <tbody class="tbody">
+                  <tr
+                    class="color-border-01 border-top-line border-bottom-line border-soild body-01-long color-txt-03"
+                  >
+                    <td>회원가입 및 로그인</td>
+                    <td rowspan="3">
+                      아이디, 비밀번호, 별명(닉네임), 이메일, 휴대전화번호,
+                      디바이스번호(모바일기기정보)
+                    </td>
+                    <td rowspan="3">
+                      부정이용 방지 보존 목적으로 1년 보관 후 파기
+                    </td>
+                  </tr>
+                  <tr
+                    class="color-border-01 border-top-line border-bottom-line border-soild body-01-long color-txt-03"
+                  >
+                    <td>본인의사 확인 및 고객상담 처리</td>
+                  </tr>
+                  <tr
+                    class="color-border-01 border-top-line border-bottom-line border-soild body-01-long color-txt-03"
+                  >
+                    <td>부정이용 방지, 비인가 사용방지 및 서비스 제공</td>
+                  </tr>
+                  <tr
+                    class="color-border-01 border-top-line border-bottom-line border-soild body-01-long color-txt-03"
+                  >
+                    <td>콘텐츠 결제 확인 및 환불 처리</td>
+                    <td>휴대전화번호, 신용카드번호, 은행계좌번호 등</td>
+                    <td>관련법령에 의해 5년 보관 후 파기</td>
+                  </tr>
+                  <tr
+                    class="color-border-01 border-top-line border-bottom-line border-soild body-01-long color-txt-03"
+                  >
+                    <td>개인화된 맞춤추천 기능 제공 목적</td>
+                    <td>
+                      단말기 모델, 하드웨어 ID, 운영체제 버전정보, 서점 및
+                      애플리케이션 이용 정보
+                    </td>
+                    <td>
+                      회원탈퇴 시 부정이용 방지 보존 목적으로 5년 보관 후 파기
+                    </td>
+                  </tr>
+                  <tr
+                    class="color-border-01 border-top-line border-bottom-line border-soild body-01-long color-txt-03"
+                  >
+                    <td>서비스 방문 통계 처리 및 부정이용 방지 목적</td>
+                    <td>
+                      IP주소, 쿠키, 접속로그, 결제기록, 서비스 이용 기록,
+                      불량이용 기록
+                    </td>
+                    <td>관련법령에 의해 3개월 보관 후 파기</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="terms_txt body-02-long color-txt-01">
+                이용자는 개인정보의 수집 및 이용 동의를 거부할 수 있습니다. 단,
+                회원가입 시 수집하는 최소한의 개인정보, 즉 필수 항목에 대한 수집
+                및 이용 동의를 거부하실 경우, 회원가입이 제한됩니다.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("Modal"));
+      function Modal() {
+        modal.show();
+      }
+      let modal2 = new bootstrap.Modal(document.getElementById("Modal2"));
+      function Modal2() {
+        modal2.show();
+      }
+    </script>
+  </body>
+</html>

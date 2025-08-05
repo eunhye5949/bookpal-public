@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/re.bootstrap.css" rel="stylesheet">
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <link href="/css/guid.css" rel="stylesheet">
+    <link href="/css/content.css" rel="stylesheet">
+    <link href="/css/mediaquery.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>history.scrollRestoration = "manual"</script>
+
+</head>
+
+<!-- 모바일헤더 일때 M_Header 추가 --> 
+<body class="LightMode M_Header">
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+        <div class="title_menu wrapper">
+            <div class="btns left_btns">
+                <button type="button" class="prev_btn" onClick="history.back()"></button>
+            </div>
+            <div class="title-04 color-txt-normal text_overflow">비밀번호 확인</div>
+            <div class="btns right_btns">
+            </div>
+        </div>
+    </div>
+    <!-- //서브메뉴 --> 
+    
+    <!-- container -->
+    <div id="container" class="s_wrap wrapper">
+        <section class="comfirm_box">
+            <p class="title color-txt-normal title-04">비밀번호 확인</p>
+            <div class="area_box color-bg-01 radius-lg color-border-01 border-soild border-line">
+                <div class="logo_title">
+                    <p class="logo"></p>
+                    <p class="body-01 color-txt-muted label_txt">당신의 상상이 이야기가 되는 곳</p>
+                </div>
+                <div class="text_box body-03-long color-txt-normal">
+                    개인정보 보호를 위해 비밀번호 <br>확인 후 이용하실 수 있습니다. 
+                </div>
+                <ul class="input_box">
+                    <!-- 입력한 이메일이 유효한 값이 아닐 경우 error_text 추가 -->
+                    <li class="">
+                        <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                            <input type="password" placeholder="비밀번호를 입력해주세요." class="color-txt-normal body-03">
+                            <p class="right_btns">
+                                <span class="btnClear"></span>
+                                <span class="Error"></span>
+                            </p>
+                        </div>
+                        <p class="bottom_txt caption-02 color-txt-05">비밀번호가 일치하지 않습니다.</p>
+                    </li>
+                </ul>
+                <div class="button_box">
+                    <!-- 비활성화일땐  disabled='disabled' -->
+                    <button type="button" class="radius-sm btn-04 txt btn_01 large label_on filled button" disabled='disabled'>확인</button> 
+                    <button type="button" class="radius-sm btn-04 txt btn_01 large label_on outlined button">취소</button> 
+                </div>
+                <div class="find_pw_box"> 
+                    <p class="color-txt-05 title-book-02-m">비밀번호가 생각나지 않는다면?</p>
+                    <button type="button" onclick="location.href='/user/findPw.html' " class="button color-txt-05 title-book-02-m">비밀번호 찾기</button>
+                </div>
+            </div>        
+        </section>
+    </div>
+    <!-- container -->
+
+</body>
+</html>

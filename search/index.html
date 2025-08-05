@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 타이틀헤더 일때 Title_Header Sub_Header 추가 -->
+  <!-- 바닥에 여백 36px 추가하고싶으면 class="Depth" 추가 -->
+  <body class="LightMode Depth Title_Header Sub_Header">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="clearfix wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+          <button type="button" class="home_btn"></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">검색</div>
+        <div class="btns right_btns">
+          <button type="button"></button>
+        </div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <section class="section search_box wrapper">
+        <!-- 키워드검색시에서 keyword_box 추가 -->
+        <div class="area_box">
+          <div class="search_text color-bg-02 radius-full input_box">
+            <div class="text_input">
+              <input
+                type="text"
+                class="text_box body-03 color-txt-normal"
+                placeholder="검색어를 입력하세요."
+              />
+              <p class="right_btns">
+                <span class="btnClear"></span>
+              </p>
+              <button
+                type="button"
+                class="keyword_text radius-full color-bg-01 color-btn-01 border border-line border-soild"
+              >
+                <span class="color-btn-01 txt btn-03 text_overflow"
+                  >키워드</span
+                >
+                <span class="close_btn"></span>
+              </button>
+            </div>
+          </div>
+          <div class="right_button">
+            <button
+              type="button"
+              class="button color-btn-01 bg radius-full search_button"
+            >
+              <img src="./images/search_white.svg" />
+            </button>
+            <button
+              type="button"
+              onclick="Modal()"
+              class="button color-btn-01 bg radius-full keyword_btn"
+            >
+              <img src="./images/hash_white.svg" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 검색시 나오기 전 화면 -->
+      <section class="section recent_search wrapper s_wrap">
+        <div class="tit_con clearfix">
+          <h2 class="title left color-txt-normal title-02-b text_overflow">
+            최근 검색어
+          </h2>
+          <div class="right">
+            <a href="#"
+              ><span class="color-btn-03-txt btn-03">전체 삭제</span></a
+            >
+            <a href="#"
+              ><span class="color-btn-03-txt btn-03">저장 기능 끄기</span></a
+            >
+          </div>
+        </div>
+        <div class="searh_box swiper mySwiper list">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide radius-full color-border-01 border-line border-soild"
+            >
+              <a href="#none"
+                ><span class="color-txt-02 btn-04 text_overflow"
+                  >영웅은 몸으로 구한다</span
+                ></a
+              >
+              <button type="button" class="close_btn"><span></span></button>
+            </div>
+            <div
+              class="swiper-slide radius-full color-border-01 border-line border-soild"
+            >
+              <a href="#none"
+                ><span class="color-txt-02 btn-04 text_overflow">쩐퀸</span></a
+              >
+              <button type="button" class="close_btn"><span></span></button>
+            </div>
+            <div
+              class="swiper-slide radius-full color-border-01 border-line border-soild"
+            >
+              <a href="#none"
+                ><span class="color-txt-02 btn-04 text_overflow"
+                  >내남편과결혼해줘</span
+                ></a
+              >
+              <button type="button" class="close_btn"><span></span></button>
+            </div>
+            <div
+              class="swiper-slide radius-full color-border-01 border-line border-soild"
+            >
+              <a href="#none"
+                ><span class="color-txt-02 btn-04 text_overflow"
+                  >내남편과결혼해줘</span
+                ></a
+              >
+              <button type="button" class="close_btn"><span></span></button>
+            </div>
+          </div>
+        </div>
+        <!-- <p class="no_data small color-txt-04 body-02-long">최근 검색어가 없습니다.</p> -->
+      </section>
+      <section class="section popular_search wrapper s_wrap">
+        <div class="tit_con clearfix">
+          <h2 class="title left color-txt-normal title-02-b text_overflow">
+            인기 검색 키워드
+          </h2>
+        </div>
+        <ol class="list">
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-01 bg">
+                <span class="color-txt-strong-reverse">1</span>
+              </p>
+              <p class="text btn-04 color-txt-normal">#고수위</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-01 bg">
+                <span class="color-txt-strong-reverse">2</span>
+              </p>
+              <p class="text btn-04 color-txt-normal">#집착공</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-01 bg">
+                <span class="color-txt-strong-reverse">3</span>
+              </p>
+              <p class="text btn-04 color-txt-normal text_overflow">#후회남</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-01 bg">
+                <span class="color-txt-strong-reverse">4</span>
+              </p>
+              <p class="text btn-04 color-txt-normal text_overflow">#소요욕</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-02 bg">
+                <span class="color-txt-strong-reverse">5</span>
+              </p>
+              <p class="text btn-04 color-btn-03-txt text_overflow">#첫사랑</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-02 bg">
+                <span class="color-txt-strong-reverse">6</span>
+              </p>
+              <p class="text btn-04 color-btn-03-txt text_overflow">
+                #로맨스판타지
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-02 bg">
+                <span class="color-txt-strong-reverse">7</span>
+              </p>
+              <p class="text btn-04 color-btn-03-txt text_overflow">
+                #계약결혼
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-02 bg">
+                <span class="color-txt-strong-reverse">8</span>
+              </p>
+              <p class="text btn-04 color-btn-03-txt text_overflow">#절륜남</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-02 bg">
+                <span class="color-txt-strong-reverse">9</span>
+              </p>
+              <p class="text btn-04 color-btn-03-txt text_overflow">
+                #현대로맨스
+              </p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <p class="num radius-full color-btn-02 bg">
+                <span class="color-txt-strong-reverse">10</span>
+              </p>
+              <p class="text btn-04 color-btn-03-txt text_overflow">#시대물</p>
+            </a>
+          </li>
+        </ol>
+      </section>
+      <section class="section wrapper s_wrap keyword_area">
+        <button
+          type="button"
+          onclick="Modal()"
+          class="keyword_search_btn button btn_03 label_on large outlined round radius-full"
+        >
+          <span class="btn-04 color-txt-04">키워드 검색하기</span>
+        </button>
+      </section>
+
+      <!-- 검색 시 나오는 화면 -->
+      <section
+        class="section template wrapper temp_list temp_list_type template_column"
+        style="display: none"
+      >
+        <ul class="tab_list menu_tab large">
+          <li class="color-txt-muted btn-04">
+            <a href="#" class="border border-soild border-bottom-line">전체</a>
+          </li>
+          <li class="color-txt-muted btn-04">
+            <a href="#" class="border border-soild border-bottom-line"
+              >웹소설</a
+            >
+          </li>
+          <li class="color-txt-muted btn-04">
+            <a href="#" class="border border-soild border-bottom-line">웹툰</a>
+          </li>
+          <li class="color-txt-muted btn-04">
+            <a href="#" class="border border-soild border-bottom-line"
+              >단행본</a
+            >
+          </li>
+        </ul>
+        <div class="tit_con clearfix">
+          <div class="left">
+            <label class="medium toggle_btn">
+              <input role="switch" type="checkbox" />
+              <span class="color-txt-05 btn-03">완결</span>
+            </label>
+          </div>
+          <div class="right">
+            <span class="color-btn-03-txt btn-03">검색결과 (16)</span>
+          </div>
+        </div>
+        <div class="list">
+          <div class="list_1">
+            <ul>
+              <!-- 리스트 -->
+              <li class="clearfix">
+                <a href="#">
+                  <div class="cover_img radius-xs">
+                    <p class="ic_adult badge_adult_middle">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                    <p class="ic_bottom badges_box">
+                      <span class="ic_midnight radius-xs icon_badge"
+                        ><img src="../images/midnight_badge.svg"
+                      /></span>
+                      <span class="ic_discount radius-xs discount_10 icon_badge"
+                        ><img src="../images/discount_10.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="info_txt spacing_08">
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">웹소설</span>
+                      <span class="free body-01 color-txt-05">로맨스</span>
+                      <span class="free body-01 color-txt-05">완결</span>
+                    </div>
+                    <div class="list_tit_con">
+                      <span class="ic_up radius-xs icon_badge"
+                        ><img src="../images/up_badge.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-normal title-book-03-m text_overflow"
+                        >책<em class="color-btn-01 txt">제목</em
+                        >영역입니다.</span
+                      >
+                    </div>
+                    <div class="writer color-txt-03 body-02 text_overflow">
+                      <em class="color-btn-01 txt">작가</em>명
+                    </div>
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">3화무료</span>
+                      <span class="view body-01 color-txt-05">61.4만</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="clearfix">
+                <a href="#">
+                  <div class="cover_img radius-xs">
+                    <p class="ic_adult badge_adult_middle">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                    <p class="ic_bottom badges_box">
+                      <span class="ic_midnight radius-xs icon_badge"
+                        ><img src="../images/midnight_badge.svg"
+                      /></span>
+                      <span class="ic_discount radius-xs discount_10 icon_badge"
+                        ><img src="../images/discount_10.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="info_txt spacing_08">
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">웹소설</span>
+                      <span class="free body-01 color-txt-05">로맨스</span>
+                      <span class="free body-01 color-txt-05">완결</span>
+                    </div>
+                    <div class="list_tit_con">
+                      <span class="ic_up radius-xs icon_badge"
+                        ><img src="../images/up_badge.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-normal title-book-03-m text_overflow"
+                        >전 <em class="color-btn-01 txt">남편</em>의 불순한
+                        짓</span
+                      >
+                    </div>
+                    <div class="writer color-txt-03 body-02 text_overflow">
+                      작가명
+                    </div>
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">3화무료</span>
+                      <span class="view body-01 color-txt-05">61.4만</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="clearfix">
+                <a href="#">
+                  <div class="cover_img radius-xs">
+                    <p class="ic_adult badge_adult_middle">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                    <p class="ic_bottom badges_box">
+                      <span class="ic_midnight radius-xs icon_badge"
+                        ><img src="../images/midnight_badge.svg"
+                      /></span>
+                      <span class="ic_discount radius-xs discount_10 icon_badge"
+                        ><img src="../images/discount_10.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="info_txt spacing_08">
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">웹소설</span>
+                      <span class="free body-01 color-txt-05">로맨스</span>
+                      <span class="free body-01 color-txt-05">완결</span>
+                    </div>
+                    <div class="list_tit_con">
+                      <span class="ic_up radius-xs icon_badge"
+                        ><img src="../images/up_badge.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-normal title-book-03-m text_overflow"
+                        >책<em class="color-btn-01 txt">제목</em
+                        >영역입니다.</span
+                      >
+                    </div>
+                    <div class="writer color-txt-03 body-02 text_overflow">
+                      작가명
+                    </div>
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">3화무료</span>
+                      <span class="view body-01 color-txt-05">61.4만</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="clearfix">
+                <a href="#">
+                  <div class="cover_img radius-xs">
+                    <p class="ic_adult badge_adult_middle">
+                      <img src="../images/ic_adult.svg" />
+                    </p>
+                    <img src="../images/thumbnail.jpg" />
+                    <p class="ic_bottom badges_box">
+                      <span class="ic_midnight radius-xs icon_badge"
+                        ><img src="../images/midnight_badge.svg"
+                      /></span>
+                      <span class="ic_discount radius-xs discount_10 icon_badge"
+                        ><img src="../images/discount_10.svg"
+                      /></span>
+                    </p>
+                  </div>
+                  <div class="info_txt spacing_08">
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">웹소설</span>
+                      <span class="free body-01 color-txt-05">로맨스</span>
+                      <span class="free body-01 color-txt-05">완결</span>
+                    </div>
+                    <div class="list_tit_con">
+                      <span class="ic_up radius-xs icon_badge"
+                        ><img src="../images/up_badge.svg"
+                      /></span>
+                      <span
+                        class="title color-txt-normal title-book-03-m text_overflow"
+                        >책<em class="color-btn-01 txt">제목</em
+                        >영역입니다.</span
+                      >
+                    </div>
+                    <div class="writer color-txt-03 body-02 text_overflow">
+                      작가명
+                    </div>
+                    <div class="info">
+                      <span class="free body-01 color-txt-05">3화무료</span>
+                      <span class="view body-01 color-txt-05">61.4만</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!-- 리스트 없을때 -->
+            <!-- <p class="no_data large color-txt-04 body-02-long">검색결과가 없습니다.
+              <button
+                type="button"
+                onclick="Modal()"
+                class="keyword_search_btn button btn_03 label_on large outlined round radius-full"
+              >
+                <span class="btn-04 color-txt-04">키워드 검색하기</span>
+              </button>
+            </p> -->
+            <!-- //리스트 없을때 -->
+          </div>
+          <div class="list_2">
+            <!-- 리스트 없을때 -->
+            <p class="no_data large color-txt-04 body-02-long">
+              검색결과가 없습니다.
+              <button
+                type="button"
+                onclick="Modal()"
+                class="keyword_search_btn button btn_03 label_on large outlined round radius-full"
+              >
+                <span class="btn-04 color-txt-04">키워드 검색하기</span>
+              </button>
+            </p>
+            <!-- //리스트 없을때 -->
+          </div>
+          <div class="list_3">
+            <!-- 리스트 없을때 -->
+            <p class="no_data large color-txt-04 body-02-long">
+              검색결과가 없습니다.
+              <button
+                type="button"
+                onclick="Modal()"
+                class="keyword_search_btn button btn_03 label_on large outlined round radius-full"
+              >
+                <span class="btn-04 color-txt-04">키워드 검색하기</span>
+              </button>
+            </p>
+            <!-- //리스트 없을때 -->
+          </div>
+          <div class="list_4">
+            <!-- 리스트 없을때 -->
+            <p class="no_data large color-txt-04 body-02-long">
+              검색결과가 없습니다.
+              <button
+                type="button"
+                onclick="Modal()"
+                class="keyword_search_btn button btn_03 label_on large outlined round radius-full"
+              >
+                <span class="btn-04 color-txt-04">키워드 검색하기</span>
+              </button>
+            </p>
+            <!-- //리스트 없을때 -->
+          </div>
+        </div>
+      </section>
+
+      <!-- 네트워크 미연결 화면 -->
+      <section class="section" style="display: none">
+        <p class="no_data large color-txt-04 body-02-long">
+          네트워크가 연결되어 있지 않습니다.<br />연결 상태를 확인해 주세요.
+          <button
+            type="button"
+            class="button btn_01 filled label_on large radius-full again_btn"
+          >
+            <span class="btn-04">다시시도</span>
+          </button>
+        </p>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box clearfix">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+        </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered large">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-header">
+            <div class="title_menu">
+              <div class="title title-03 color-txt-normal text_overflow">
+                #키워드 검색
+              </div>
+              <button
+                type="button"
+                class="close_btn"
+                data-bs-dismiss="modal"
+              ></button>
+            </div>
+          </div>
+          <div class="modal-body tab_box">
+            <ul class="tab_list menu_tab large">
+              <li class="color-txt-muted btn-04">
+                <!-- 클릭될때 active 추가-->
+                <a
+                  href="#"
+                  class="border border-soild border-bottom-line active"
+                  >로맨스</a
+                >
+              </li>
+              <li class="color-txt-muted btn-04">
+                <a href="#" class="border border-soild border-bottom-line"
+                  >로판</a
+                >
+              </li>
+              <li class="color-txt-muted btn-04">
+                <a href="#" class="border border-soild border-bottom-line"
+                  >BL</a
+                >
+              </li>
+              <li class="color-txt-muted btn-04">
+                <a href="#" class="border border-soild border-bottom-line"
+                  >판타지</a
+                >
+              </li>
+            </ul>
+            <div class="list">
+              <ul class="scroll_box">
+                <li>
+                  <div class="title title-02-b color-txt-normal">장르</div>
+                  <div class="keyword_word">
+                    <!-- 클릭시 active 추가 -->
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04 active"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="title title-02-b color-txt-normal">관계</div>
+                  <div class="keyword_word">
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                  </div>
+                </li>
+                <li>
+                  <div class="title title-02-b color-txt-normal">분위기</div>
+                  <div class="keyword_word">
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                    <button
+                      type="button"
+                      class="btn_05 medium button label_on radius-full color-txt-02 btn-04"
+                    >
+                      #키워드
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("Modal"));
+      function Modal() {
+        modal.show();
+      }
+    </script>
+  </body>
+</html>

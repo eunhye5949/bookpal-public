@@ -1,0 +1,661 @@
+.calendar {
+  padding: 0 4.55%;
+}
+.calendar .calendarContent {
+  background: #fff;
+  padding: 56px;
+  box-sizing: border-box;
+  border-radius: 32px;
+}
+.calendar .desc {
+  text-align: center;
+  padding: 48px 0;
+  color: #817b7b;
+}
+.table_box > li {
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+  padding-top: 24px;
+  position: relative;
+  display: flex;
+}
+.table_box > li:first-child {
+  border-top: 0;
+}
+.table_box > li .date_box {
+  width: 100px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+}
+.table_box > li .list_box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.table_box > li .date_box .week {
+  margin-top: 12px;
+  color: #817b7b;
+}
+.table_box > li .list_box .text_box {
+  display: flex;
+  padding-bottom: 24px;
+}
+.table_box > li .info_box {
+  padding: 0 24px;
+  box-sizing: border-box;
+  flex: 1;
+  margin-right: auto;
+}
+.table_box > li .info_box > p:not(:first-child) {
+  margin-top: 12px;
+}
+.table_box > li .info_box .tag {
+  font-size: 0;
+}
+.table_box > li .info_box .tag > img:not(:first-child) {
+  margin-left: 4px;
+}
+.table_box > li .info_box .tag img {
+  height: 18px;
+  display: inline-block;
+  vertical-align: top;
+}
+.table_box > li .icon_box {
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.table_box > li .icon_box .icon {
+  font-size: 0;
+}
+.table_box > li .icon_box .icon img {
+  height: 36px;
+  vertical-align: middle;
+}
+.table_box > li .icon_box .icon img:not(:first-child) {
+  margin-left: 8px;
+}
+.table_box > li .icon_box .button {
+  margin-top: 16px;
+  border: 0 none;
+}
+.table_box > li .icon_box .button button {
+  padding: 10px 17px;
+  line-height: 16px;
+}
+.table_box > li .icon_box .button .default {
+  background-color: #ec2a38;
+}
+.table_box > li .icon_box .button .disabled {
+  background-color: #fbd4d7;
+  color: rgba(0, 0, 0, 0.3);
+  cursor: default;
+}
+
+.event_header .btns {
+  padding: 64px 0 120px;
+  text-align: center;
+}
+.event_header .btns button {
+  padding: 28px 42px;
+  font-size: 0;
+  background-color: #bfbcbc;
+}
+.event_header .btns button p {
+  padding: 0 8px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+.event_header .btns button img {
+  vertical-align: middle;
+}
+.typeList .tit_text {
+  margin: 48px 0 14px;
+}
+.typeList .template_row .list {
+  margin: 6px 0;
+}
+.typeList .template_row .list ul {
+  grid-gap: 20px 8px;
+}
+.typeList .template_column .list {
+  margin: 0;
+}
+.typeList .template_column .list li {
+  margin: 0 !important;
+  padding: 6px 0;
+}
+.typeList .template_column .list li .cover_img {
+  width: 184px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.typeList .template_column .list li a {
+  overflow: hidden;
+}
+.typeList .template_column .list li .info_txt {
+  margin: 0 24px;
+}
+.typeList .template_column .list li .info_txt .desc {
+  margin-top: 30px;
+}
+.typeList .template_column .list li .info_txt .keyword {
+  margin-top: 16px;
+}
+.typeList .template_column .list li .info_txt .keyword span {
+  margin-right: 12px;
+}
+.typeList .notice_box {
+  padding: 64px 60px;
+  margin-top: 40px;
+}
+.typeList .notice_box .title::before {
+  display: inline-block;
+  content: "";
+  width: 1.375rem;
+  height: 1.375rem;
+  background-image: url(/promotions/images/LightMode-check_circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  vertical-align: top;
+  margin-right: 4px;
+}
+.DarkMode .typeList .notice_box .title::before {
+  background-image: url(/promotions/images/DarkMode-check_circle.svg);
+}
+.typeList .notice_box .desc {
+  margin-top: 12px;
+}
+.typeList .notice_box .desc > li {
+  position: relative;
+  margin-bottom: 8px;
+  padding-left: 13px;
+  word-break: keep-all;
+}
+.typeList .notice_box .desc > li:last-child {
+  margin-bottom: 0;
+}
+.typeList .notice_box .desc > li::before {
+  display: block;
+  content: "-";
+  font-size: 15px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 22px;
+}
+.temp_list.template_column .list .cover_img > img {
+  height: auto;
+}
+
+/* 미션형 */
+.missonContent {
+  padding: 64px 4.55%;
+}
+.missonContent .myInfo {
+  display: flex;
+  padding: 36px 56px;
+  align-items: center;
+}
+.missonContent .myInfo .name {
+  color: #121212;
+}
+.missonContent .myInfo .completedMisson {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  color: #3e3636;
+}
+.missonContent .myInfo .completedMisson .num {
+  margin-left: 8px;
+  font-size: 0;
+  color: #534c4c;
+  display: flex;
+  align-items: center;
+}
+.missonContent .myInfo .completedMisson .num span {
+  margin-right: 1px;
+}
+.missonContent .myInfo .profile_box {
+  margin-right: 20px;
+}
+.missonContent .myInfo .profile_box .profile {
+  display: block;
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+.missonContent .myInfo .profile_box .profile img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.missonContent .myInfo .login_btn {
+  display: flex;
+  align-items: center;
+  color: #121212;
+  border: 0 none;
+}
+.missonContent .myInfo .login_btn::after {
+  display: inline-block;
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(../images/icon_login_button.svg);
+  margin-left: 2px;
+}
+.missonContent .misson_List > div {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+  position: relative;
+  overflow: hidden;
+}
+.missonContent .misson_List > div .dimmed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.missonContent .misson_List > div .dimmed .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px 36px;
+  white-space: nowrap;
+  font-size: 32px;
+  font-weight: 700;
+}
+.missonContent .misson_List .missonDesc,
+.missonContent .misson_List .missonDesc .missonNum,
+.missonContent .misson_List .missonDesc .right {
+  display: flex;
+}
+.missonContent .misson_List .missonDesc .left {
+  flex: 1;
+}
+.missonContent .misson_List .missonDesc .right {
+  flex-direction: column;
+  width: 160px;
+  margin-left: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.missonContent .misson_circle {
+  position: relative;
+}
+.missonContent .misson_circle .misson_con {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 112px;
+  height: 112px;
+  box-sizing: border-box;
+  align-items: center;
+  border: 10px solid rgba(0, 0, 0, 0.07);
+}
+.missonContent .misson_circle .misson_con.icon_img {
+  border: 0 none;
+  overflow: hidden;
+}
+.missonContent .misson_circle .missonBage img {
+  width: 100%;
+  height: 100%;
+}
+.missonContent .misson_circle .missonRate {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+  width: 70px;
+}
+.missonContent .misson_circle .missonRate::before {
+  display: block;
+  content: "";
+  height: 65px;
+  width: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.missonContent .misson_circle .missonRate .top {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 32px;
+}
+.missonContent .misson_circle .missonRate .bottom {
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 18px;
+
+  margin-top: 32px;
+}
+.missonContent .missonDesc .right > .misson_text {
+  margin-top: 12px;
+}
+.missonContent .missonDesc .right > .misson_text button {
+  background-color: #121212;
+  border-color: #121212;
+}
+.missonContent .missonDesc .right > .misson_text button span {
+  margin-left: 3px;
+}
+.missonContent .missonDesc .right > .misson_text button span::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url(../images/icon_gift_white_btn.svg);
+  vertical-align: top;
+  margin-left: 3px;
+}
+.missonContent .missonDesc .right > .misson_text .text {
+  color: #121212;
+  padding-left: 0;
+  padding-right: 0;
+  cursor: text;
+}
+.missonContent .misson_List .missonDesc .missonIcon {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 36px;
+}
+.missonContent .misson_List .missonDesc .missonNum span {
+  font-family: "Montserrat", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  text-overflow: ellipsis;
+  border-width: 3px;
+  padding: 9px 17px;
+  box-sizing: border-box;
+}
+.missonContent .misson_List .missonDesc .title {
+  margin-top: 28px;
+  font-size: 28px;
+  word-break: keep-all;
+  line-height: 36px;
+}
+.missonContent .misson_List .missonDesc .desc {
+  margin-top: 12px;
+  color: #3e3636;
+  word-break: keep-all;
+}
+.missonContent .misson_List .missonDesc .more_button {
+  margin-top: 12px;
+}
+.missonContent .misson_List .missonDesc .more_button button {
+  border-color: rgba(0, 0, 0, 0.07);
+  color: #817b7b;
+}
+.missonContent .misson_List .missonDesc .more_button span {
+  margin-left: 3px;
+}
+.missonContent .misson_List .missonDesc .more_button span::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/misson_button.svg);
+  margin-left: 3px;
+  vertical-align: middle;
+}
+.missonContent .misson_List .missonInfo {
+  padding: 16px 24px;
+  margin-top: 36px;
+  background-color: rgba(236, 42, 56, 0.1);
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 12px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+.missonContent .misson_List .missonInfo > div {
+  display: flex;
+  min-width: 240px;
+  align-items: center;
+  align-content: center;
+  gap: 4px 8px;
+  flex: 1 0 0;
+  flex-wrap: wrap;
+}
+.missonContent .misson_List .missonInfo .text {
+  display: flex;
+  align-items: center;
+  color: #ec2a38;
+}
+.missonContent .misson_List .missonInfo .date {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  color: #121212;
+  min-width: 260px;
+}
+.missonBox .missionTemplate {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 56px 0;
+}
+.missonBox .missionTemplate .listButton {
+  margin-bottom: 36px;
+}
+.missonBox .missionTemplate .listButton button {
+  border: 0 none;
+  padding-left: 4px;
+}
+.missonBox .missionTemplate .listButton button span {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 4px;
+}
+.missonBox .missionTemplate .listButton button::after {
+  display: inline-block;
+  content: "";
+  vertical-align: top;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url(../images/missionListButton.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.missonBox .missionTemplate .listButton button::after {
+  transform: rotate(180deg);
+}
+.missonBox.typeList .notice_box {
+  margin-top: 0;
+}
+
+@media (max-width: 999px) {
+  .typeList .tit_text,
+  .typeList .template_row .list,
+  .typeList .template_column .list {
+    padding: 0 2.08%;
+  }
+  .typeList .template_column .list li .cover_img {
+    width: 23.18%;
+  }
+  #container .section:first-child {
+    margin-top: 0;
+  }
+  .typeList .template_column .list li .info_txt .keyword span {
+    margin-right: 8px;
+  }
+  .typeList .notice_box {
+    padding: 64px 6.6%;
+  }
+  .missonContent .misson_List > div {
+    margin-top: 20px;
+    padding: 56px 36px;
+  }
+  .missonContent .myInfo {
+    padding: 28px 36px;
+  }
+  .calendar .calendarContent {
+    padding: 32px;
+  }
+  .table_box > li .date_box {
+    width: 68px;
+  }
+}
+
+@media (max-width: 540px) {
+  .typeList .tit_text,
+  .typeList .template_row .list,
+  .typeList .template_column .list {
+    padding: 0 3.3%;
+  }
+  .calendar .calendarContent {
+    padding: 12px;
+    border-radius: 16px;
+  }
+  .calendar .desc {
+    padding: 24px 0;
+  }
+  .table_box > li {
+    padding-top: 18px;
+  }
+  .table_box > li .date_box {
+    width: 54px;
+  }
+  .table_box > li .date_box .week {
+    margin-top: 4px;
+  }
+  .table_box > li .list_box .text_box {
+    padding-bottom: 18px;
+  }
+  .table_box > li .info_box {
+    padding: 0 8px;
+  }
+  .table_box > li .info_box > p:not(:first-child) {
+    margin-top: 8px;
+  }
+  .table_box > li .info_box .tag img {
+    height: 13px;
+  }
+  .table_box > li .icon_box {
+    padding-left: 0;
+  }
+  .table_box > li .icon_box .icon img {
+    height: 24px;
+  }
+  .table_box > li .icon_box .icon img:not(:first-child) {
+    margin-left: 4px;
+  }
+  .table_box > li .icon_box .button {
+    margin-top: 12px;
+  }
+  .table_box > li .icon_box .button button {
+    padding: 6px 12px;
+  }
+  .event_header .btns {
+    padding: 48px 0 80px;
+  }
+  .event_header .btns button {
+    padding: 20px 24px;
+  }
+  .event_header .btns button p {
+    font-size: 20px;
+  }
+  .event_header .btns button img {
+    height: 28px;
+  }
+  .typeList .template_column .list li .cover_img {
+    width: 40%;
+  }
+  .typeList .template_column .list li .info_txt .desc {
+    margin-top: 24px;
+  }
+  .typeList .template_column .list li .info_txt {
+    margin: 0 12px;
+  }
+  .typeList .template_column.column_right .list li .info_txt {
+    margin-left: 16px;
+  }
+  .typeList .template_column.column_left .list li .info_txt {
+    margin-right: 16px;
+  }
+  .typeList .template_column .list li .info_txt .keyword {
+    margin-top: 12px;
+  }
+  .missonContent {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  .missonContent .misson_List > div {
+    margin-top: 12px;
+    padding: 32px 20px;
+  }
+  .missonContent .misson_List .missonDesc .title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 20px;
+    word-break: keep-all;
+  }
+  .missonContent .misson_List .missonDesc {
+    display: block;
+  }
+  .missonContent .misson_List .missonDesc > div {
+    float: none;
+  }
+  .missonContent .misson_List .missonDesc .right {
+    margin: 0 auto;
+    margin-top: 24px;
+  }
+  .missonContent .misson_List .missonDesc .missonNum span {
+    font-size: 16px;
+    padding: 7px 13px;
+  }
+  .missonContent .misson_List .missonInfo {
+    margin-top: 24px;
+  }
+  .missonContent .misson_List .missonInfo .info_left {
+    margin: 0;
+  }
+  .missonContent .myInfo {
+    padding: 28px 20px;
+  }
+  .missonContent .myInfo .profile_box .profile {
+    width: 64px;
+    height: 64px;
+  }
+  .missonContent .myInfo .profile_box {
+    margin-right: 16px;
+  }
+  .missonContent .misson_List > div .dimmed .text {
+    font-size: 24px;
+    line-height: 32px;
+    padding: 16px 24px;
+  }
+  .list_item,
+  .missonContent .myInfo {
+    border-radius: 16px;
+  }
+}
