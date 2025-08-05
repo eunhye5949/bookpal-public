@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 타이틀헤더 일때 Title_Header Sub_Header 추가 -->
+  <!-- 바닥에 여백 36px 추가하고싶으면 class="Depth" 추가 -->
+  <body class="LightMode Title_Header Sub_Header Depth">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="swiper-slide wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">마이페이지</div>
+        <div class="btns right_btns" style="display: flex">
+          <button type="button" class="adult_btn">
+            <label>
+              <input role="switch" type="checkbox" />
+            </label>
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <section class="myPage wrapper">
+        <div class="my_profile section">
+          <!-- 로그인 전 -->
+          <!-- <div class="login_btn before">
+                    <p class="s_tit body-03 color-txt-02">로그인 후 이용 가능합니다.</p>
+                    <button type="button" class="button radius-full btn_01 medium filled label_on" onclick="location.href='/user/index.html' "><span class="white-always txt">로그인 하기</span></button>
+                </div> -->
+          <!-- 로그인 후 -->
+          <div class="my_info after">
+            <div class="left profile_box">
+              <p class="profile radius-full">
+                <img src="/images/thumbnail.jpg" />
+              </p>
+              <button
+                type="button"
+                class="button btn_02 medium outlined round label_off radius-full"
+                onclick="selectModal()"
+                return
+                false;
+              >
+                <span class="icon"></span>
+              </button>
+            </div>
+            <div class="left info_txt">
+              <div class="nick_box">
+                <p class="nick_name color-txt-normal title-02-m">
+                  <span class="name title-02-b" id="nickName"
+                    >눈송이송송송송송송송송송송송송송송송송</span
+                  >님
+                </p>
+                <button type="button" class="button setting_btn"></button>
+              </div>
+              <div class="rating_box clearfix">
+                <p class="left rating_label medium">
+                  <span class="normal">
+                    <img
+                      src="/images/rating_label_normal.svg"
+                      class="Light_label"
+                    />
+                    <img
+                      src="/images/rating_label_normal-DarkMode.svg"
+                      class="Dark_label"
+                    />
+                  </span>
+                  <!-- <span class="vip">
+                                    <img src="/images/rating_label_vip.svg" class="Light_label">
+                                    <img src="/images/rating_label_vip-DarkMode.svg" class="Dark_label">
+                                </span>
+                                <span class="vipSilver">
+                                    <img src="/images/rating_label_vipSilver.svg">
+                                </span>
+                                <span class="vipGold">
+                                    <img src="/images/rating_label_vipGold.svg">
+                                </span>
+                                <span class="rVip">
+                                    <img src="/images/rating_label_rVip.svg" class="Light_label">
+                                    <img src="/images/rating_label_rVip-DarkMode.svg" class="Dark_label">
+                                </span> -->
+                </p>
+                <p class="right benefits_btn">
+                  <button
+                    type="button"
+                    class="button"
+                    onclick="location.href='/mypage/benefit.html' "
+                  >
+                    <span class="btn-03 color-btn-03-txt">등급별 혜택</span>
+                  </button>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 로그인 후 -->
+        <div class="my_pay section">
+          <div class="area_box">
+            <div class="coupon_box">
+              <div class="left gold_opacity-10 bg radius-lg">
+                <p class="icon_coupon_box">
+                  <span></span>
+                </p>
+                <div class="text_box">
+                  <p class="s_title btn-03 color-txt-04">내가 가진 쿠폰</p>
+                  <p class="num_btn">
+                    <a href="#" class="title-03-m color-txt-normal">
+                      <span class="title-03">33,000</span>개
+                    </a>
+                  </p>
+                </div>
+              </div>
+              <div class="right gold_opacity-10 bg radius-lg">
+                <!-- 본인인증 전 -->
+                <!-- <div class="self_identify before">
+                                <p class="s_tit title-sub-02-m color-txt-03">본인인증 후 선물을 받을 수 있어요!</p>
+                                <button type="button" class="button btn_01 outlined label_on medium radius-full"><span class="btn-03 color-btn-01 txt">본인인증</span></button>
+                            </div> -->
+                <!-- 본인인증 후 -->
+                <div class="after">
+                  <div class="text_box">
+                    <p class="s_title btn-03 color-txt-04">선물이용권</p>
+                    <p class="num_btn">
+                      <a href="#" class="title-02-m-long color-txt-normal">
+                        <span class="title-02-b-long">9,000</span>장
+                      </a>
+                    </p>
+                  </div>
+                  <div class="text_box">
+                    <p class="s_title btn-03 color-txt-04">선물소장권</p>
+                    <p class="num_btn">
+                      <a href="#" class="title-02-m-long color-txt-normal">
+                        <span class="title-02-b-long">0</span>장
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="button_box">
+              <button
+                type="button"
+                class="button btn_01 large filled label_on radius-sm"
+              >
+                <span class="white-always txt btn-04">충전하기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- // 로그인 후 -->
+        <div class="menu_list section">
+          <nav>
+            <ul>
+              <li>
+                <a href="#">
+                  <span class="menu_icon alarm_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">
+                    <span class="dot color-btn-01 bg radius-full"></span>알림
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="menu_icon event_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">
+                    <span class="dot color-btn-01 bg radius-full"></span>이벤트
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="menu_icon chat_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">
+                    <span class="dot color-btn-01 bg radius-full"></span
+                    >댓글내역
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="menu_icon exclamation_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">
+                    <span class="dot color-btn-01 bg radius-full"></span
+                    >고객센터
+                  </p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="menu_icon allMenu_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">바로가기</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="menu_icon setting_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">설정</p>
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  <span class="menu_icon edit_icon"></span>
+                  <p class="menu_tit body-04 color-txt-normal">작가홈가기</p>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="login_out bottom_button section">
+          <button tyep="button" class="button" onclick="Modal()" return false;>
+            <span class="btn-04 color-btn-03-txt">로그아웃</span>
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box swiper-slide">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- selectModal -->
+    <div
+      id="selectModal"
+      class="select_modal modal black_opacity-60"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="scroll_box select_box">
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">앨범에서 사진 선택</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="/mypage/emblem.html">엠블럼에서 선택</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">기본 이미지 사용</a>
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 텍스트 토스트 -->
+    <div
+      class="toast message_toast black_opacity-80 bg radius-xs"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-body">
+        <div class="area">
+          <p class="text white-always txt body-02-long">
+            프로필이 변경되었습니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 로그아웃 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">로그아웃 안내</div>
+            <div class="desc color-txt-02 body-03-long">
+              로그아웃을 하시겠습니까?
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="bg btn-04 radius-sm btn_01 large label_on filled button"
+            >
+              확인
+            </button>
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sns 가입자 내정보 수정 -->
+    <div id="pwModal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">비밀번호 설정</div>
+            <div class="body-03-long color-txt-02">
+              비밀번호 설정 후 이용하실 수 있습니다.
+            </div>
+            <div class="txt_box title-01-m radius-sm color-bg-select-01 desc">
+              <p class="color-btn-01 txt">
+                <span class="text_overflow" id="email"
+                  >booooooooooooooo@bookpal.co.kr</span
+                >
+              </p>
+            </div>
+            <div class="body-03-long color-txt-02">
+              가입 시 사용한 이메일 주소로 <br />비밀번호 설정 메일을
+              전송됩니다.
+            </div>
+            <div class="body-01-long color-txt-05">
+              메일이 도착하지 않았을 경우 스팸함 확인 후 <br />고객센터에
+              문의해주세요.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on filled button"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- sns 가입자 본인확인 -->
+    <div id="snsModal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">본인 확인</div>
+            <div class="body-03-long color-txt-02">
+              개인정보 보호를 위해 가입하신 <br />SNS 계정 확인 후 이용하실 수
+              있습니다.
+            </div>
+            <div class="button_box">
+              <ul class="signup_list">
+                <li>
+                  <a
+                    href="#"
+                    class="color_btn label_on button large radius-md"
+                    style="background-color: #03cf5d"
+                  >
+                    <span class="sns_logo" id="naver"></span>
+                    <span class="btn-04 white-always txt"
+                      >네이버 계정으로 진행하기</span
+                    >
+                  </a>
+                </li>
+                <!-- <li>
+                                <a href="#" class="color_btn label_on button large radius-md" style="background-color: #FEE500;">
+                                    <span class="sns_logo" id="kakao"></span>
+                                    <span class="btn-04 black-always txt">카카오톡 계정으로 진행하기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="color_btn label_on button large radius-md border-line border-soild color-border-02 white-always bg">
+                                    <span class="sns_logo" id="google"></span>
+                                    <span class="btn-04 black-always txt">Google 계정으로 진행하기</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="color_btn label_on button large radius-md color-btn-02 bg">
+                                    <span class="sns_logo" id="apple"></span>
+                                    <span class="btn-04 color-txt-strong-reverse txt">Apple 계정으로 진행하기</span>
+                                </a>
+                            </li> -->
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("selectModal"));
+      function selectModal() {
+        modal.show();
+      }
+      let modal2 = new bootstrap.Modal(document.getElementById("Modal"));
+      function Modal() {
+        modal2.show();
+      }
+    </script>
+  </body>
+</html>

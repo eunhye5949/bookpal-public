@@ -1,0 +1,20 @@
+.toolTip{
+    left: auto;
+    right: 43px;
+}
+@media (max-width: 999px) {
+    .toolTip.right{
+        right: 14px
+    }
+    #container .section:first-child{
+        margin-top: 0
+    }
+}
+
+@media (max-width: 540px) {
+    .gift_banner .num_gift{
+        right: 90px;
+        top: 22px
+    }
+
+}

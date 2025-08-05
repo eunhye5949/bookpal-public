@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title></title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="/css/declaration.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 3depth헤더 일때 Depth3_Header Sub_Header 추가 -->
+  <!-- fixed_button 하단 고정일때 class="fixed" 추가-->
+  <body class="LightMode Depth3_Header Sub_Header fixed">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="swiper-slide wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">신고하기</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- subDepth -->
+    <div id="subDepth" class="color-bg-01 type_header">
+      <div class="swiper-container">
+        <div class="swiper-wrapper txt color-txt-muted">
+          <!-- 클릭시 class="on" 추가-->
+          <div class="swiper-slide on">
+            <a href="/help/declaration.html">
+              <span class="color-btn-01 border border-soild btn-04"
+                >신고하기</span
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/help/declaration_history.html">
+              <span class="color-btn-01 border border-soild btn-04"
+                >신고내역<span class="dot color-btn-01 bg radius-full"></span
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //subDepth -->
+
+    <div id="container" class="wrapper">
+      <section class="input_area section">
+        <div class="area_box">
+          <ul class="input_box">
+            <li>
+              <p class="input_txt body-01 color-txt-01">구분</p>
+              <div
+                class="select_box text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <!-- 선택전 -->
+                <button type="button" onclick="selectModal()" return false>
+                  <span class="body-03 color-txt-muted"
+                    >카테고리를 선택해주세요.</span
+                  >
+                </button>
+                <!-- 선택후 -->
+                <!-- <button type="button">
+                                <span class="body-03 color-txt-normal">부적절한 홍보</span>
+                            </button> -->
+              </div>
+            </li>
+            <li>
+              <p class="input_txt body-01 color-txt-01">제목</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="text"
+                  placeholder="제목을 입력해주세요."
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="input_txt body-01 color-txt-01">내용</p>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <textarea
+                  placeholder="불법적인 내용이거나,서비스 이용목적에 부합하지 않는 경우 신고해주세요."
+                  class="color-txt-normal body-03-long"
+                ></textarea>
+              </div>
+            </li>
+          </ul>
+          <ul class="info_txt">
+            <li>
+              <p class="text body-02-long color-txt-01">
+                신고사항은 운영정책에 따라 처리되며,허위신고시 이용에 제한을
+                받을수 있습니다.
+              </p>
+              <p class="text body-02-long color-txt-01">
+                신고 답변은 평일 10시 ~18시 (공휴일, 주말 제외)에 처리됩니다.
+              </p>
+            </li>
+            <li>
+              <p class="title btn-03-active color-txt-01">
+                [개인정보 수집·이용에 대한 안내]
+              </p>
+              <p class="text body-02-long color-txt-01">
+                (주)북팔은 이용자 문의를 처리하기 위해 다음과 같이 개인정보를
+                수집 및 이용하며, 이용자의 개인정보를 안전하게 취급하는데 최선을
+                다하고 있습니다.
+              </p>
+              <div
+                class="table_box color-border-01 border-top-line border-soild"
+              >
+                <p class="thead color-bg-02">
+                  <span class="color-txt-01 title-sub-02-b">수집항목</span>
+                  <span class="color-txt-01 title-sub-02-b">수집목적</span>
+                  <span class="color-txt-01 title-sub-02-b">보유기간</span>
+                </p>
+                <p
+                  class="tbody color-border-01 border-top-line border-bottom-line border-soild"
+                >
+                  <span class="body-01-long color-txt-03"
+                    >아이디, E-mail, 모바일 단말기 정보, 문의/답변 내용에 포함된
+                    개인정보</span
+                  >
+                  <span class="body-01-long color-txt-03"
+                    >신고사항 확인 및 해결</span
+                  >
+                  <span class="body-01-long color-txt-03"
+                    >1년간 보관 후 파기</span
+                  >
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="text body-02-long color-txt-01">
+                더 자세한 내용에 대해서는 <b>개인정보처리방침</b>을 참고하시기
+                바랍니다.
+              </p>
+              <p class="text body-02-long color-txt-01">
+                이용자는 본 동의를 거부할 수 있으나, 미동의 시 문의 접수가
+                불가능합니다.
+              </p>
+            </li>
+          </ul>
+          <div class="check_event">
+            <label
+              for="agree"
+              class="checkbox_round check-type-01 medium label_on"
+            >
+              <input type="checkbox" id="agree" />
+              <span class="box"></span>
+              <span class="txt color-txt-04"
+                >개인정보 수집 및 이용에 동의합니다.</span
+              >
+            </label>
+          </div>
+          <div class="fixed_button">
+            <!-- 정상적 입력값 모두 입력상태 disabled="disabled" 제거 -->
+            <button
+              type="button"
+              class="button btn_01 filled btn-05 white-always txt"
+              disabled="disabled"
+            >
+              접수하기
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box swiper-slide">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- select 모달 -->
+    <div
+      id="selectModal"
+      class="select_modal modal black_opacity-60"
+      tabindex="-1"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="scroll_box select_box">
+              <p
+                class="radius-sm color-bg-modal color-txt-normal body-02 click"
+              >
+                <a href="#">카테고리를 선택해주세요.</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">부적절한 홍보</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">무의미한 도배글</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">성희롱</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">욕설</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">비방</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">반사회적 게시글</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">저작권법 위반 게시글</a>
+              </p>
+              <p class="radius-sm color-bg-modal color-txt-normal body-02">
+                <a href="#">작품 신고</a>
+              </p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 접수완료 모달 -->
+    <div id="myModal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">접수 완료</div>
+            <div class="desc color-txt-02 body-03-long">
+              접수가 완료되었습니다. <br />신고하신 내용은<br />운영 정책에 따라
+              처리됩니다.
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="bg btn-04 radius-sm btn_01 large label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              확인
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("myModal"));
+      function showModal() {
+        modal.show();
+      }
+      let modal2 = new bootstrap.Modal(document.getElementById("selectModal"));
+      function selectModal() {
+        modal2.show();
+      }
+    </script>
+  </body>
+</html>

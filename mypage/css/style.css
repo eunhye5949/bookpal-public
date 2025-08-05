@@ -1,0 +1,836 @@
+section {
+  padding: 40px 0;
+}
+.section .tit_con .title span {
+  margin-right: 4px;
+}
+.section.bottom_button {
+  padding: 48px 0 !important;
+  text-align: center;
+}
+/*** 마이페이지 ***/
+.adult_btn {
+  display: flex;
+  align-items: center;
+  cursor: inherit !important;
+}
+.adult_btn label {
+  display: block;
+  cursor: pointer;
+  vertical-align: top;
+  z-index: 1;
+  position: relative;
+  padding: 0 4px;
+}
+.adult_btn input {
+  appearance: none;
+  position: relative;
+  width: 38px;
+  height: 16px;
+  border-radius: 999px;
+  background-color: rgba(18, 18, 18, 0.2);
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
+.DarkMode .adult_btn input {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.DarkMode .adult_btn input::before {
+  background-color: #121212;
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #817b7b;
+}
+.adult_btn input::before {
+  content: "19";
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.24), 0 0 2px 0 rgba(0, 0, 0, 0.12);
+  transition: left 250ms linear;
+  font-size: 12px;
+  vertical-align: top;
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  color: #a9a5a5;
+}
+
+.adult_btn input:checked {
+  background-color: rgba(236, 42, 56, 0.2);
+}
+.DarkMode .adult_btn input:checked {
+  background-color: rgba(255, 55, 70, 0.2);
+}
+
+.adult_btn input:checked::before {
+  background-color: #ec2a38;
+  left: 19px;
+  color: #fff;
+}
+.DarkMode .adult_btn input:checked::before {
+  background-color: #ff3746;
+}
+
+.myPage .my_profile .login_btn {
+  text-align: center;
+  height: 260px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.myPage .my_profile .login_btn .s_tit {
+  margin-bottom: 16px;
+}
+.myPage .my_profile .my_info {
+  display: flex;
+  align-items: end;
+}
+.myPage .my_profile .my_info .profile_box {
+  position: relative;
+}
+.myPage .my_profile .my_info .profile_box button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.myPage .my_profile .my_info .profile_box button span {
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/myPage/images/icon_camera_black.svg);
+}
+.DarkMode .myPage .my_profile .my_info .profile_box button span {
+  background-image: url(/myPage/images/icon_camera_white.svg);
+}
+.myPage .my_profile .my_info .profile {
+  width: 120px;
+  height: 120px;
+  overflow: hidden;
+}
+.myPage .my_profile .my_info .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.myPage .my_profile .my_info .info_txt {
+  flex: 1;
+  margin-left: 20px;
+}
+.myPage .my_profile .my_info .info_txt .nick_box {
+  display: flex;
+  align-items: center;
+  height: 26px;
+}
+.myPage .my_profile .my_info .info_txt .nick_box .nick_name {
+  display: flex;
+  align-items: center;
+}
+.myPage .my_profile .my_info .info_txt .setting_btn {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/myPage/images/icon_setting_gray.svg);
+  margin-left: 2px;
+}
+.DarkMode .myPage .my_profile .my_info .info_txt .setting_btn {
+  background-image: url(/myPage/images/icon_setting_gray-DarkMode.svg);
+}
+.myPage .my_profile .my_info .info_txt .rating_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+.myPage .my_profile .my_info .info_txt .rating_box .left {
+  flex: 1;
+}
+.myPage .my_profile .my_info .info_txt .rating_box .benefits_btn button::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(/myPage/images/icon_info_gray.svg);
+  vertical-align: top;
+}
+.DarkMode
+  .myPage
+  .my_profile
+  .my_info
+  .info_txt
+  .rating_box
+  .benefits_btn
+  button::after {
+  background-image: url(/myPage/images/icon_info_gray-DarkMode.svg);
+}
+.myPage .my_profile .my_info .info_txt .rating_box .benefits_btn button span {
+  margin: 0 3px;
+}
+.myPage .my_pay .coupon_box {
+  display: flex;
+  height: 150px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.myPage .my_pay .coupon_box > div {
+  border: 1px solid rgba(210, 167, 126, 0.2);
+}
+.myPage .my_pay .coupon_box > .left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.myPage .my_pay .coupon_box > .left .icon_coupon_box {
+  height: 46px;
+  width: 46px;
+  margin-right: 24px;
+}
+.myPage .my_pay .coupon_box > .left .icon_coupon_box span {
+  transform: rotate(-30deg);
+  display: block;
+  background: url(/images/coupon_color.svg);
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+.myPage .my_pay .coupon_box > .left .text_box {
+  width: 140px;
+}
+.myPage .my_pay .coupon_box > .right {
+  width: 360px;
+  margin-left: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myPage .my_pay .coupon_box .num_btn {
+  margin-top: 8px;
+}
+.myPage .my_pay .coupon_box .num_btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myPage .my_pay .coupon_box .num_btn a::after {
+  display: inline-block;
+  content: "";
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/mypage/images/icon_numBtn_black.svg);
+  margin-left: 4px;
+  vertical-align: middle;
+}
+.DarkMode .myPage .my_pay .coupon_box .num_btn a::after {
+  background-image: url(/mypage/images/icon_numBtn_white.svg);
+}
+.myPage .my_pay .coupon_box .num_btn a span {
+  margin-right: 2px;
+}
+.myPage .my_pay .coupon_box .self_identify .s_tit {
+  margin-bottom: 12px;
+  word-break: keep-all;
+}
+.myPage .my_pay .coupon_box .self_identify .s_tit::before {
+  display: block;
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/mypage/images/icon_lockClosed_black.svg);
+  margin: 0 auto;
+  margin-bottom: 8px;
+}
+.DarkMode .myPage .my_pay .coupon_box .self_identify .s_tit::before {
+  background-image: url(/mypage/images/icon_lockClosed_white.svg);
+}
+.myPage .my_pay .coupon_box .self_identify .button span {
+  margin: 0 3px;
+}
+.myPage .my_pay .coupon_box .self_identify .button::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  vertical-align: top;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(/mypage/images/icon_identifyBtn_red.svg);
+}
+.DarkMode .myPage .my_pay .coupon_box .self_identify .button::after {
+  background-image: url(/mypage/images/icon_identifyBtn_red-DarkMode.svg);
+}
+.myPage .my_pay .coupon_box > .right .after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myPage .my_pay .coupon_box > .right .after > div {
+  margin: 0 12px;
+  width: 108px;
+}
+.myPage .my_pay .button_box {
+  margin-top: 16px;
+}
+.myPage .my_pay .button_box button {
+  width: 100%;
+}
+.myPage .my_pay .button_box button span {
+  margin-right: 4px;
+}
+.myPage .my_pay .button_box button span::before {
+  display: inline-block;
+  content: "";
+  width: 1.125rem;
+  height: 1.125rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/mypage/images/icon_coupon_white.svg);
+  vertical-align: top;
+  margin-right: 4px;
+}
+.myPage .menu_list nav > ul {
+  font-size: 0;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 8px;
+  display: grid;
+  position: relative;
+}
+.myPage .menu_list nav > ul > li > a {
+  display: flex;
+  padding: 8px 0;
+}
+.myPage .menu_list nav > ul .menu_icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 8px;
+}
+.myPage .menu_list nav > ul .menu_icon.alarm_icon {
+  background-image: url(/images/ic_menu_alarm_b.svg);
+}
+.myPage .menu_list nav > ul .menu_icon.event_icon {
+  background-image: url(/images/ic_menu_event_b.svg);
+}
+.myPage .menu_list nav > ul .menu_icon.chat_icon {
+  background-image: url(/images/ic_menu_chat_b.svg);
+}
+.myPage .menu_list nav > ul .menu_icon.exclamation_icon {
+  background-image: url(/images/ic_menu_exclamation_b.svg);
+}
+.myPage .menu_list nav > ul .menu_icon.allMenu_icon {
+  background-image: url(/images/ic_menu_allMenu_b.svg);
+}
+.myPage .menu_list nav > ul .menu_icon.setting_icon {
+  background-image: url(/images/ic_menu_setting_b.svg);
+}
+.myPage .menu_list nav > ul .menu_icon.edit_icon {
+  background-image: url(/images/ic_menu_edit_b.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.alarm_icon {
+  background-image: url(/images/ic_menu_alarm_w.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.event_icon {
+  background-image: url(/images/ic_menu_event_w.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.chat_icon {
+  background-image: url(/images/ic_menu_chat_w.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.exclamation_icon {
+  background-image: url(/images/ic_menu_exclamation_w.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.allMenu_icon {
+  background-image: url(/images/ic_menu_allMenu_w.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.setting_icon {
+  background-image: url(/images/ic_menu_setting_w.svg);
+}
+.DarkMode .myPage .menu_list nav > ul .menu_icon.edit_icon {
+  background-image: url(/images/ic_menu_edit_w.svg);
+}
+.myPage .menu_list nav > ul .menu_tit {
+  position: relative;
+  display: inline-block;
+  padding: 0 2px;
+}
+
+/*** 엠블럼 ***/
+.myEmblem .emblem_list {
+  margin-top: 40px;
+}
+.myEmblem .emblem_list ul {
+  font-size: 0;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-gap: 12px;
+  display: grid;
+}
+.myEmblem .emblem_list ul li {
+  position: relative;
+}
+.myEmblem .emblem_list ul li.active a::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ec2a38;
+  z-index: 1;
+  border-radius: 24px;
+  background-color: rgba(236, 42, 56, 0.1);
+}
+.DarkMode .myEmblem .emblem_list ul li.active a::before {
+  border-color: #ff3746;
+  background-color: rgba(236, 42, 56, 0.2);
+}
+.myEmblem .emblem_list ul li a {
+  overflow: hidden;
+  display: block;
+}
+.myEmblem .emblem_list ul li img {
+  width: 100%;
+}
+
+/*** 등급별 혜택 안내 ***/
+.myBenefit .my_benefit .my_grade {
+  padding: 28px 0;
+  text-align: center;
+}
+.myBenefit .my_benefit .my_grade p:not(:first-of-type) {
+  margin-top: 16px;
+}
+.myBenefit .my_benefit .my_grade .rating_label span {
+  background-position: center;
+}
+.myBenefit .my_benefit .grade_up {
+  padding: 16px;
+  margin-top: 12px;
+}
+.myBenefit .my_benefit .grade_up .left .money {
+  margin-top: 4px;
+}
+.myBenefit .benefit_list .list li {
+  padding: 16px 0;
+}
+.myBenefit .benefit_list .list li:first-child {
+  padding-top: 12px;
+}
+.myBenefit .benefit_list .list li:last-child {
+  padding-bottom: 12px;
+}
+.myBenefit .benefit_list .list .grid_tit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.myBenefit .benefit_list .list .grid_tit .title {
+  margin-left: 4px;
+  flex: 1;
+}
+.myBenefit .benefit_list .grade_benefit {
+  margin-top: 8px;
+}
+.myBenefit .benefit_list .grade_benefit p {
+  margin-top: 4px;
+}
+/*** 내정보 수정 ***/
+.edit_box .list .input_box > li {
+  margin-bottom: 16px;
+}
+.edit_box .side_info .input_box > li {
+  margin-bottom: 12px;
+}
+.edit_box .input_box > li > .flex {
+  justify-content: center;
+  align-items: center;
+}
+.edit_box .input_box > li button {
+  margin-left: 8px;
+}
+#certifyBtn {
+  margin: 0;
+}
+.edit_box .input_box > li button span {
+  margin: 0 3px;
+}
+.edit_box .input_box > li .sns_logo {
+  display: inline-block;
+  margin-right: 2px;
+}
+.edit_box .input_box .text_tit {
+  width: 100px;
+  margin-right: 8px;
+}
+.edit_box .input_box .input_text {
+  flex: 1;
+}
+.edit_box .input_box .essential_tit::after {
+  display: inline-block;
+  content: "*";
+  color: #ec2a38;
+}
+.DarkMode .edit_box .input_box .essential_tit::after {
+  color: #ff3746;
+}
+.edit_box #completedBtn {
+  width: 100%;
+  margin-top: 4px;
+}
+.edit_box .sns_logo img {
+  width: 1rem;
+}
+.edit_box .account_button button {
+  width: 100%;
+}
+.edit_box .input_box .text_input:focus-within {
+  border-color: #121212;
+}
+.DarkMode .edit_box .input_box .text_input:focus-within {
+  border-color: #fff;
+}
+.edit_box .side_info button::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(/mypage/images/icon_btn_red.svg);
+  vertical-align: top;
+}
+.edit_box .side_info .account_button {
+  margin-top: 24px;
+}
+.edit_box .side_info .account_button button::after {
+  background-image: url(/mypage/images/icon_btn_gray.svg);
+  width: 1.125rem;
+  height: 1.125rem;
+}
+.edit_box .side_info .account_button button span {
+  margin: 0 4px;
+}
+.DarkMode .edit_box .side_info .account_button button::after {
+  background-image: url(/mypage/images/icon_btn_gray-DarkMode.svg);
+}
+
+/*** sns연결정보 ***/
+.connection_box .signup_list > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  padding: 8px 12px;
+}
+.connection_box .signup_list .left {
+  flex: 1;
+}
+.connection_box .signup_list .sns_login {
+  font-size: 0;
+}
+.connection_box .signup_list .sns_logo {
+  width: 1.25rem;
+  height: 1.25rem;
+  vertical-align: top;
+  margin-right: 4px;
+}
+.connection_box .signup_list .existing_email {
+  margin-top: 8px;
+}
+
+/*** 회원탈퇴 ***/
+.connection_box .section .tit_con {
+  margin-bottom: 12px;
+}
+.connection_box .section .check_box {
+  padding: 16px;
+  box-sizing: border-box;
+}
+.connection_box .section .check_box .check_event {
+  text-align: right;
+  margin-top: 20px;
+}
+.connection_box .section .check_list > li,
+.connection_box .section .check_list > li .input_box {
+  margin-top: 12px;
+}
+.connection_box .section > button {
+  width: 100%;
+  margin-top: 12px;
+}
+.connection_box .section > button:first-child {
+  margin: 0;
+}
+
+/*** 쿠폰내역 ***/
+.coupon_box .my_box > div {
+  margin-bottom: 8px;
+  padding: 18px 16px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coupon_box .my_box .right {
+  flex: 1;
+  margin-left: 16px;
+  text-align: right;
+}
+.coupon_box .my_box .right .number span {
+  display: inline-block;
+  margin-right: 2px;
+  vertical-align: top;
+}
+.coupon_box .my_box .right .coupon_button {
+  margin-top: 8px;
+}
+.coupon_box .my_box .right .coupon_button .button {
+  border: 0 none;
+  font-size: 0;
+}
+.coupon_box .my_box .right .coupon_button .button span {
+  vertical-align: middle;
+}
+.coupon_box .my_box .right .coupon_button .button span b {
+  font-weight: bold;
+}
+.coupon_box .my_box .right .coupon_button .button::after {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-image: url(/mypage/images/icon_info_circle.svg);
+  vertical-align: middle;
+  margin-left: 4px;
+}
+.coupon_box .list_box > li:last-child {
+  border-bottom: 0 none;
+}
+
+/* 댓글, 답글 */
+.section .comment_list.list {
+  margin-top: 0;
+}
+
+/* 공지사항 */
+.notice_list .info_txt {
+  flex: 1;
+}
+.notice_list .info_txt .date {
+  margin-top: 6px;
+}
+.notice_list .txt_box .desc {
+  font-size: 14px;
+  line-height: 18px;
+}
+.notice_list .txt_box .desc strong {
+  display: block;
+  font-weight: 700;
+}
+.notice_list .txt_box .desc img {
+  max-width: 100%;
+  display: block;
+  margin-top: 16px;
+}
+.notice_list .txt_box .desc table {
+  margin-top: 16px;
+  width: 100%;
+  border: 1px solid #d4d2d2;
+  border-radius: 4px;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: block;
+}
+.notice_list .txt_box .desc table thead {
+  border-bottom: 1px solid #d4d2d2;
+}
+.notice_list .txt_box .desc table thead th {
+  padding: 12px;
+  color: #231f1f;
+  text-align: center;
+  background-color: #eae9e9;
+  font-weight: 700;
+}
+.notice_list .txt_box .desc table thead th:not(:first-child),
+.notice_list .txt_box .desc table tbody td:not(:first-child) {
+  border-left: 1px solid #d4d2d2;
+}
+.notice_list .txt_box .desc table tbody {
+  background-color: #fff;
+}
+.notice_list .txt_box .desc table tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #d4d2d2;
+}
+.notice_list .txt_box .desc table tbody td:last-child {
+  border-bottom: 0 none;
+}
+.notice_list .txt_box .desc a {
+  display: inline-block;
+  color: #0015d7;
+  text-decoration-line: underline;
+}
+.notice_list .txt_box .desc b {
+  font-weight: bold;
+}
+.DarkMode .notice_list .txt_box .desc table thead {
+  border-bottom: 1px solid #534c4c;
+}
+.DarkMode .notice_list .txt_box .desc table thead th {
+  color: #eae9e9;
+  background-color: #3e3636;
+}
+.DarkMode .notice_list .txt_box .desc table thead th:not(:first-child),
+.DarkMode .notice_list .txt_box .desc table tbody td:not(:first-child) {
+  border-left: 1px solid #534c4c;
+}
+.DarkMode .notice_list .txt_box .desc table tbody {
+  background-color: #121212;
+}
+.DarkMode .notice_list .txt_box .desc table tbody td {
+  border-bottom: 1px solid #534c4c;
+}
+.DarkMode .notice_list .txt_box .desc a {
+  color: #7987ff;
+}
+
+@media (max-width: 999px) {
+  .section {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .section .tit_con,
+  .section .list {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .adult_btn label {
+    padding: 0 3px;
+  }
+  .adult_btn input::before {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    top: -3px;
+    left: -3px;
+  }
+  .adult_btn input:checked::before {
+    left: 14px;
+  }
+  .adult_btn input {
+    width: 31px;
+    height: 14px;
+  }
+  .myPage .my_pay .coupon_box {
+    height: 168px;
+  }
+  .myPage .my_pay .coupon_box > .left {
+    flex-direction: column;
+  }
+  .myPage .my_pay .coupon_box > .left .icon_coupon_box {
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+  }
+  .myPage .my_pay .coupon_box .num_btn {
+    margin-top: 4px;
+  }
+  .myPage .my_pay .coupon_box > .right {
+    width: 240px;
+    flex-direction: column;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .myPage .my_pay .coupon_box > .right .after {
+    flex-direction: column;
+  }
+  .myPage .my_pay .coupon_box > .right .after > div {
+    margin: 0;
+    padding: 8px 0;
+  }
+  .myEmblem .emblem_list {
+    padding-right: 12px;
+    margin-top: 8px;
+  }
+  .myEmblem .emblem_list ul {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .comment_list {
+    margin-bottom: 4rem;
+  }
+}
+@media (max-width: 540px) {
+  section {
+    padding: 20px 0 40px;
+  }
+  .section {
+    margin-top: 36px;
+  }
+  .myPage .my_profile .my_info .profile {
+    width: 96px;
+    height: 96px;
+  }
+  .myPage .my_profile .my_info .info_txt {
+    margin-left: 12px;
+  }
+  .myPage .my_profile .my_info .info_txt .rating_box .left {
+    margin-top: 8px;
+  }
+  .myPage .menu_list nav > ul {
+    grid-template-columns: none;
+  }
+  .myPage .my_pay .coupon_box > .right {
+    width: 140px;
+  }
+  .myEmblem .emblem_list ul {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .myBenefit .my_benefit .my_grade {
+    padding: 20px 0;
+  }
+  .connection_box .signup_list > li {
+    height: 72px;
+  }
+  .history_list .list,
+  .history_list .tit_con,
+  .history_list ul {
+    margin-top: 0;
+  }
+  .edit_box .side_info .input_box > li {
+    margin-bottom: 8px;
+  }
+  .notice_list .info_txt .date {
+    margin-top: 4px;
+  }
+}

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 3depth헤더 일때 Depth3_Header Sub_Header 추가 -->
+  <!-- 바닥에 여백 36px 추가하고싶으면 class="Depth" 추가 -->
+  <body class="LightMode Depth3_Header Sub_Header Depth">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="swiper-slide wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+          <button type="button" class="home_btn"></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">회원탈퇴</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <section class="connection_box wrapper">
+        <div class="section">
+          <div class="tit_con title-02-b color-txt-normal">탈퇴 안내</div>
+          <div
+            class="check_box radius-sm border-line border-soild color-border-01"
+          >
+            <div class="text_box body-03-long color-txt-03">
+              탈퇴 진행시<br /><br />
+              1&#41; 회원님께서 보유하고 계시던 쿠폰 등 재화는 모두 소멸되며 더
+              이상 사용이 불가합니다.<br />
+              2&#41; 회원님께서 구매하셨던 모든 유료 콘텐츠의 열람이
+              불가합니다.<br />
+              3&#41; 재가입 시 잔여 쿠폰, 구입하신 콘텐츠 내역 등은 복구가
+              불가합니다.<br /><br />
+              또한 탈퇴 이후에는 동일한 인증정보로 재가입이 불가하오니 신중하게
+              탈퇴를 진행해주시길 부탁드립니다.<br />
+              탈퇴를 진행하시겠습니까?
+            </div>
+            <p class="check_event">
+              <label
+                for="check"
+                class="checkbox_round check-type-01 medium label_on"
+              >
+                <input type="checkbox" id="check" />
+                <span class="box"></span>
+                <span class="txt color-txt-04"
+                  >유의사항 확인 후 동의합니다
+                  <span class="color-btn-01 txt">(필수)</span></span
+                >
+              </label>
+            </p>
+          </div>
+        </div>
+        <div class="section">
+          <div class="tit_con title-02-b color-txt-normal">
+            탈퇴 사유 <span class="btn-04 color-btn-01 txt">(필수)</span>
+          </div>
+          <ul class="check_list">
+            <li>
+              <label
+                for="a1"
+                class="radio_button check-type-01 medium label_on"
+              >
+                <input type="radio" id="a1" name="radio" />
+                <span class="box"></span>
+                <span class="txt color-txt-04">잦은 시스템 오류</span>
+              </label>
+            </li>
+            <li>
+              <label
+                for="a2"
+                class="radio_button check-type-01 medium label_on"
+              >
+                <input type="radio" id="a2" name="radio" />
+                <span class="box"></span>
+                <span class="txt color-txt-04">콘텐츠로 인한 불만</span>
+              </label>
+            </li>
+            <li>
+              <label
+                for="a3"
+                class="radio_button check-type-01 medium label_on"
+              >
+                <input type="radio" id="a3" name="radio" />
+                <span class="box"></span>
+                <span class="txt color-txt-04"
+                  >서비스 운영이 마음에 들지 않음</span
+                >
+              </label>
+            </li>
+            <li>
+              <label
+                for="a4"
+                class="radio_button check-type-01 medium label_on"
+              >
+                <input type="radio" id="a4" name="radio" />
+                <span class="box"></span>
+                <span class="txt color-txt-04">사용하지 않는 계정</span>
+              </label>
+            </li>
+            <li>
+              <label
+                for="a5"
+                class="radio_button check-type-01 medium label_on"
+              >
+                <input type="radio" id="a5" name="radio" />
+                <span class="box"></span>
+                <span class="txt color-txt-04">기타</span>
+              </label>
+              <!-- 기타 눌렀을때만 보이게 -->
+              <ul class="input_box" style="display: none">
+                <li>
+                  <div
+                    class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+                  >
+                    <textarea
+                      placeholder="더 나은 북팔이 될 수 있도록 의견을 들려주세요."
+                      class="color-txt-normal body-03-long"
+                    ></textarea>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- 비밀번호 입력 불가 계정인 경우 아예 안보이게 -->
+        <div class="section">
+          <div class="tit_con title-02-b color-txt-normal">비밀번호 확인</div>
+          <ul class="input_box">
+            <li>
+              <div
+                class="text_input border-line border-soild radius-sm color-bg-01 color-border-02"
+              >
+                <input
+                  type="password"
+                  placeholder="비밀번호를 입력하세요."
+                  class="color-txt-normal body-03"
+                />
+                <p class="right_btns">
+                  <span class="btnClear"></span>
+                  <span class="Error"></span>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- //비밀번호 입력 불가 계정인 경우 아예 안보이게 -->
+
+        <div class="section button_box">
+          <button
+            type="button"
+            class="button btn_01 filled large label_on radius-sm btn-04"
+          >
+            취소
+          </button>
+          <button
+            type="button"
+            class="button btn_01 outlined large label_on radius-sm btn-04 color-btn-01 txt"
+            onclick="Modal()"
+            return
+            false;
+          >
+            탈퇴하기
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box swiper-slide">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">회원 탈퇴</div>
+            <div class="desc body-03-long color-txt-02">
+              회원 탈퇴 시 쿠폰, 재화는 모두 소멸되며, 계정 정보 복구가
+              불가능합니다. 또한 모든 콘텐츠 열람이 불가하며 재가입시에도
+              동일합니다. <br />정말로 탈퇴하시겠어요?
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on filled button"
+            >
+              계속 사용하기
+            </button>
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              네, 탈퇴할게요.
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("Modal"));
+      function Modal() {
+        modal.show();
+      }
+    </script>
+  </body>
+</html>

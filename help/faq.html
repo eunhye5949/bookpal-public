@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 3depth헤더 일때 Depth3_Header Sub_Header 추가 -->
+  <!-- 바닥에 여백 36px 추가하고싶으면 class="Depth" 추가 -->
+  <body class="LightMode Depth3_Header Sub_Header Depth">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="swiper-slide wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">FAQ</div>
+        <div class="btns right_btns" style="display: flex">
+          <button
+            type="button"
+            onclick="location.href='/help/faq_search.html' "
+            class="faq_search_btn"
+          ></button>
+        </div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- subDepth -->
+    <div id="subDepth" class="color-bg-01 type_header">
+      <div class="swiper-container">
+        <div class="swiper-wrapper txt color-txt-muted">
+          <!-- 클릭시 class="on" 추가-->
+          <div class="swiper-slide on">
+            <a href="#">
+              <span class="color-btn-01 border border-soild btn-04"
+                >이용방법</span
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <span class="color-btn-01 border border-soild btn-04"
+                >결제/환불</span
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <span class="color-btn-01 border border-soild btn-04">기타</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //subDepth -->
+
+    <!-- container -->
+    <div id="container">
+      <section class="history_box section wrapper">
+        <div class="type_list_btns">
+          <div class="swiper-container snbSwiper">
+            <div class="swiper-wrapper">
+              <!-- 클릭시 on 추가-->
+              <div class="swiper-slide on">
+                <a href="#" class="button btn_05 label_on medium radius-full">
+                  <span class="btn-03 color-btn-03-txt">계정&로그인</span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="button btn_05 label_on medium radius-full">
+                  <span class="btn-03 color-btn-03-txt">콘텐츠 이용</span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="button btn_05 label_on medium radius-full">
+                  <span class="btn-03 color-btn-03-txt">프로모션</span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="button btn_05 label_on medium radius-full">
+                  <span class="btn-03 color-btn-03-txt">작가가 되려면 </span>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="button btn_05 label_on medium radius-full">
+                  <span class="btn-03 color-btn-03-txt">오류해결</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <ul class="toggle_list">
+          <li class="border-line border-soild radius-sm color-border-01">
+            <button type="button" class="button large color-bg-01 label_on">
+              <span class="color-txt-02 title-01-m-long"
+                >비밀번호는 어디서 변경 하나요?</span
+              >
+            </button>
+            <div
+              class="txt_box color-txt-03 body-02-long border-soild border-top-line color-bg-02 color-border-01"
+            >
+              <div class="desc body-02-long color-txt-03">
+                동시 접속자가 많은 시간대의 경우 서버 송수신 오류로 불가피하게
+                충전 상품 지급 누락이 발생할 수 있습니다. <br />
+                [1:1문의]로 알려 주시면 도와드리겠습니다. <br />
+                <br />
+                ※ 문의 시 결제 내용을 정확히 알려 주시면 빠른 조회 및 처리가
+                가능합니다.- 휴대폰 결제 / 12월 6일 20시 / 51,000원 / 북팔
+                아이디 <br />
+                북팔 계좌이체는 이체 내역 확인 후 수동 지급이 되기 때문에 이체
+                후 지급까지 다소 시간이 걸릴 수 있습니다. <br />
+                <br />
+                (평일 10시 / 14시 / 16시 확인) 주말 및 공휴일의 경우 다음
+                영업일에 쿠폰 발급이 진행됩니다.
+              </div>
+            </div>
+          </li>
+          <li class="border-line border-soild radius-sm color-border-01">
+            <button type="button" class="button large color-bg-01 label_on">
+              <span class="color-txt-02 title-01-m-long"
+                >비밀번호는 어디서 변경 하나요?</span
+              >
+            </button>
+            <div
+              class="txt_box color-txt-03 body-02-long border-soild border-top-line color-bg-02 color-border-01"
+            >
+              <div class="desc body-02-long color-txt-03">
+                동시 접속자가 많은 시간대의 경우 서버 송수신 오류로 불가피하게
+                충전 상품 지급 누락이 발생할 수 있습니다. <br />
+                [1:1문의]로 알려 주시면 도와드리겠습니다. <br />
+                <br />
+                ※ 문의 시 결제 내용을 정확히 알려 주시면 빠른 조회 및 처리가
+                가능합니다.- 휴대폰 결제 / 12월 6일 20시 / 51,000원 / 북팔
+                아이디 <br />
+                북팔 계좌이체는 이체 내역 확인 후 수동 지급이 되기 때문에 이체
+                후 지급까지 다소 시간이 걸릴 수 있습니다. <br />
+                <br />
+                (평일 10시 / 14시 / 16시 확인) 주말 및 공휴일의 경우 다음
+                영업일에 쿠폰 발급이 진행됩니다.
+              </div>
+            </div>
+          </li>
+        </ul>
+        <!-- 리스트 없을때 -->
+        <!-- <p class="no_data medium color-txt-04 body-02-long">검색 결과가 없습니다.</p> -->
+        <!-- //리스트 없을때 -->
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box swiper-slide">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+  </body>
+</html>

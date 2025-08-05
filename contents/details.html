@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 3depth헤더 일때 Depth3_Header Sub_Header 추가 -->
+  <!-- 디바이스줄여도 계속 footer보이면 Main 클래스 추가 -->
+  <body class="LightMode Main Depth3_Header Sub_Header">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="clearfix wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+          <button type="button" class="home_btn"></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">
+          이 작품 이용내역
+        </div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- subDepth -->
+    <div id="subDepth" class="color-bg-01 type_header">
+      <div class="swiper-container">
+        <div class="swiper-wrapper txt color-txt-muted">
+          <!-- 클릭시 class="on" 추가-->
+          <div class="swiper-slide on">
+            <a href="/contents/details.html">
+              <span class="color-btn-01 border border-soild btn-04"
+                >받은혜택</span
+              >
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="/contents/usage.html">
+              <span class="color-btn-01 border border-soild btn-04"
+                >사용내역</span
+              >
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- //subDepth -->
+
+    <!-- container -->
+    <div id="container">
+      <section class="section wrapper template">
+        <div class="my_coupon">
+          <div class="area top_con radius-sm color-bg-select-01">
+            <div class="left">
+              <img src="/images/coupon_color.svg" />
+              <span class="title-01-b color-txt-normal">내 쿠폰</span>
+            </div>
+            <div class="right">
+              <p class="num title-03-m color-txt-normal">
+                <span class="title-03">112</span>개
+              </p>
+              <button
+                type="button"
+                class="button btn_01 label_on filled medium radius-full"
+              >
+                <span class="btn-03 white-always txt">충전하기</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="benefits_area">
+          <ul class="info_txt area radius-sm gold_opacity-10 bg">
+            <li>
+              <p class="left">
+                <span class="color-txt-02 title-sub-02-m">선물소장권</span>
+              </p>
+              <p class="right">
+                <span class="color-txt-normal title-sub-02-m">13장</span>
+              </p>
+            </li>
+            <li>
+              <p class="left">
+                <span class="color-txt-02 title-sub-02-m">선물이용권</span>
+              </p>
+              <p class="right">
+                <span class="color-txt-normal title-sub-02-m">2장</span>
+              </p>
+            </li>
+            <!-- 벌써 열두시?! -->
+            <li>
+              <p class="left info plus_info">
+                <!-- 첫만남이용권 있을때 최초만 / 첫만남 이용권 없을때 이용권 텍스트 빼기 -->
+                <span class="color-txt-02 title-sub-02-m">벌써열두시?!</span>
+                <span class="color-btn-01 txt body-02">첫만남이용권 5장</span>
+              </p>
+              <p class="right">
+                <button
+                  type="button"
+                  class="button btn_01 round radius-full small label_on outlined link_btn"
+                >
+                  <span class="btn-02 color-btn-01 txt">선물받기</span>
+                </button>
+                <!-- 선물받기 후 -->
+                <!-- <span class="title-sub-02-m color-btn-01 txt">12시간뒤 충전</span> -->
+              </p>
+            </li>
+            <!-- 정주행의맛 -->
+            <li>
+              <p class="left info">
+                <span class="color-txt-02 title-sub-02-m"
+                  >정주행의맛 이벤트 작품</span
+                >
+                <span class="color-txt-05 title-sub-02-b">0/7</span>
+              </p>
+              <p class="right">
+                <button type="button" class="button" id="info"></button>
+              </p>
+            </li>
+            <!-- 묶음이벤트 -->
+            <li>
+              <p class="left">
+                <span class="color-txt-02 title-sub-02-m"
+                  >발렌타인데이 이벤트</span
+                >
+              </p>
+              <p class="right">
+                <button
+                  type="button"
+                  class="button btn_01 round radius-full small label_on outlined link_btn"
+                >
+                  <span class="btn-02 color-btn-01 txt">진행중</span>
+                </button>
+              </p>
+            </li>
+            <!-- 선물함 -->
+            <li>
+              <p class="left">
+                <span class="color-txt-02 title-sub-02-m"
+                  >깜짝선물이 도착했습니다.</span
+                >
+              </p>
+              <p class="right">
+                <button
+                  type="button"
+                  class="button btn_01 round radius-full small label_on outlined link_btn"
+                >
+                  <span class="btn-02 color-btn-01 txt">선물받기</span>
+                </button>
+              </p>
+            </li>
+            <!-- 핫딜 -->
+            <!-- 단행본에서는 핫딜명칭 빠짐 10% 할인 오른쪽 버튼도 빠짐 -->
+            <li>
+              <p class="left info">
+                <span class="color-txt-02 title-sub-02-m">핫딜 10% 할인</span>
+                <span class="color-txt-05 body-02">3일 남음</span>
+              </p>
+              <p class="right">
+                <button
+                  type="button"
+                  class="button btn_01 round radius-full small label_on outlined link_btn"
+                  onclick="DealModal()"
+                  return
+                  false;
+                >
+                  <span class="btn-02 color-btn-01 txt">할인받기</span>
+                </button>
+              </p>
+            </li>
+            <!-- 플러스무료 -->
+            <li>
+              <p class="left info">
+                <span class="color-txt-02 title-sub-02-m">25화 플러스무료</span>
+                <span class="color-txt-05 body-02">23시간 남음</span>
+              </p>
+            </li>
+            <!-- 자유연재 -->
+            <li>
+              <p class="left">
+                <span class="color-txt-02 title-sub-02-m"
+                  >댓글 입력시 선물소장권 추첨!</span
+                >
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="area_box history_list">
+          <!-- 리스트 -->
+          <ul class="list">
+            <li class="border-soild border-bottom-line color-border-01">
+              <a>
+                <div class="left info_txt spacing_08">
+                  <div class="list_tit_con">
+                    <span class="title-01-b color-txt-normal text_overflow"
+                      >책제목입니다.</span
+                    >
+                  </div>
+                  <div class="category body-02 color-txt-03 text_overflow">
+                    <!-- 작가명 들어갈때만 이 span 태그 존재 -->
+                    [<span class="writer text_overflow"
+                      >작가명들어가는자리인데 작가명이 길면</span
+                    >] 작가 감동쿠폰
+                  </div>
+                  <div class="date body-01 color-txt-05">YY.MM.DD 00:00:00</div>
+                </div>
+                <div class="right">
+                  <div class="title title-01-m color-txt-normal">
+                    <span>1</span>장
+                  </div>
+                  <div class="data color-btn-01 txt body-01">
+                    유효기간 <span>23.11.10</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="border-soild border-bottom-line color-border-01">
+              <a>
+                <div class="left info_txt spacing_08">
+                  <div class="list_tit_con">
+                    <span class="title-01-b color-txt-normal text_overflow"
+                      >전체</span
+                    >
+                  </div>
+                  <div class="category body-02 color-txt-03 text_overflow">
+                    [본인인증] 선물소장권
+                  </div>
+                  <div class="date body-01 color-txt-05">YY.MM.DD 00:00:00</div>
+                </div>
+                <div class="right">
+                  <div class="title title-01-m color-txt-normal">
+                    <span>1</span>장
+                  </div>
+                  <div class="data color-btn-01 txt body-01">
+                    유효기간 <span>23.11.10</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="border-soild border-bottom-line color-border-01">
+              <a>
+                <div class="left info_txt spacing_08">
+                  <div class="list_tit_con">
+                    <span class="title-01-b color-txt-normal text_overflow"
+                      >책제목입니다.</span
+                    >
+                  </div>
+                  <div class="category body-02 color-txt-03 text_overflow">
+                    [프로모션명] 지급내역 종류
+                  </div>
+                  <div class="date body-01 color-txt-05">YY.MM.DD 00:00:00</div>
+                </div>
+                <div class="right">
+                  <div class="title title-01-m color-txt-normal">
+                    <span>1</span>장
+                  </div>
+                  <div class="data color-btn-01 txt body-01">
+                    유효기간 <span>23.11.10</span>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <!-- 맨 마지막지점에서 -->
+          <div class="body-02 color-txt-muted data_info">
+            최근 90일 까지의 데이터가 노출됩니다.
+          </div>
+          <!-- 내역 없을때 -->
+          <!-- <div class="no_data medium color-txt-04 body-02-long">최근 90일 동안 받은혜택이 없습니다.</div> -->
+        </div>
+      </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box clearfix">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 프로모션 토스트 -->
+    <div
+      class="toast benefit_toast black_opacity-80 bg radius-xs"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-body">
+        <div class="area">
+          <p class="text color-btn-02-txt btn-03-active">벌써열두시?!</p>
+          <p class="text color-btn-02-txt body-02-long">
+            <span class="text_overflow"
+              >책제목입니다. 책제목입니다. 책제목입니다.</span
+            >
+            <span>선물소장권 999장을 받았습니다.</span>
+          </p>
+          <p class="text color-state-point-01 txt caption-02-long">
+            유효기간 : 2024. 01. 03 23:59:59
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 정주행의맛 토스트 -->
+    <div
+      class="toast message_toast black_opacity-80 bg radius-xs"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-body">
+        <div class="area">
+          <p class="text color-btn-02-txt body-02-long">
+            해당 작품 N개 회차 쿠폰 열람시<br />선물이용권 N장 지급!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 핫딜 모달 -->
+    <div id="DealModal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">핫딜 구매 안내</div>
+            <!-- ‘할인받기’ 터치시 안내 모달 -->
+            <div class="txt_box title-01-m radius-sm color-bg-select-01">
+              <p class="title-01-m">
+                <span class="color-txt-04">구매회차</span>
+                <span class="color-txt-01">76개</span>
+              </p>
+              <p class="title-01-m color-btn-01 txt">쿠폰 38개 (50%할인)</p>
+            </div>
+            <div class="desc color-txt-05 body-01-long">
+              - 기존 구매 회차는 쿠폰이 소모되지 않습니다. <br />
+              - 할인은 일괄 구매 시에만 적용되며 자동 소장됩니다.<br />
+              - 쿠폰으로만 구매가 가능합니다. (선물권 사용 불가)<br />
+              - 핫딜 구매 후에는 환불이 불가합니다.
+            </div>
+            <!-- ‘핫딜 구매’ 터치 후 쿠폰 부족할 경우 -->
+            <!-- <div class="desc color-txt-02">
+                      <p class="title-book-03-m">
+                        <span class="text_overflow">책제목영역입니다. 책제목영역입니다. 책제목영역입니다.</span>
+                      </p>
+                      <p class="body-03-long">
+                          전체 회차를 소장하시겠습니까?
+                      </p>
+                  </div> 
+                  <div class="txt_box title-01-m radius-sm color-bg-select-01">
+                      <p class="color-txt-01">
+                        <span class="color-txt-04">잔여쿠폰</span> 21개 ·
+                        <span class="color-txt-04">사용쿠폰</span> 38개
+                      </p>
+                      <p class="color-btn-01 txt">쿠폰이 부족합니다.</p>
+                  </div> -->
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on filled button"
+            >
+              빨간색 배경 버튼
+            </button>
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              다음에 할게요
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modalDeal = new bootstrap.Modal(document.getElementById("DealModal"));
+      function DealModal() {
+        modalDeal.show();
+      }
+    </script>
+  </body>
+</html>

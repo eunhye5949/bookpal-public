@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Document</title>
+
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap" rel="stylesheet">
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/re.bootstrap.css" rel="stylesheet">
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="/css/common.css" rel="stylesheet">
+    <link href="/css/guid.css" rel="stylesheet">
+    <link href="/css/content.css" rel="stylesheet">
+    <link href="/css/mediaquery.css" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>history.scrollRestoration = "manual"</script>
+
+
+</head>
+
+<!-- 3depth헤더 일때 Depth3_Header Sub_Header 추가 -->
+<!-- 바닥에 여백 36px 추가하고싶으면 class="Depth" 추가 -->
+<body class="LightMode Depth3_Header Sub_Header Depth">
+
+    <!-- header --> 
+    <header id="header">
+        <div class="header_inner color-border-01">
+            <div class="swiper-slide wrapper">
+                <div class="left">
+                    <div class="logo text_overflow">
+                        <a href="/index.html"></a>
+                        <span class="color-txt-normal title-02-b title">페이지제목</span>
+                    </div>
+                    <ul class="gnb">
+                        <li class="home">
+                            <a href="/index.html">
+                                <p class="gnb_list white-always btn-04 txt">추천</p>
+                            </a>
+                        </li>
+                        <li class="novel">
+                            <a href="/novel">
+                                <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                            </a>
+                        </li>
+                        <li class="toon">
+                            <a href="/toon">
+                                <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                            </a>
+                        </li>
+                        <li class="gift">
+                            <a href="/gift">
+                                <p class="gnb_list white-always btn-04 txt">선물함</p>
+                            </a>
+                        </li>
+                        <li class="storage">
+                            <a href="/storage">
+                                <p class="gnb_list white-always btn-04 txt">보관함</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="btns right">
+                    <a href="" target="_blank">
+                        <p class="factory">작가홈</p>
+                    </a>
+                    <a href="/order" id="orderLink" >
+                        <p class="charge">충전</p>
+                    </a>
+                    <a href="/search">
+                        <p class="search">검색</p>
+                    </a>
+                    <a href="/mypage">
+                        <p class="mypage">
+                            <span class="dot color-btn-01 bg radius-full"></span>
+                            마이페이지
+                        </p>
+                    </a>
+                </div> 
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+        <div class="title_menu wrapper">
+            <div class="btns left_btns">
+                <button type="button" class="prev_btn" onClick="history.back()"></button>
+                <button type="button" class="home_btn"></button>
+            </div>
+            <div class="title-04 color-txt-normal text_overflow">내정보 수정</div>
+            <div class="btns right_btns">
+                
+            </div>
+        </div>
+    </div>
+    <!-- //서브메뉴 -->  
+
+    <!-- container -->
+    <div id="container">
+        <section class="edit_box wrapper">
+            <div class="section basis_info">
+                <div class="tit_con title-02-b color-txt-normal">기본정보</div>
+                <div class="list">
+                    <ul class="input_box">
+                        <li class="readonly_txt">
+                            <div class="text_input border-line border-soild radius-sm color-bg-02 color-border-01">
+                                <p class="text_tit body-03 color-txt-03"><span>아이디</span></p>
+                                <span class="sns_logo">
+                                    <img src="/user/images/login_naver_icon.svg">
+                                    <!-- <img src="/user/images/login_kakao_icon.svg">
+                                    <img src="/user/images/login_google_icon.svg">
+                                    <img src="/user/images/login_apple_icon.svg"> -->
+                                </span>
+                                <input type="text" class="color-txt-muted body-03" value="sooooooong" readonly disabled>
+                            </div>
+                        </li>
+                        <!-- 잘못되었을때 error_text 추가 -->
+                        <li class="">
+                            <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                <p class="text_tit body-03 color-txt-03"><span class="essential_tit">닉네임</span></p>
+                                <input type="text" placeholder="닉네임을 입력해주세요." value="sooooooong" class="color-txt-normal body-03">
+                                <p class="right_btns">
+                                    <span class="btnClear"></span> 
+                                    <span class="Error"></span>
+                                </p>
+                            </div>
+                            <p class="bottom_txt caption-02 color-txt-05">닉네임이 중복되었어요.</p>
+                        </li>
+                        <li class="">
+                            <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                <p class="text_tit body-03 color-txt-03"><span class="essential_tit">이메일</span></p>
+                                <input type="email" placeholder="이메일을 입력해주세요." value="songsong@gmail.com" class="color-txt-normal body-03">
+                                <p class="right_btns">
+                                    <span class="btnClear"></span>
+                                    <span class="Error"></span>
+                                </p>  
+                            </div>
+                            <p class="bottom_txt caption-02 color-txt-05">이메일 형식이 잘못되었어요.</p>
+                        </li>
+                        <li class="">
+                            <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                <p class="text_tit body-03 color-txt-03"><span>새 비밀번호</span></p>
+                                <input type="password" placeholder="수정시에만 입력해주세요." class="color-txt-normal body-03">
+                                <p class="right_btns">
+                                    <span class="btnClear"></span>
+                                    <span class="Error"></span>
+                                </p>
+                            </div>
+                            <p class="bottom_txt caption-02 color-txt-05">비밀번호를 입력해주세요.</p>
+                            <!-- <p class="bottom_txt caption-02 color-txt-05">비밀번호는 8~16자로 입력해주세요.</p> -->
+                        </li>
+                        <li class="">
+                            <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                <p class="text_tit body-03 color-txt-03"><span>비밀번호 확인</span></p>
+                                <input type="password" placeholder="수정시에만 입력해주세요." class="color-txt-normal body-03">
+                                <p class="right_btns">
+                                    <span class="btnClear"></span>
+                                    <span class="Error"></span>
+                                </p>
+                            </div>
+                            <p class="bottom_txt caption-02 color-txt-05">비밀번호가 일치하지 않습니다.</p>
+                        </li>
+                        <!-- 본인인증 전 -->
+                        <li>
+                            <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                <p class="text_tit body-03 color-txt-03"><span>전화번호</span></p>
+                                <p class="input_text color-txt-muted body-03">인증이 필요합니다.</p>
+                            </div>
+                        </li>
+                        <!-- 본인인증 완료 -->
+                        <li style="display: none;">
+                            <div class="flex">
+                                <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                    <p class="text_tit body-03 color-txt-03"><span>전화번호</span></p>
+                                    <p class="input_text color-txt-normal body-03">010-1234-5678</p>
+                                </div>
+                                <button type="button" class="button btn_01 medium outlined label_on radius-full"><span class="color-btn-01 txt btn-04">변경</span></button>
+                            </div>
+                        </li>
+                        <!-- 본인인증 완료후 변경버튼 눌렀을때 -->
+                        <!-- 잘못되었을때 error_text 추가 -->
+                        <li class="" style="display: none;">
+                            <div class="flex">
+                                <div class="text_input border-line border-soild radius-sm color-bg-01 color-border-02">
+                                    <input type="text" placeholder="전화번호 입력" class="color-txt-normal body-03">
+                                    <p class="right_btns">
+                                        <span class="btnClear"></span> 
+                                        <span class="Error"></span>
+                                    </p>
+                                    <span class="time caption-02 color-txt-05">03:00</span>
+                                </div>
+                                <!-- 인증번호 발송 -->
+                                <button type="button" class="button btn_01 medium filled label_on radius-full btn-04" disabled="disabled">인증번호 발송</button>
+                                <!-- 인증하기 -->
+                                <!-- <button type="button" class="button btn_01 medium filled label_on radius-full btn-04">인증하기</button> -->
+                                <!-- 재발송 -->
+                                <!-- <button type="button" class="button btn_01 medium filled label_on radius-full btn-04">재발송</button> -->
+                            </div>
+                            <p class="bottom_txt caption-02 color-txt-05">인증번호를 잘못 입력하셨습니다.</p>
+                        </li>
+                    </ul>
+                    <!-- 비활성화 시 disabled="disabled"-->
+                    <button type="button" id="completedBtn" class="button btn_01 filled large label_on radius-sm btn-04" disabled="disabled">수정완료</button>
+                </div>
+            </div>
+            <div class="section side_info">
+                <div class="tit_con title-02-b color-txt-normal">부가정보</div>
+                <div class="list">
+                    <ul class="input_box">
+                        <li>
+                            <div class="text_input">
+                                <p class="text_tit body-03 color-txt-03"><span>본인인증</span></p>
+                                <p class="input_text">
+                                    <button type="button" id="certifyBtn" class="button btn_01 medium outlined label_on radius-full"><span class="color-btn-01 txt btn-03">인증하기</span></button>
+                                    <!-- 인증완료 했을때 버튼사라지고 텍스트만 보이게 -->
+                                    <!-- <span class="color-btn-01 txt body-03">인증완료</span> -->
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="text_input">
+                                <p class="text_tit body-03 color-txt-03"><span>자동충전상품</span></p>
+                                <p class="input_text">
+                                    <!-- 이용안할때 -->
+                                    <span class="color-btn-03-txt body-03">이용안함</span>
+                                    <button type="button" class="button btn_01 medium outlined label_on radius-full"><span class="color-btn-01 txt btn-03">보러가기</span></button>
+                                    <!-- 이용할때 -->
+                                    <!-- <span class="color-btn-01 txt body-03">정기충전 이용중</span>
+                                    <button type="button" class="button btn_01 medium outlined label_on radius-full"><span class="color-btn-01 txt btn-03">해지하기</span></button> -->
+                                </p>
+                            </div>
+                        </li>
+                        <!-- 해지하면 뜨게 -->
+                        <li style="display: none;">
+                            <div class="text_input">
+                                <p class="text_tit body-03 color-txt-03"><span>최근해지일자</span></p>
+                                <p class="input_text">
+                                    <span class="color-btn-03-txt txt body-03">24.04.22 (스마트충전 해지)</span>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="account_button">
+                        <button type="button" onclick="location.href='/mypage/connection.html' " class="button btn_03 outlined large label_on round radius-sm"><span class="btn-04 color-txt-04">SNS 계정 연동</span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cancel_button bottom_button section">
+                <button tyep="button" class="button" onclick="location.href='/mypage/secession.html' "><span class="btn-04 color-btn-03-txt">회원탈퇴</span></button>
+            </button>
+        </section>
+    </div>
+    <!-- container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+        <div class="area_box swiper-slide">
+            <div class="left">
+                <div class="info">
+                    <button type="button" class="color-txt-03 btn-03">(주) 북팔 사업자정보</button>
+                    <div class="txt_box color-txt-04 body-01-long">
+                        서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br>
+                        대표이사 : 김석환  |  사업자등록번호 : 214-88-74813  |  통신판매업신고 :
+                        <a href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813" target="_blank">제2022-서울영등포-1421호</a><br>
+                        개인정보관리책임자 : 최성민 <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+                    </div>
+                </div>
+                <p class="copyright btn-01 color-txt-muted">Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.</p>
+                <ul class="menu_links">
+                    <li class="color-txt-muted btn-02">
+                        <a href="/help/index.html">고객센터</a>
+                      </li>
+                      <li class="color-txt-muted btn-02">
+                        <a href="/help/terms.html">이용약관</a>
+                      </li>
+                      <li class="color-txt-muted btn-02-active">
+                        <a href="/help/terms.html">개인정보처리방침</a>
+                      </li>
+                      <li class="color-txt-muted btn-02">
+                        <a href="/help/terms.html">청소년 보호정책</a>
+                      </li>
+                  </ul>
+            </div>
+            <div class="right">
+                <ul class="sns_link">
+                    <li class="color-bg-02 radius-full blog">
+                        <a href="https://blog.naver.com/bookpalbooks" target="_blank" class="button btn_03 large label_off round on radius-full"><span>블로그</span></a>
+                    </li>
+                    <li class="color-bg-02 radius-full twitter">
+                        <a href="https://twitter.com/bookpalkorea" target="_blank"  class="button btn_03 large label_off round on radius-full"><span>트위터</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+        <button type="button" class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild" >
+            <span>Top</span>
+        </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 텍스트 토스트 -->
+    <div class="toast message_toast black_opacity-80 bg radius-xs">
+        <div class="toast-body">
+            <div class="area">
+                <p class="text color-btn-02-txt body-02-long">정기충전 해지가 완료되었습니다. </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 모달 -->
+    <div id="Modal" class="select_modal modal black_opacity-60" tabindex="-1"> 
+        <div class="modal-dialog modal-dialog-centered"> 
+            <div class="modal-content radius-xxl color-bg-modal"> 
+                <div class="modal-body"> 
+                    <div class="title title-02-b color-txt-normal">타이틀 들어가는 자리</div>
+                    <div class="body-03-long color-txt-02">내용 들어가는자리입니다.</div>
+                </div> 
+                <div class="modal-footer">
+                    <button type="button" class="radius-sm btn-04 txt btn_01 large label_on filled button">빨간배경 버튼</button>
+                    <button type="button" class="radius-xs btn-03 txt btn_03 medium label_on filled button" data-bs-dismiss="modal">취소</button>   
+                </div> 
+            </div> 
+        </div> 
+    </div>
+
+    <script> 
+        let modal =  new bootstrap.Modal(document.getElementById('Modal')); 
+        function selectModal () { 
+            modal.show(); 
+        } 
+    </script>
+
+   
+
+</body>
+</html>

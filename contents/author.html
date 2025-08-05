@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 모바일헤더 일때 M_Header 추가 -->
+  <!-- 디바이스줄여도 계속 footer보이면 Main 클래스 추가 -->
+  <body class="LightMode color-bg-02 Main M_Header">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="clearfix wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">작가소개</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <section
+        class="section detail_box wrapper clearfix template temp_list template_column"
+      >
+        <div class="radius-xxl color-bg-01 area_box">
+          <div id="top_header" class="color-bg-01">
+            <button
+              type="button"
+              class="prev_btn"
+              onclick="history.back()"
+            ></button>
+            <span class="title-02-b color-txt-normal text_overflow"
+              >작가소개</span
+            >
+          </div>
+          <div class="content_body author_box">
+            <div class="author_info">
+              <div class="info_txt">
+                <p class="title-sub-02-b color-txt-muted">필명</p>
+                <p class="writer title-02-m-long color-txt-normal">
+                  작가명 진짜진짜 긴 경우가 있습니다, 그럴땐 이렇게 표시될 수
+                  있도록 작업해주시면 됩니다. 아마 최대 네다섯줄까지 나올 수도
+                  있을것 같습니다. 이렇게 영역 늘어나면 됩니다. 감사합니다.
+                  작가명 진짜진짜 긴 경우가 있습니다, 그럴땐 이렇게 표시될 수
+                  있도록 작업해주시면 됩니다. 아마 최대 네다섯줄까지 나올 수도
+                  있을것 같습니다. 이렇게 영역 늘어나면 됩니다.
+                  감사합니다.작가명 진짜진짜 긴 경우가 있습니다, 그럴땐 이렇게
+                  표시될 수 있도록 작업해주시면 됩니다. 아마 최대 네다섯줄까지
+                  나올 수도 있을것 같습니다. 이렇게 영역 늘어나면 됩니다.
+                  감사합니다.
+                </p>
+              </div>
+            </div>
+            <div class="status_info">
+              <div class="top_con">
+                <div class="left text_overflow">
+                  <span class="color-txt-normal title-01-b">작품 현황</span>
+                </div>
+                <div class="right">
+                  <span class="btn-03 color-btn-03-txt">전체 작품 (4)</span>
+                </div>
+              </div>
+              <div class="radius-sm gold_opacity-10 status_box clearfix">
+                <div
+                  class="left color-border-thumbnail border-right-line border-soild"
+                >
+                  <p>
+                    <span class="title-01-m color-txt-04 stit">로맨스</span>
+                    <span class="title-01-m color-txt-normal num">1</span>
+                  </p>
+                  <p>
+                    <span class="title-01-m color-txt-04 stit"
+                      >로맨스판타지</span
+                    >
+                    <span class="title-01-m color-txt-normal num">2</span>
+                  </p>
+                </div>
+                <div class="right">
+                  <p>
+                    <span class="title-01-m color-txt-04 stit">판타지</span>
+                    <span class="title-01-m color-txt-normal num">1</span>
+                  </p>
+                  <p>
+                    <span class="title-01-m color-txt-04 stit">BL</span>
+                    <span class="title-01-m color-txt-normal num">0</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="author_list">
+              <div class="top_con">
+                <div class="left text_overflow">
+                  <p class="writer_name color-txt-normal title-01-b">
+                    [<span class="text_overflow"
+                      >작가명들어가는자리인데 작가명 진짜진짜 긴 경우가
+                      있습니다. 그럴땐 이렇게 나오게</span
+                    >] 작품
+                  </p>
+                </div>
+              </div>
+              <div class="list">
+                <ul>
+                  <li class="clearfix">
+                    <a href="/contents/index.html">
+                      <div class="cover_img radius-xs">
+                        <p class="ic_adult badge_adult_middle">
+                          <img src="../images/ic_adult.svg" />
+                        </p>
+                        <img src="../images/thumbnail.jpg" />
+                        <p class="ic_bottom badges_box">
+                          <span class="ic_midnight radius-xs icon_badge"
+                            ><img src="../images/midnight_badge.svg"
+                          /></span>
+                          <span
+                            class="ic_discount radius-xs discount_10 icon_badge"
+                            ><img src="../images/discount_10.svg"
+                          /></span>
+                        </p>
+                      </div>
+                      <div class="info_txt spacing_08">
+                        <div class="info">
+                          <span class="body-01 color-txt-05">장르</span>
+                          <span class="body-01 color-txt-05">3화무료</span>
+                          <span class="body-01 color-txt-05">81.4만</span>
+                        </div>
+                        <div class="list_tit_con">
+                          <span class="ic_up radius-xs icon_badge"
+                            ><img src="../images/up_badge.svg"
+                          /></span>
+                          <span
+                            class="title color-txt-normal title-book-03-m text_overflow"
+                            >책제목입니다.</span
+                          >
+                        </div>
+                        <div class="keyword color-txt-04 btn-02 text_overflow">
+                          <!-- span 태그 무조건 한줄에서 쓰기 -->
+                          <span>#키워드</span><span>#키워드</span
+                          ><span>#키워드입니다~</span><span>#키워드</span
+                          ><span>#키워드 들어가는자리</span
+                          ><span>#키워드입니다~</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="clearfix">
+                    <a href="/contents/index.html">
+                      <div class="cover_img radius-xs">
+                        <p class="ic_adult badge_adult_middle">
+                          <img src="../images/ic_adult.svg" />
+                        </p>
+                        <img src="../images/thumbnail.jpg" />
+                        <p class="ic_bottom badges_box">
+                          <span class="ic_midnight radius-xs icon_badge"
+                            ><img src="../images/midnight_badge.svg"
+                          /></span>
+                          <span
+                            class="ic_discount radius-xs discount_10 icon_badge"
+                            ><img src="../images/discount_10.svg"
+                          /></span>
+                        </p>
+                      </div>
+                      <div class="info_txt spacing_08">
+                        <div class="info">
+                          <span class="body-01 color-txt-05">장르</span>
+                          <span class="body-01 color-txt-05">3화무료</span>
+                          <span class="body-01 color-txt-05">81.4만</span>
+                        </div>
+                        <div class="list_tit_con">
+                          <span class="ic_up radius-xs icon_badge"
+                            ><img src="../images/up_badge.svg"
+                          /></span>
+                          <span
+                            class="title color-txt-normal title-book-03-m text_overflow"
+                            >책제목입니다.</span
+                          >
+                        </div>
+                        <div class="keyword color-txt-04 btn-02 text_overflow">
+                          <!-- span 태그 무조건 한줄에서 쓰기 -->
+                          <span>#키워드</span><span>#키워드</span
+                          ><span>#키워드입니다~</span><span>#키워드</span
+                          ><span>#키워드 들어가는자리</span
+                          ><span>#키워드입니다~</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="clearfix">
+                    <a href="/contents/index.html">
+                      <div class="cover_img radius-xs">
+                        <p class="ic_adult badge_adult_middle">
+                          <img src="../images/ic_adult.svg" />
+                        </p>
+                        <img src="../images/thumbnail.jpg" />
+                        <p class="ic_bottom badges_box">
+                          <span class="ic_midnight radius-xs icon_badge"
+                            ><img src="../images/midnight_badge.svg"
+                          /></span>
+                          <span
+                            class="ic_discount radius-xs discount_10 icon_badge"
+                            ><img src="../images/discount_10.svg"
+                          /></span>
+                        </p>
+                      </div>
+                      <div class="info_txt spacing_08">
+                        <div class="info">
+                          <span class="body-01 color-txt-05">장르</span>
+                          <span class="body-01 color-txt-05">3화무료</span>
+                          <span class="body-01 color-txt-05">81.4만</span>
+                        </div>
+                        <div class="list_tit_con">
+                          <span class="ic_up radius-xs icon_badge"
+                            ><img src="../images/up_badge.svg"
+                          /></span>
+                          <span
+                            class="title color-txt-normal title-book-03-m text_overflow"
+                            >책제목입니다.</span
+                          >
+                        </div>
+                        <div class="keyword color-txt-04 btn-02 text_overflow">
+                          <!-- span 태그 무조건 한줄에서 쓰기 -->
+                          <span>#키워드</span><span>#키워드</span
+                          ><span>#키워드입니다~</span><span>#키워드</span
+                          ><span>#키워드 들어가는자리</span
+                          ><span>#키워드입니다~</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="clearfix">
+                    <a href="/contents/index.html">
+                      <div class="cover_img radius-xs">
+                        <p class="ic_adult badge_adult_middle">
+                          <img src="../images/ic_adult.svg" />
+                        </p>
+                        <img src="../images/thumbnail.jpg" />
+                        <p class="ic_bottom badges_box">
+                          <span class="ic_midnight radius-xs icon_badge"
+                            ><img src="../images/midnight_badge.svg"
+                          /></span>
+                          <span
+                            class="ic_discount radius-xs discount_10 icon_badge"
+                            ><img src="../images/discount_10.svg"
+                          /></span>
+                        </p>
+                      </div>
+                      <div class="info_txt spacing_08">
+                        <div class="info">
+                          <span class="body-01 color-txt-05">장르</span>
+                          <span class="body-01 color-txt-05">3화무료</span>
+                          <span class="body-01 color-txt-05">81.4만</span>
+                        </div>
+                        <div class="list_tit_con">
+                          <span class="ic_up radius-xs icon_badge"
+                            ><img src="../images/up_badge.svg"
+                          /></span>
+                          <span
+                            class="title color-txt-normal title-book-03-m text_overflow"
+                            >책제목입니다.</span
+                          >
+                        </div>
+                        <div class="keyword color-txt-04 btn-02 text_overflow">
+                          <!-- span 태그 무조건 한줄에서 쓰기 -->
+                          <span>#키워드</span><span>#키워드</span
+                          ><span>#키워드입니다~</span><span>#키워드</span
+                          ><span>#키워드 들어가는자리</span
+                          ><span>#키워드입니다~</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- //container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box clearfix">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+  </body>
+</html>
