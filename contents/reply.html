@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      as="style"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/re.bootstrap.css" rel="stylesheet" />
+    <link href="/css/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="/css/common.css" rel="stylesheet" />
+    <link href="/css/guid.css" rel="stylesheet" />
+    <link href="/css/content.css" rel="stylesheet" />
+    <link href="/css/mediaquery.css" rel="stylesheet" />
+
+    <link href="css/style.css" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/swiper-bundle.min.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/content.js"></script>
+
+    <script src="js/main.js"></script>
+
+    <script>
+      history.scrollRestoration = "manual";
+    </script>
+  </head>
+
+  <!-- 모바일헤더 일때 M_Header 추가 -->
+  <!-- 디바이스줄여도 계속 footer보이면 Main 클래스 추가 -->
+  <body class="LightMode color-bg-02 Main M_Header">
+    <!-- header -->
+    <header id="header">
+      <div class="header_inner color-border-01">
+        <div class="clearfix wrapper">
+          <div class="left">
+            <div class="logo text_overflow">
+              <a href="/index.html"></a>
+              <span class="color-txt-normal title-02-b title">페이지제목</span>
+            </div>
+            <ul class="gnb">
+              <li class="home">
+                <a href="/index.html">
+                  <p class="gnb_list white-always btn-04 txt">추천</p>
+                </a>
+              </li>
+              <li class="novel">
+                <a href="/novel">
+                  <p class="gnb_list white-always btn-04 txt">웹소설</p>
+                </a>
+              </li>
+              <li class="toon">
+                <a href="/toon">
+                  <p class="gnb_list white-always btn-04 txt">웹툰</p>
+                </a>
+              </li>
+              <li class="gift">
+                <a href="/gift">
+                  <p class="gnb_list white-always btn-04 txt">선물함</p>
+                </a>
+              </li>
+              <li class="storage">
+                <a href="/storage">
+                  <p class="gnb_list white-always btn-04 txt">보관함</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btns right">
+            <a href="" target="_blank">
+              <p class="factory">작가홈</p>
+            </a>
+            <a href="/order" id="orderLink">
+              <p class="charge">충전</p>
+            </a>
+            <a href="/search">
+              <p class="search">검색</p>
+            </a>
+            <a href="/mypage">
+              <p class="mypage">
+                <span class="dot color-btn-01 bg radius-full"></span>
+                마이페이지
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- //header -->
+
+    <!-- 서브메뉴 -->
+    <div id="navMenu" class="color-bg-01 title_header">
+      <div class="title_menu wrapper">
+        <div class="btns left_btns">
+          <button
+            type="button"
+            class="prev_btn"
+            onClick="history.back()"
+          ></button>
+        </div>
+        <div class="title-04 color-txt-normal text_overflow">답글(2)</div>
+        <div class="btns right_btns"></div>
+      </div>
+    </div>
+    <!-- //서브메뉴 -->
+
+    <!-- container -->
+    <div id="container">
+      <section
+        class="section detail_box wrapper clearfix template template_column"
+      >
+        <div class="radius-xxl color-bg-01 area_box">
+          <div id="top_header" class="color-bg-01">
+            <button
+              type="button"
+              class="prev_btn"
+              onclick="history.back()"
+            ></button>
+            <span class="title-02-b color-txt-normal text_overflow"
+              >답글(2)</span
+            >
+          </div>
+          <div class="content_body comment_list">
+            <div class="list">
+              <!-- 댓글 -->
+              <div class="comment_top">
+                <div class="left profile_box">
+                  <span class="profile radius-full">
+                    <img src="/images/thumbnail.jpg" />
+                  </span>
+                </div>
+                <div class="right comment_box">
+                  <div class="top_con">
+                    <div class="badge_list">
+                      <!-- 댓글 좋아요 5개 이상달렸을때 베스트뱃지 -->
+                      <p
+                        class="badge best_badge color-btn-01 bg border border-soild border-line radius-full"
+                      >
+                        <span class="white-always txt">Best</span>
+                      </p>
+                      <!-- 작가가 선정한 댓글 뱃지 -->
+                      <p
+                        class="badge love_badge color-state-point-01 bg border border-soild border-line radius-full"
+                      >
+                        <span class="white-always txt">작가감동♥︎</span>
+                      </p>
+                      <!-- 내가 쓴 댓글일때 MY뱃지 -->
+                      <p
+                        class="badge my_badge border-line border-soild border color-btn-01 radius-full"
+                      >
+                        <span class="color-btn-01 txt">MY</span>
+                      </p>
+                    </div>
+                    <div
+                      class="name text_overflow title-01-b-long color-txt-normal"
+                    >
+                      눈송이송송송송송송송송송송
+                    </div>
+                    <div class="date title-sub-02-m color-txt-muted">
+                      24.03.25
+                    </div>
+                  </div>
+                  <div class="desc color-txt-02 body-03-long">
+                    베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨. 댓글 내용 글자
+                    제한은 300자. 300자이상 쓰지 못하도록 제한을 둠 베스트댓글,
+                    작가감동 댓글 뱃지 이렇게 노출됨. 댓글 내용 글자 제한은
+                    300자. 300자이상 쓰지 못하도록 제한을 둠 베스트댓글,
+                    작가감동 댓글 뱃지 이렇게 노출됨. 댓글 내용 글자 제한은
+                    300자. 300자이상 쓰지 못하도록 제한을 둠
+                  </div>
+                  <div class="info">
+                    <span class="title body-01-long color-txt-05 text_overflow"
+                      >작품제목</span
+                    >
+                    <span class="body-01-long color-txt-05">- N화</span>
+                  </div>
+                  <div class="btns bottom_con">
+                    <div class="left">
+                      <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                      <button
+                        type="button"
+                        class="button btn_03 medium outlined label_on round radius-full"
+                        id="likeBtn"
+                      >
+                        <span class="btn-03 color-txt-04 text">0</span>
+                      </button>
+                      <!-- 답글 버튼 -->
+                      <!-- <button type="button" class="button btn_03 medium outlined label_on round radius-full before" id="replyBtn">
+                                            <span class="btn-03 color-txt-04 text">2</span>
+                                        </button> -->
+                      <!-- 내가 쓴 답글이 있을때 버튼 -->
+                      <button
+                        type="button"
+                        class="button btn_01 medium outlined label_on round radius-full after"
+                        id="replyBtn"
+                      >
+                        <span class="btn-03 color-btn-01 text">2</span>
+                      </button>
+                    </div>
+                    <div class="right">
+                      <!-- 신고/차단버튼 (기본) -->
+                      <!-- <button type="button" id="reportBtn"></button> -->
+                      <!-- 내가 쓴 댓글일때 삭제버튼 -->
+                      <button
+                        type="button"
+                        id="deleteBtn"
+                        onclick="Modal()"
+                        return
+                        false;
+                      >
+                        <span class="body-01-long color-txt-05">삭제</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- 답글 // 더보기 클릭시 50개 단위로 노출 -->
+              <ul class="reply_list">
+                <li class="border-soild border-top-line color-border-01">
+                  <div class="profile_box left">
+                    <span class="profile radius-full">
+                      <img src="/images/thumbnail.jpg" />
+                    </span>
+                  </div>
+                  <div class="right comment_box">
+                    <div class="top_con">
+                      <div class="badge_list">
+                        <!-- 내가 쓴 덧글 일때 MY뱃지 -->
+                        <p
+                          class="badge my_badge border-line border-soild border color-btn-01 radius-full"
+                        >
+                          <span class="color-btn-01 txt">MY</span>
+                        </p>
+                      </div>
+                      <div
+                        class="name text_overflow title-01-b color-txt-normal"
+                      >
+                        눈송이송송송송송송송송송송
+                      </div>
+                      <div class="date title-sub-02-m color-txt-muted">
+                        24.03.25
+                      </div>
+                    </div>
+                    <div class="desc color-txt-02 body-03-long">
+                      베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨. 댓글 내용
+                      글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                    </div>
+                    <div class="btns bottom_con">
+                      <div class="left">
+                        <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                        <button
+                          type="button"
+                          class="button btn_03 medium outlined label_on round radius-full"
+                          id="likeBtn"
+                        >
+                          <span class="btn-03 color-txt-04 text">0</span>
+                        </button>
+                      </div>
+                      <div class="right">
+                        <!-- 신고/차단버튼 -->
+                        <button type="button" id="reportBtn"></button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="border-soild border-top-line color-border-01">
+                  <!-- 삭제한 답글 -->
+                  <p class="delete_list color-txt-muted body-03-long">
+                    작성자가 글을 삭제하였습니다.
+                  </p>
+                </li>
+                <li class="border-soild border-top-line color-border-01">
+                  <div class="profile_box left">
+                    <span class="profile radius-full">
+                      <img src="/images/thumbnail.jpg" />
+                    </span>
+                  </div>
+                  <div class="right comment_box">
+                    <div class="top_con">
+                      <div
+                        class="name text_overflow title-01-b color-txt-normal"
+                      >
+                        눈송이송송송송송송송송송송
+                      </div>
+                      <div class="date title-sub-02-m color-txt-muted">
+                        1일전
+                      </div>
+                    </div>
+                    <div class="desc color-txt-02 body-03-long">
+                      베스트댓글, 작가감동 댓글 뱃지 이렇게 노출됨. 댓글 내용
+                      글자 제한은 300자. 300자이상 쓰지 못하도록 제한을 둠
+                    </div>
+                    <div class="btns bottom_con">
+                      <div class="left">
+                        <!-- 좋아요버튼 클릭시 class="click" 추가-->
+                        <button
+                          type="button"
+                          class="button btn_03 medium outlined label_on round radius-full"
+                          id="likeBtn"
+                        >
+                          <span class="btn-03 color-txt-04 text">0</span>
+                        </button>
+                      </div>
+                      <div class="right">
+                        <!-- 신고/차단버튼 -->
+                        <button type="button" id="reportBtn"></button>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <!-- 등록된 답글이 없을때 -->
+              <!-- <p class="no_data small color-txt-04 body-02-long">아직 등록된 답글이 없습니다. <br>첫 답글을 작성해 보세요.</p> -->
+            </div>
+
+            <!-- 더보기 버튼 // 답글이 50개 이상일때-->
+            <div class="list_more_btn">
+              <button
+                type="button"
+                class="button btn_03 label_on medium outlined round radius-full"
+              >
+                <span class="btn-03 color-txt-04">더보기</span>
+              </button>
+            </div>
+
+            <div class="write_box">
+              <div class="left">
+                <textarea
+                  placeholder="아름다운 언어로 소통해주세요."
+                  class="body-03-long color-txt-02 radius-sm color-bg-02 color-border-01 border-line border-soild"
+                ></textarea>
+              </div>
+              <div class="right">
+                <p class="num caption-02 color-txt-04">300</p>
+                <button
+                  type="button"
+                  class="button btn_01 medium filled label_on radius-full"
+                >
+                  <span class="txt white-always btn-03">등록</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- //container -->
+
+    <!-- footer -->
+    <footer id="footer" class="wrapper">
+      <div class="area_box clearfix">
+        <div class="left">
+          <div class="info">
+            <button type="button" class="color-txt-03 btn-03">
+              (주) 북팔 사업자정보
+            </button>
+            <div class="txt_box color-txt-04 body-01-long">
+              서울특별시 영등포구 국회대로70길 23 , 용산빌딩 7층 (여의도동)<br />
+              대표이사 : 김석환 | 사업자등록번호 : 214-88-74813 | 통신판매업신고
+              :
+              <a
+                href="http://www.ftc.go.kr/bizCommPop.do?wrkr_no=2148874813"
+                target="_blank"
+                >제2022-서울영등포-1421호</a
+              ><br />
+              개인정보관리책임자 : 최성민
+              <a href="mailto:bookpal@bookpal.co.kr">bookpal@bookpal.co.kr</a>
+            </div>
+          </div>
+          <p class="copyright btn-01 color-txt-muted">
+            Copyright ⓒ BOOKPAL CO., LTD. All Rights Reserverd.
+          </p>
+          <ul class="menu_links">
+            <li class="color-txt-muted btn-02">
+              <a href="/help/index.html">고객센터</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">이용약관</a>
+            </li>
+            <li class="color-txt-muted btn-02-active">
+              <a href="/help/terms.html">개인정보처리방침</a>
+            </li>
+            <li class="color-txt-muted btn-02">
+              <a href="/help/terms.html">청소년 보호정책</a>
+            </li>
+          </ul>
+        </div>
+        <div class="right">
+          <ul class="sns_link">
+            <li class="color-bg-02 radius-full blog">
+              <a
+                href="https://blog.naver.com/bookpalbooks"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>블로그</span></a
+              >
+            </li>
+            <li class="color-bg-02 radius-full twitter">
+              <a
+                href="https://twitter.com/bookpalkorea"
+                target="_blank"
+                class="button btn_03 large label_off round on radius-full"
+                ><span>트위터</span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- top_btn -->
+    <aside id="top_btn">
+      <button
+        type="button"
+        class="radius-full color-border-01 border-line color-bg-01 box-shadow-lg border-soild"
+      >
+        <span>Top</span>
+      </button>
+    </aside>
+    <!-- //top_btn -->
+
+    <!-- 텍스트 토스트 -->
+    <div
+      class="toast message_toast black_opacity-80 bg radius-xs"
+      role="alert"
+      aria-live="assertive"
+      aria-atomic="true"
+    >
+      <div class="toast-body">
+        <div class="area">
+          <p class="text color-btn-02-txt body-02-long">Toast Message Text</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 모달 -->
+    <div id="Modal" class="modal black_opacity-60" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content radius-xxl color-bg-modal">
+          <div class="modal-body">
+            <div class="title title-02-b color-txt-normal">
+              타이틀 제목들어가는자리
+            </div>
+            <div class="desc color-txt-02 body-03-long">내용들어가는자리</div>
+            <!-- 닉네임 들어갈때는 -->
+            <div class="desc color-txt-02">
+              <p class="body-03-long">
+                <span class="text_overflow title-book-03-m"
+                  >닉네임들어가는자리입니다.</span
+                >
+                님
+              </p>
+              <p class="body-03-long">내용들어가는자리입니다.</p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on filled button"
+            >
+              빨간배경 버튼
+            </button>
+            <button
+              type="button"
+              class="radius-sm btn-04 txt btn_01 large label_on outlined button"
+            >
+              빨간줄 버튼
+            </button>
+            <button
+              type="button"
+              class="radius-xs btn-03 txt btn_03 medium label_on filled button"
+              data-bs-dismiss="modal"
+            >
+              취소
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let modal = new bootstrap.Modal(document.getElementById("Modal"));
+      function Modal() {
+        modal.show();
+      }
+    </script>
+  </body>
+</html>
